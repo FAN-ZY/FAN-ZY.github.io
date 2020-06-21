@@ -1409,7 +1409,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a8b82b;
+  background: #c84090;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1654,6 +1654,7 @@ pre code {
   color: #ff0000;
   display: inline-block;
   margin: 0 5px;
+  animation: icon-animate 1.33s ease-in-out infinite;
 }
 .powered-by,
 .theme-info {
