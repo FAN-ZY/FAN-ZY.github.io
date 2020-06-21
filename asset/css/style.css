@@ -775,6 +775,23 @@ a {
 .markdown-body {
   color: var(--color-text);
   counter-reset: h1;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
+  max-width: $site-author-image-width;
+  height: $site-author-image-height;
+  border: site-author-image-border-color;
+/* start*/
+  border-radius: 50%;
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
+/* end */
+  background-color: #55dae1;
+  webkit-transform: rotate(360deg) scale(1.1);
+  moz-transform: rotate(360deg) scale(1.1);
+  ms-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
 }
 .markdown-body h1,
 .markdown-body h2,
@@ -813,30 +830,6 @@ a {
 }
 .markdown-body img {
   display: block;
-  border-radius: 4px;
-}
-.markdown-body img + em {
-  font-size: 0.5em;
-  border-radius: 1em;
-  padding: 0.25em 0.75em;
-  border: 1px solid;
-  margin: 0.5em 0;
-  display: inline-block;
-}
-@media (min-width: 1025px) {
-  .markdown-body img + em {
-    opacity: 0.25;
-  }
-  .markdown-body img + em:hover {
-    opacity: 1;
-    color: #03a9f4;
-  }
-}
-@media (min-width: 1025px) {
-  .markdown-body img:hover + em {
-    opacity: 1;
-    color: #03a9f4;
-  }
 }
 .markdown-body table {
   word-break: keep-all;
