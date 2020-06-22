@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="hi">
-<meta property="og:url" content="http://yoursite.com/2020/06/17/hi/index.html">
+  <meta name="description" content="一、首页工作台问题【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改 更改前： 123456789&#x2F;*打开页签*&#x2F;        budgetClick: function(item) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题总结">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="木马">
+<meta property="og:description" content="一、首页工作台问题【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改 更改前： 123456789&#x2F;*打开页签*&#x2F;        budgetClick: function(item) &amp;#123;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-17T12:13:58.000Z">
-<meta property="article:modified_time" content="2020-06-17T12:18:14.101Z">
+<meta property="article:modified_time" content="2020-06-22T07:22:13.174Z">
 <meta property="article:author" content="墨寒">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/17/hi/">
+<link rel="canonical" href="http://yoursite.com/2020/06/17/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
 
 
 <script id="page-configurations">
@@ -43,7 +45,7 @@
   };
 </script>
 
-  <title>hi | 木马</title>
+  <title>问题总结 | 木马</title>
   
 
 
@@ -171,6 +173,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、首页工作台问题"><span class="nav-number">1.</span> <span class="nav-text">一、首页工作台问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、审查菜单配置"><span class="nav-number">2.</span> <span class="nav-text">二、审查菜单配置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -237,7 +240,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/hi/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.png">
@@ -250,7 +253,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hi
+          问题总结
         </h1>
 
         <div class="post-meta">
@@ -259,10 +262,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-17 20:13:58 / Modified: 20:18:14" itemprop="dateCreated datePublished" datetime="2020-06-17T20:13:58+08:00">2020-06-17</time>
+              <time title="Created: 2020-06-17 20:13:58" itemprop="dateCreated datePublished" datetime="2020-06-17T20:13:58+08:00">2020-06-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-22 15:22:13" itemprop="dateModified" datetime="2020-06-22T15:22:13+08:00">2020-06-22</time>
+              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -282,7 +291,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="一、首页工作台问题"><a href="#一、首页工作台问题" class="headerlink" title="一、首页工作台问题"></a>一、首页工作台问题</h1><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
+<p>更改前：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">                   parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);         </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+<p>更改后：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">        	if(item.AREA_CODE)&#123;</span><br><span class="line">                     parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);</span><br><span class="line">        	&#125;            </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、审查菜单配置"><a href="#二、审查菜单配置" class="headerlink" title="二、审查菜单配置"></a>二、审查菜单配置</h1><p>【菜单审查配置】中【业务分类】无法更换问题：<br>解决办法：–&gt;找到人大包相应路径文件【\npcs\menuandshowplan\menuandshowplan.js】，将以下代码【覆盖】原始代码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">getPlanLbRela:function(showPlan_id,selectFlag)&#123;</span><br><span class="line">                var that = this;</span><br><span class="line">                axios.get("/ywgl/getPlanByMenu",&#123;</span><br><span class="line">                    params:&#123;</span><br><span class="line">                        menuid:that.menudata.menu_id,</span><br><span class="line">                        subject_id:that.version_id</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).then(function(res)&#123;</span><br><span class="line">                    var data = res.data;</span><br><span class="line">                    if(data.errorCode=='1')&#123;</span><br><span class="line">                        that.delScMlList=[];</span><br><span class="line">                        if(data.showplanList&amp;&amp;data.showplanList.length&amp;&amp;!selectFlag)&#123;</span><br><span class="line">                         that.showPlanData=data.showplanList[0];</span><br><span class="line">                            that.assignFrom(that.showPlanData);</span><br><span class="line">                        &#125;</span><br><span class="line">                        that.ywScMlList=data.reviewLbList;</span><br><span class="line">                        that.ywScMlIdList=[];</span><br><span class="line">                        for(var i = 0;i&lt;that.ywScMlList.length;i++)&#123;</span><br><span class="line">                            that.ywScMlIdList.push(that.ywScMlList[i].LB_ID);</span><br><span class="line">                        &#125;</span><br><span class="line">                        // this.handleSelect(this.curYwId);</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        that.$message(&#123;</span><br><span class="line">                            message: "查询失败",</span><br><span class="line">                            type: 'warning'</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).catch(function(e)&#123;</span><br><span class="line"></span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
