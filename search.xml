@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>aaa</title>
-    <url>/2020/06/17/aaa/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>问题总结</title>
     <url>/2020/06/17/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h3 id="1、首页工作台问题"><a href="#1、首页工作台问题" class="headerlink" title="1、首页工作台问题"></a>1、首页工作台问题</h3><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
@@ -58,5 +53,10 @@
 <h3 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>aaa</title>
+    <url>/2020/06/17/aaa/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
