@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/05/31/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>a</title>
     <url>/2020/06/23/a/</url>
     <content><![CDATA[<h3 id="1、首页工作台问题"><a href="#1、首页工作台问题" class="headerlink" title="1、首页工作台问题"></a>1、首页工作台问题</h3><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
@@ -33,29 +53,11 @@
 
 <h3 id="8、清除weblogic缓存"><a href="#8、清除weblogic缓存" class="headerlink" title="8、清除weblogic缓存"></a>8、清除<font color="gree">weblogic</font>缓存</h3><p>删除相应域的对应文件夹</p>
 <p><img src="/2020/06/23/a/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5Ca%5C2.png" alt></p>
-<img src="/2020/06/23/a/06/23/a/2.png" class title="This is an test image">
+<img src="/2020/06/23/a/06/23/a/2.jpg" class title="This is an test image">
 
-<img src="/2020/06/23/a/06/23/a/%E9%A2%84%E8%AD%A6%E6%8F%90%E7%A4%BA.jpg" class title="This is an test image">]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/05/31/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<img src="/2020/06/23/a/06/23/a/%E9%A2%84%E8%AD%A6%E6%8F%90%E7%A4%BA.jpg" class title="This">
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
-
-]]></content>
+<img src="/2020/06/23/a/06/23/a/2.jpg" class title="这是一个新的博客的图片的说明">]]></content>
   </entry>
   <entry>
     <title>问题总结</title>
