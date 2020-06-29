@@ -21,28 +21,32 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="木马">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="decode()函数简介：主要作用：将查询结果翻译成其他值（即以其他形式表现出来，以下举例说明）； 使用方法： 12345678910111213141516171819Select decode（columnname，值1,翻译值1,值2,翻译值2,...值n,翻译值n,缺省值）From talbenameWhere …其中columnname为要选择的table中所定义的column，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FAN&#96;SQL">
+<meta property="og:url" content="http://yoursite.com/2020/06/28/cs/index.html">
 <meta property="og:site_name" content="木马">
+<meta property="og:description" content="decode()函数简介：主要作用：将查询结果翻译成其他值（即以其他形式表现出来，以下举例说明）； 使用方法： 12345678910111213141516171819Select decode（columnname，值1,翻译值1,值2,翻译值2,...值n,翻译值n,缺省值）From talbenameWhere …其中columnname为要选择的table中所定义的column，">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-28T08:09:54.000Z">
+<meta property="article:modified_time" content="2020-06-29T09:53:11.507Z">
 <meta property="article:author" content="墨寒">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/06/28/cs/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>木马</title>
+  <title>FAN`SQL | 木马</title>
   
 
 
@@ -170,6 +174,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-函数简介："><span class="nav-number">1.</span> <span class="nav-text">decode()函数简介：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值型函数"><span class="nav-number">2.</span> <span class="nav-text">数值型函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#返回绝对值-abs-x"><span class="nav-number">2.1.</span> <span class="nav-text">返回绝对值 abs(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回正负值-sign-x"><span class="nav-number">2.2.</span> <span class="nav-text">返回正负值 sign(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回较大的最小整数-ceil-x"><span class="nav-number">2.3.</span> <span class="nav-text">返回较大的最小整数 ceil(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回较小的最大整数-floor-x"><span class="nav-number">2.4.</span> <span class="nav-text">返回较小的最大整数 floor(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回x的y次幂-power-x-y"><span class="nav-number">2.5.</span> <span class="nav-text">返回x的y次幂 power(x,y)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#【相近】exp-y"><span class="nav-number">2.5.1.</span> <span class="nav-text">【相近】exp(y)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SIN-1-57079"><span class="nav-number"></span> <span class="nav-text">SIN(1.57079)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COS-3-1415927"><span class="nav-number"></span> <span class="nav-text">COS(-3.1415927)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COSH-20"><span class="nav-number"></span> <span class="nav-text">  COSH(20)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASIN-0-5"><span class="nav-number"></span> <span class="nav-text"> ASIN(0.5)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ATAN-1"><span class="nav-number"></span> <span class="nav-text">   ATAN(1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话号码"><span class="nav-number"></span> <span class="nav-text">电话号码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UPP"><span class="nav-number"></span> <span class="nav-text">UPP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AABBCCDD"><span class="nav-number"></span> <span class="nav-text">AABBCCDD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UPPER"><span class="nav-number"></span> <span class="nav-text">UPPER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSTRING"><span class="nav-number"></span> <span class="nav-text">  INSTRING</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LPAD-‘杨’-10-’-’"><span class="nav-number"></span> <span class="nav-text">LPAD(‘杨’,10,’*’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RPAD-‘GAO’-10-’-A’"><span class="nav-number"></span> <span class="nav-text">RPAD(‘GAO’,10,’*A’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT"><span class="nav-number"></span> <span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-1"><span class="nav-number"></span> <span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-2"><span class="nav-number"></span> <span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-3"><span class="nav-number"></span> <span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST"><span class="nav-number"></span> <span class="nav-text">TEST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST-1"><span class="nav-number"></span> <span class="nav-text">TEST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SYSDATE"><span class="nav-number"></span> <span class="nav-text">SYSDATE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EXTRACT-YEARFROMDATE’2001-2-16"><span class="nav-number"></span> <span class="nav-text">EXTRACT(YEARFROMDATE’2001-2-16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LOCALTIMESTAMP"><span class="nav-number"></span> <span class="nav-text">LOCALTIMESTAMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CURRENT-TIMESTAMP"><span class="nav-number"></span> <span class="nav-text">CURRENT_TIMESTAMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DBTIMEZONE"><span class="nav-number"></span> <span class="nav-text">DBTIMEZONE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CHARTOROWID-‘AAAADEAABAAAAZSAA"><span class="nav-number"></span> <span class="nav-text">CHARTOROWID(‘AAAADEAABAAAAZSAA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROWIDTOCHAR-ROWID"><span class="nav-number"></span> <span class="nav-text">ROWIDTOCHAR(ROWID)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conversion"><span class="nav-number"></span> <span class="nav-text">conversion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONVERSION"><span class="nav-number"></span> <span class="nav-text">CONVERSION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXTORAW-‘A123’"><span class="nav-number"></span> <span class="nav-text">HEXTORAW(‘A123’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RAWTOHEX-‘A123’"><span class="nav-number"></span> <span class="nav-text">RAWTOHEX(‘A123’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TO-CHAR-TO-DATE-‘2016-06-02’-’"><span class="nav-number"></span> <span class="nav-text">TO_CHAR(TO_DATE(‘2016-06-02’,’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TO-CHAR-100-’XX’"><span class="nav-number"></span> <span class="nav-text">TO_CHAR(100,’XX’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test"><span class="nav-number"></span> <span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test-1"><span class="nav-number"></span> <span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NLS-CHARSET-ID-‘ZHS16GBK’"><span class="nav-number"></span> <span class="nav-text">NLS_CHARSET_ID(‘ZHS16GBK’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NLS-CHARSET-NAME-852"><span class="nav-number"></span> <span class="nav-text">NLS_CHARSET_NAME(852)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-NULL-1-2-3"><span class="nav-number"></span> <span class="nav-text">COALESCE(NULL,1,2,3)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-88-3-4-5-99"><span class="nav-number"></span> <span class="nav-text">COALESCE(88,3,4,5,99)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-NULL-NULL-NULL-NULL"><span class="nav-number"></span> <span class="nav-text">COALESCE(NULL,NULL,NULL,NULL)</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -229,9 +234,10 @@
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -247,10 +253,9 @@
       <meta itemprop="name" content="木马">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/28/cs/" class="post-title-link" itemprop="url">FAN`SQL</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          FAN`SQL
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -270,6 +275,13 @@
               </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -280,7 +292,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
+        <a id="more"></a>
 
 
 
@@ -644,165 +656,30 @@
 　</p>
 <p>　create or replace view<br>　　v_sale(year,month1,month2,month3,month4,month5,month6,　　<br>　　month7,month8,month9,month10,month11,month12)<br>　　as<br>　　select<br>　　substrb(month,1,4),<br>　　sum(decode(substrb(month,5,2),’01’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’02’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’03’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’04’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’05’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’06’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’07’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’08’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’09’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’10’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’11’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’12’,sell,0))<br>　　from sale<br>　　group by substrb(month,1,4);<br>————————————————<br>版权声明：本文为CSDN博主「小小工匠」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/yangshangwei/java/article/details/51425458" target="_blank" rel="noopener">https://blog.csdn.net/yangshangwei/java/article/details/51425458</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/YY%60NODE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1.png">
-      <meta itemprop="name" content="墨寒">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木马">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/17/YY%60NODE/" class="post-title-link" itemprop="url">NODE</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-06-17 20:13:58" itemprop="dateCreated datePublished" datetime="2020-06-17T20:13:58+08:00">2020-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-23 22:16:24" itemprop="dateModified" datetime="2020-06-23T22:16:24+08:00">2020-06-23</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>长风破浪会有时，直挂云帆济沧海。🏄‍♂️</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/17/YY%60NODE/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/31/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1.png">
-      <meta itemprop="name" content="墨寒">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木马">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/31/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-05-31 21:21:49" itemprop="dateCreated datePublished" datetime="2020-05-31T21:21:49+08:00">2020-05-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-23 20:44:16" itemprop="dateModified" datetime="2020-06-23T20:44:16+08:00">2020-06-23</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>hexo 常用操作整理✍</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/31/hello-world/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/17/YY%60NODE/" rel="prev" title="NODE">
+      <i class="fa fa-chevron-left"></i> NODE
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
