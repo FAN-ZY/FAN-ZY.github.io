@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>aa</title>
-    <url>/2020/06/29/aa/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>NODE</title>
     <url>/2020/06/17/YY%60NODE/</url>
     <content><![CDATA[<h3 id="1、首页工作台问题"><a href="#1、首页工作台问题" class="headerlink" title="1、首页工作台问题"></a>1、首页工作台问题</h3><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
@@ -37,6 +32,11 @@
 <h3 id="8、清除weblogic缓存"><a href="#8、清除weblogic缓存" class="headerlink" title="8、清除weblogic缓存"></a>8、清除<font color="gree">weblogic</font>缓存</h3><p>删除相应域的对应文件夹</p>
 <p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5CYY%60NODE%5C2.jpg" alt></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>aa</title>
+    <url>/2020/06/29/aa/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>FAN`SQL</title>
