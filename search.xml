@@ -76,7 +76,9 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
+<h2 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
+
+<h2 id="文本插图"><a href="#文本插图" class="headerlink" title="文本插图"></a>文本插图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img XXX.png This is an example image %&#125;</span><br><span class="line">&#123;% asset_img 图片名称 图片赘述 %&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
