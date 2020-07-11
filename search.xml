@@ -1,9 +1,898 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>NODE</title>
+    <url>/2020/06/17/YY%60NODE/</url>
+    <content><![CDATA[<h3 id="系统部署"><a href="#系统部署" class="headerlink" title="系统部署"></a>系统部署</h3><h4 id="数据导入及备份"><a href="#数据导入及备份" class="headerlink" title="数据导入及备份"></a>数据导入及备份</h4><figure class="highlight"><table><tr><td class="code"><pre><span class="line">导出（备份）：</span><br><span class="line">expdp NPCS_XXRD/1@orcl  directory=TEST2 dumpfile=NPCS_XXRD20200707.dmp logfile=NPCS_XXRD20200707.log</span><br><span class="line"></span><br><span class="line">expdp NPCS_XXBI/1@orcl  directory=TEST2 dumpfile=NPCS_XXBI20200707.dmp logfile=NPCS_XXBI20200707.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">导入：</span><br><span class="line">impdp npcs_xxbi/1@zyf </span><br><span class="line">directory=DATA_PUMP_DIR  dumpfile=NPCS_XXBI20200707.DMP </span><br><span class="line">logfile=NPCS_XXBI20200708.log remap_schema=NPCS_XXBI:npcs_rd_fap remap_tablespace=EFMIS:NPCS </span><br><span class="line">version=11.2.0.4.0</span><br><span class="line"></span><br><span class="line">impdp npcs_xxrd/1@zyf </span><br><span class="line">directory=DATA_PUMP_DIR  dumpfile=NPCS_XXRD20200707.DMP </span><br><span class="line">logfile=NPCS_XXRD20200708.log remap_schema=NPCS_XXRD:npcs_rd_fap remap_tablespace=EFMIS:NPCS </span><br><span class="line">version=11.2.0.4.0</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="首页工作台问题"><a href="#首页工作台问题" class="headerlink" title="首页工作台问题"></a>首页工作台问题</h3><h4 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">执行明细：<span class="selector-tag">v_npcs_ods_bmzcjd</span></span><br><span class="line">执行进度；<span class="selector-tag">vw_npcs_budget_progress</span></span><br><span class="line">钻取：<span class="selector-tag">npcs_portal_area_conf</span></span><br><span class="line">首页背景：<span class="selector-tag">npcs-web-8</span><span class="selector-class">.20-SNAPSHOT</span>\<span class="selector-tag">df</span>\<span class="selector-tag">portal</span>\<span class="selector-tag">login</span>\<span class="selector-tag">img</span></span><br><span class="line">风格：<span class="selector-tag">sys_userpara</span></span><br><span class="line">预警规则查询：<span class="selector-tag">vw_npcs_warning_info</span></span><br></pre></td></tr></table></figure>
+
+<p>a、修改执行明细</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> T.*,T.ROWID <span class="keyword">FROM</span>    npcs_portal_area_conf t <span class="keyword">where</span> t.area_code=<span class="string">'SZZX'</span>;</span><br><span class="line"><span class="keyword">update</span> npcs_portal_area_conf t <span class="keyword">set</span> t.url=<span class="string">'http://59.207.104.160:8080/bi/showreport.do?resid=EBI$12$LMI51NC6LUUUNKNMIVWMCKUEC7MTYLMN$1$LCU2UQ0UMMDM8U4CMJ7VP0K3ETC5TUW4.rpttpl&amp;showmenu=false&amp;showparams=true&amp;calcnow=true&amp;showtype=hide&amp;escape=true&amp;id=admin&amp;pw=admin'</span>  <span class="keyword">where</span> t.area_code=<span class="string">'SZZX'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p><img src="/2020/06/17/YY%60NODE/YY%60NODE%5C1.png" alt></p>
+<p>浮动数字，通过执行进度；vw_npcs_budget_progress</p>
+<p>，这个视图进行控制，填写对应的收入和支出的业务类型，执行下视图就好了。</p>
+<p>点击收入进度，跳转具体的表的设置：</p>
+<p>通过npcs_portal_area_conf 进行控制的</p>
+<p><img src="/2020/06/17/YY%60NODE/YY%60NODE%5C3.png" alt></p>
+<p><img src="/2020/06/17/YY%60NODE/YY%60NODE%5C4.png" alt></p>
+<p>修改地方：</p>
+<p><img src="/2020/06/17/YY%60NODE/YY%60NODE%5C5.png" alt></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">count</span>,sz.gzlbbm,fl.yjzbflmc <span class="keyword">from</span> npcs_warning_data da</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">left</span> <span class="keyword">join</span> npcs_jdyj_yjgzsz sz <span class="keyword">on</span> da.warning_id =sz.gzid </span><br><span class="line"></span><br><span class="line">​    <span class="keyword">left</span> <span class="keyword">join</span> npcs_jdyj_yjzbfl fl <span class="keyword">on</span> sz.gzlbbm = fl.yjzbflbm</span><br><span class="line"></span><br><span class="line"> <span class="keyword">where</span> sz.gzlbbm <span class="keyword">like</span> <span class="string">''</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">group</span> <span class="keyword">by</span> sz.gzlbbm,fl.yjzbflmc</span><br></pre></td></tr></table></figure>
+
+<p>数据来源：VW_NPCS_BUDGET_PROGRESS</p>
+<p>链接地址：npcs_portal_area_conf</p>
+<p>全国法规库：<a href="http://fgk.mof.gov.cn/law/jsp/firstPage/main.jsp" target="_blank" rel="noopener">http://fgk.mof.gov.cn/law/jsp/firstPage/main.jsp</a></p>
+<h4 id="四个模块的问题"><a href="#四个模块的问题" class="headerlink" title="四个模块的问题"></a>四个模块的问题</h4><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
+<p>更改前：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">                   parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);         </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+<p>更改后：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">        	if(item.AREA_CODE)&#123;</span><br><span class="line">                     parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);</span><br><span class="line">        	&#125;            </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="审查菜单配置"><a href="#审查菜单配置" class="headerlink" title="审查菜单配置"></a>审查菜单配置</h3><p>【菜单审查配置】中【业务分类】无法更换问题：<br>解决办法：–&gt;找到人大包相应路径文件【\npcs\menuandshowplan\menuandshowplan.js】，将以下代码【覆盖】原始代码</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">getPlanLbRela:function(showPlan_id,selectFlag)&#123;</span><br><span class="line">                var that = this;</span><br><span class="line">                axios.get("/ywgl/getPlanByMenu",&#123;</span><br><span class="line">                    params:&#123;</span><br><span class="line">                        menuid:that.menudata.menu_id,</span><br><span class="line">                        subject_id:that.version_id</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).then(function(res)&#123;</span><br><span class="line">                    var data = res.data;</span><br><span class="line">                    if(data.errorCode=='1')&#123;</span><br><span class="line">                        that.delScMlList=[];</span><br><span class="line">                        if(data.showplanList&amp;&amp;data.showplanList.length&amp;&amp;!selectFlag)&#123;</span><br><span class="line">                         that.showPlanData=data.showplanList[0];</span><br><span class="line">                            that.assignFrom(that.showPlanData);</span><br><span class="line">                        &#125;</span><br><span class="line">                        that.ywScMlList=data.reviewLbList;</span><br><span class="line">                        that.ywScMlIdList=[];</span><br><span class="line">                        for(var i = 0;i&lt;that.ywScMlList.length;i++)&#123;</span><br><span class="line">                            that.ywScMlIdList.push(that.ywScMlList[i].LB_ID);</span><br><span class="line">                        &#125;</span><br><span class="line">                        // this.handleSelect(this.curYwId);</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        that.$message(&#123;</span><br><span class="line">                            message: "查询失败",</span><br><span class="line">                            type: 'warning'</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).catch(function(e)&#123;</span><br><span class="line"></span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="报表弹窗重影"><a href="#报表弹窗重影" class="headerlink" title="报表弹窗重影"></a>报表弹窗重影</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">修改相应主题表文件夹的脚本，将对应弹窗中的txt(<span class="string">""</span>)置空</span><br></pre></td></tr></table></figure>
+
+<h3 id="审查阶段设置"><a href="#审查阶段设置" class="headerlink" title="审查阶段设置"></a>审查阶段设置</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">数据库中对表【<span class="selector-tag">NPCS_SYS_VERSION</span>】中【<span class="selector-tag">IDX_NO</span>】字段进行排序设置，并在<span class="selector-tag">BI</span>中设置相应报表中【审查阶段】如下的默认值。</span><br><span class="line">&lt;#=ardb("SELECT min(T.VERSION_CODE)  FROM NPCS_SYS_VERSION T  WHERE T.PARENT_VERSION_CODE = '"+diminf("审查类别",@sclb,'VERSION_CODE')+"' ORDER BY  T.VERSION_CODE").join(";")#&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改端口后注意事项"><a href="#修改端口后注意事项" class="headerlink" title="修改端口后注意事项"></a>修改端口后注意事项</h3><h4 id="01、数据库中5个端口"><a href="#01、数据库中5个端口" class="headerlink" title="01、数据库中5个端口"></a>01、数据库中5个端口</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> npcs_module t <span class="keyword">set</span> t.module_url = <span class="keyword">replace</span>(t.module_url,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_analysis t <span class="keyword">set</span> t.analysis_url = <span class="keyword">replace</span>(t.analysis_url,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_sys_manage t <span class="keyword">set</span> t.chr_value = <span class="keyword">replace</span>(t.chr_value,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_portal_area_conf t <span class="keyword">set</span> t.url = <span class="keyword">replace</span>(t.url,<span class="string">'http://192.168.1.8:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> sys_menu t <span class="keyword">set</span> t.url = <span class="keyword">replace</span>(t.url,<span class="string">'10.10.65.14:8001'</span>,<span class="string">'10.82.1.96:8005'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> sys_userpara <span class="keyword">WHERE</span> chr_code <span class="keyword">LIKE</span> <span class="string">'NPCS_REPORT_URL%'</span><span class="keyword">for</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="02、BI中的端口"><a href="#02、BI中的端口" class="headerlink" title="02、BI中的端口"></a>02、BI中的端口</h4><p>BI中<font color="gree">分析与展现</font>–&gt;<font color="gree">公式模块</font>的端口</p>
+<h3 id="BI"><a href="#BI" class="headerlink" title="BI"></a>BI</h3><h4 id="01、版本问题"><a href="#01、版本问题" class="headerlink" title="01、版本问题"></a>01、版本问题</h4><p>一般我们拿到的都是预算批复的数据，为了防止点其他版本的时候数据显示的问题，所以需要进行如下设置：<br>在报表上面的参数栏里添加两个参数，一个是<font color="gree">数据版本</font>，参数名为<font color="gree">@data_version</font>。一个是<font color="gree">默认版本</font>，参数名是<font color="gree">@mrbb</font>，默认值要这样设置:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.默认版本：</span><br><span class="line">&lt;#=ardb('select max(data_version) from V_NPCS_WARNING_FB_RPT').max()#&gt;</span><br><span class="line"><span class="selector-tag">b</span>.浮动维的过滤条件里面也要加上语句：</span><br><span class="line"><span class="selector-tag">if</span>(<span class="keyword">@data_version</span>=''|<span class="keyword">@data_version</span>='null'|<span class="keyword">@data_version</span>='undefined',V_NPCS_WARNING_FB_RPT.DATA_VERSION=<span class="keyword">@mrbb</span>,V_NPCS_WARNING_FB_RPT.DATA_VERSION=<span class="keyword">@data_version</span>)</span><br></pre></td></tr></table></figure>
+
+<p>注：将语句中的<font color="gree">主题表</font>改成相应的主题表。</p>
+<h4 id="02、系统中表明显示业务类型"><a href="#02、系统中表明显示业务类型" class="headerlink" title="02、系统中表明显示业务类型"></a>02、系统中表明显示业务类型</h4><p>在BI中触发一下相应主体域的<font color="gree">维表</font></p>
+<h3 id="预警"><a href="#预警" class="headerlink" title="预警"></a>预警</h3><h4 id="01、预警图片"><a href="#01、预警图片" class="headerlink" title="01、预警图片"></a>01、预警图片</h4><p>str1，flag添加 设置字符型  没有flag需要添加flag字段<br>str2，修改图片前缀</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">if(Q4=9,'',if(Q4 IN [2,3,4],'vfs/root/products/ebi/sys/picture/绿色.png',if(O4=1,'vfs/root/products/ebi/sys/picture/蓝色.png',IF(O4=2,'vfs/root/products/ebi/sys/picture/黄色.png',IF(O4=3,'vfs/root/products/ebi/sys/picture/红色.png','')))))</span><br></pre></td></tr></table></figure>
+
+<h4 id="02、预警提示"><a href="#02、预警提示" class="headerlink" title="02、预警提示"></a>02、预警提示</h4><p>常见模板：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">时序过快：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度高于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line"></span><br><span class="line">时序过慢：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度低于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">比上年同期降幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数低于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line"></span><br><span class="line">比上年同期增幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数高于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数不足预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，低于阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数超出预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，超出阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数超出调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，超出阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数不足调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，低于阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="03、预警涉及的表"><a href="#03、预警涉及的表" class="headerlink" title="03、预警涉及的表"></a>03、预警涉及的表</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">npcs_jdyj_yjjbdy</span>:预警级别定义表（可修改预警的颜色）</span><br></pre></td></tr></table></figure>
+
+<h4 id="04、预警点颜色问题"><a href="#04、预警点颜色问题" class="headerlink" title="04、预警点颜色问题"></a>04、预警<font color="greed">点</font>颜色问题</h4><p>a、【预警查询统计】：</p>
+<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource%5C_posts%5CYY%60NODE%5C%E9%A2%84%E8%AD%A61.png" alt></p>
+<img src="/2020/06/17/YY%60NODE/%E9%A2%84%E8%AD%A61.png" class title="This is an example image">
+
+<p>修改：<font color="greed">npcs-web-8.30\pages\rd\yjxxcx</font>的==YJXXCX.JS==文件</p>
+<p>b、【预警信息明细】：</p>
+<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource%5C_posts%5CYY%60NODE%5C%E9%A2%84%E8%AD%A62.png" alt></p>
+<img src="/2020/06/17/YY%60NODE/%E9%A2%84%E8%AD%A62.png" class title="This is an example image">
+
+<p>修改：<font color="greed">npcs_jdyj_yjjbdy</font>表中的颜色码</p>
+<p>c、【预警信息分析】：</p>
+<p>【预警信息分析】首页及其下钻取的各个页面中的颜色，需要到BI中对应的表中修改<font color="gree">图片前缀</font></p>
+<p>05、</p>
+<h3 id="清除weblogic缓存"><a href="#清除weblogic缓存" class="headerlink" title="清除weblogic缓存"></a>清除<font color="gree">weblogic</font>缓存</h3><p>删除相应域的对应文件夹</p>
+<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5CYY%60NODE%5C2.jpg" alt></p>
+<h3 id="系统授权过期"><a href="#系统授权过期" class="headerlink" title="系统授权过期"></a>系统授权过期</h3><p>常见提示：</p>
+<p>1、<font color="red">java.lang.IllegalArgumentException</font>: 授权已过期!</p>
+<h3 id="刷编码"><a href="#刷编码" class="headerlink" title="刷编码"></a>刷编码</h3><p>注释：<br>rownum = 1等待全表扫描完成，然后返回一行；<br>NPCS_ODS_BMJS_SZZB（数据表）可从报表管理中查看；<br> 数据表里含有类、款、项编码时，需将其合并一起组成需要的编码，例：xm_code=hode1||hode2(||是拼接的意思)；<br>数据表里本身含有编码的则不需要刷；<br>财政预算里会出现一张表里含有多个区县，刷编码时，先随意为其匹配一个编码，再将一块区县的编码清空，然后去数据匹配里进行匹配，其他块的区县按照弄好的一块进行匹配。<br>部门决算编码匹配代码：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--收入功能</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.xm_code=(<span class="keyword">select</span> xm_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code=<span class="string">'015'</span> <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.xm_name=t.xm_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--收入结余</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.incbalacc_code=(<span class="keyword">select</span> incbalacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.xm_name=t.xm_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出功能</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.expfunc_code=(<span class="keyword">select</span> expfunc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.expfunc_name=t.expfunc_name <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出功能结余</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.expbalacc_code=(<span class="keyword">select</span> expbalacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.expfunc_name=t.expfunc_name <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出性质或经济分类</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.depexpeco_code=(<span class="keyword">select</span> depexpeco_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> s.depexpeco_name=t.depexpeco_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>    <span class="keyword">and</span> depexpeco_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.balacc_code=(<span class="keyword">select</span> balacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.depexpeco_name=t.depexpeco_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="报告反馈问题"><a href="#报告反馈问题" class="headerlink" title="报告反馈问题"></a>报告反馈问题</h3><h4 id="a、反馈时上传的附件word文档"><a href="#a、反馈时上传的附件word文档" class="headerlink" title="a、反馈时上传的附件word文档"></a>a、反馈时上传的附件word文档</h4><p>系统中下载的word文档后缀默认为【doc】,填写反馈内容后还需把后缀名改为【docx】才能正常上传。</p>
+<h3 id="服务器端口总结"><a href="#服务器端口总结" class="headerlink" title="服务器端口总结"></a>服务器端口总结</h3><h4 id="a、182-92-199-36"><a href="#a、182-92-199-36" class="headerlink" title="a、182.92.199.36"></a>a、182.92.199.36</h4><p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5CYY%60NODE%5C%E7%AB%AF%E5%8F%A31.jpg" alt></p>
+<img src="/2020/06/17/YY%60NODE/%E7%AB%AF%E5%8F%A31.jpg" class title="This is an example image">]]></content>
+  </entry>
+  <entry>
     <title>aa</title>
     <url>/2020/06/29/aa/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>IMG</title>
+    <url>/2020/07/12/IMG/</url>
+    <content><![CDATA[<p>人大初级测试</p>
+<a id="more"></a>
+
+<h3 id="一，人大产品总体介绍"><a href="#一，人大产品总体介绍" class="headerlink" title="一，人大产品总体介绍"></a>一，人大产品总体介绍</h3><h4 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630150446928.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630150446928.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630150525934.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630150525934.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630150551514.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630150551514.png" class title="This is an example image">
+
+
+
+<p>（顺时针）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630150649140.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630150649140.png" class title="This is an example image">
+
+<p>（用户定位：还包括代表专家及横向的其他部门用户）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630150826565.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630150826565.png" class title="This is an example image">
+
+
+
+<p>（2、有原先的静态报表监督转变为动态数据监督）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151138274.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151138274.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151204260.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151204260.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151229031.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151229031.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151343887.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151343887.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151354733.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151354733.png" class title="This is an example image">
+
+<h4 id="2、产品功能详解"><a href="#2、产品功能详解" class="headerlink" title="2、产品功能详解"></a>2、产品功能详解</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151740708.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151740708.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151758698.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151758698.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151825423.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151825423.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151906880.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151906880.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630151928603.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630151928603.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152005835.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152005835.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152034691.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152034691.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152227348.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152227348.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152357690.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152357690.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152445454.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152445454.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152536028.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152536028.png" class title="This is an example image">
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152544795.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152544795.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152608929.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152608929.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152710840.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152710840.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152742970.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152742970.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152753810.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152753810.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152801978.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152801978.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152825132.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152825132.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152845465.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152845465.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152901322.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152901322.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152932159.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152932159.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630152957750.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630152957750.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153021054.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153021054.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153115569.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153115569.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153127255.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153127255.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153203498.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153203498.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153336327.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153336327.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153357806.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153357806.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153420854.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153420854.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153436625.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153436625.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630153452983.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630153452983.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630154949038.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630154949038.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630155039944.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630155039944.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160111757.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160111757.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160120696.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160120696.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160222694.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160222694.png" class title="This is an example image">
+
+
+
+<h4 id="3、产品技术设计"><a href="#3、产品技术设计" class="headerlink" title="3、产品技术设计"></a>3、产品技术设计</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160558159.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160558159.png" class title="This is an example image">
+
+
+
+<p>（报表基于ODS层，分析基于DW层）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160700270.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160700270.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160714471.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160714471.png" class title="This is an example image">
+
+
+
+<h4 id="4、一线需求回归及竞品对标"><a href="#4、一线需求回归及竞品对标" class="headerlink" title="4、一线需求回归及竞品对标"></a>4、一线需求回归及竞品对标</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630160909916.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630160909916.png" class title="This is an example image">
+
+
+
+<p>（以业务为主）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630161122633.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630161122633.png" class title="This is an example image">
+
+
+
+<h4 id="5、升级策略及实施注意事项"><a href="#5、升级策略及实施注意事项" class="headerlink" title="5、升级策略及实施注意事项"></a>5、升级策略及实施注意事项</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630161830189.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630161830189.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630161912492.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630161912492.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162002393.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162002393.png" class title="This is an example image">
+
+
+
+<h3 id="二、人大预算监督业务讲解"><a href="#二、人大预算监督业务讲解" class="headerlink" title="二、人大预算监督业务讲解"></a>二、人大预算监督业务讲解</h3><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162258636.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162258636.png" class title="This is an example image">
+
+
+
+<h4 id="1、人大机构设置及职能介绍"><a href="#1、人大机构设置及职能介绍" class="headerlink" title="1、人大机构设置及职能介绍"></a>1、人大机构设置及职能介绍</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162420947.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162420947.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162439248.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162439248.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162451222.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162451222.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162524184.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162524184.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162541772.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162541772.png" class title="This is an example image">
+
+
+
+<h4 id="2、预算审查监督内容及过程讲解"><a href="#2、预算审查监督内容及过程讲解" class="headerlink" title="2、预算审查监督内容及过程讲解"></a>2、预算审查监督内容及过程讲解</h4><p>（我们的产品不仅仅时数据分析产品。主要是业务产品）</p>
+<p>（主要包括的业务：年初预算、调整、决算的审查；预算执行的监督）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630162701727.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630162701727.png" class title="This is an example image">
+
+
+
+<p>（年初预算审查流程：财政编制预算草案→向人大提交预算初步方案→人大对初步方案进行初步审查给出初步审查意见→财政根据初步审查意见对提交的预算初步方案进行调整→调整后正式向人代会提交预算草案和相关说明→人代会举行会议邀请代表举行相关的人员参会对预算草案进行正式的审议最终批复。（各地方人大可能会根据自己的情况在初步审查前会进行一轮预选审查））</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630163754443.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630163754443.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630163834718.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630163834718.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630163918316.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630163918316.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164003192.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164003192.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164042753.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164042753.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164104790.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164104790.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164150803.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164150803.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164251390.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164251390.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164347390.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164347390.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164417251.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164417251.png" class title="This is an example image">
+
+
+
+<p>（注意：年初预算最终审议的是人大会，预算调整最终审议的时常委会）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200630164553175.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200630164553175.png" class title="This is an example image">
+
+
+
+<p>（收入原则上不进行调整）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084735082.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084735082.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084752649.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084752649.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084816000.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084816000.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084914800.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084914800.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084928861.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084928861.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701084945937.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701084945937.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701085006886.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701085006886.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701085035999.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701085035999.png" class title="This is an example image">
+
+
+
+<h4 id="3、政策解读"><a href="#3、政策解读" class="headerlink" title="3、政策解读"></a>3、政策解读</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701143708635.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701143708635.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701143746141.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701143746141.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701143907865.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701143907865.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144025477.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144025477.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144056076.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144056076.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144253077.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144253077.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144315264.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144315264.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144346228.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144346228.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144410751.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144410751.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144456049.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144456049.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144540749.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144540749.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144624699.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144624699.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144710413.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144710413.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144750539.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144750539.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144810887.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144810887.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144850056.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144850056.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144907922.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144907922.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701144935748.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701144935748.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701145029660.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701145029660.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701145135420.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701145135420.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701145205360.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701145205360.png" class title="This is an example image">
+
+
+
+<h3 id="三、预算审查流程功能讲解"><a href="#三、预算审查流程功能讲解" class="headerlink" title="三、预算审查流程功能讲解"></a>三、预算审查流程功能讲解</h3><p><font color="red">我们的产品不仅仅是一个数据分析进行展示的产品，更是一个结合人大的审查业务，将其具体的审查流程在我们的产品中实现了一个全程在线的一个闭环管理，所以说它更是一个数据和业务相结合的一个产品</font></p>
+<h4 id="1、预决算审查流程功能详解"><a href="#1、预决算审查流程功能详解" class="headerlink" title="1、预决算审查流程功能详解"></a>1、预决算审查流程功能详解</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200701150202011.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200701150202011.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711204104125.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711204104125.png" class title="This is an example image">
+
+
+
+<p>【大会报告的处理】：不含意见的汇总及处理流程，因为目前的大会还不会使用我们的系统。所以目前我们的系统只是把大会生成的报告及代表产生的意见维护到系统中，供后续的报告反馈和管理。（由【财经委】负责上传，并下达给【财政】）</p>
+<h5 id="有流程："><a href="#有流程：" class="headerlink" title="有流程："></a>有流程：</h5><p>审查流程中，同一个人可以分配到不同的小组，但是，只能担任一个小组中的组长。</p>
+<p>任务分配时，财政的表是以四本预算来分的，部门的表是以部门为单位来分的。</p>
+<p>目前：审查人员分配的表不能重复。</p>
+<p>预工委可以对反馈的意见重新调整意见性质。如【设为符合】或【设为问题】</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711210058656.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711210058656.png" class title="This is an example image">
+
+
+
+<p>【审查流程】可以根据客户的具体要求自定义。</p>
+<p>a、预审</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711211042002.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711211042002.png" class title="This is an example image">
+
+
+
+<p>b、初审</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711211110051.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711211110051.png" class title="This is an example image">
+
+
+
+<h5 id="无流程："><a href="#无流程：" class="headerlink" title="无流程："></a>无流程：</h5><p>无需再走小组汇总或预工委汇总，由统一的一个人汇总生成报告。</p>
+<p>注：无流程生成的报告暂不支持后续的【下达】及【审批】。（后续版本或许会增加）</p>
+<h4 id="2、预警处理流程"><a href="#2、预警处理流程" class="headerlink" title="2、预警处理流程"></a>2、预警处理流程</h4><p>闭环流程。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711211842132.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711211842132.png" class title="This is an example image">
+
+
+
+<p>预警处理分为“报告形式“（即【报告管理】）和“明细形式”（即【疑点处理】）。</p>
+<h4 id="3、代表意见处理"><a href="#3、代表意见处理" class="headerlink" title="3、代表意见处理"></a>3、代表意见处理</h4><p>处理代表【会议期间】和【预算执行中】的意见。</p>
+<p>注：【会议期间】的报告只能上传线下生成的报告文件。（因为人代会目前不使用我们的系统）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711212602451.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711212602451.png" class title="This is an example image">
+
+
+
+<h3 id="四、人大产品安装部署即初始化"><a href="#四、人大产品安装部署即初始化" class="headerlink" title="四、人大产品安装部署即初始化"></a>四、人大产品安装部署即初始化</h3><h4 id="1、产品授权"><a href="#1、产品授权" class="headerlink" title="1、产品授权"></a>1、产品授权</h4><p>产品授权【license】授权期限为【当前日期顺延后续三个月】</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711213726499.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711213726499.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711213739198.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711213739198.png" class title="This is an example image">
+
+
+
+<h4 id="2、产品数据库导入"><a href="#2、产品数据库导入" class="headerlink" title="2、产品数据库导入"></a>2、产品数据库导入</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711213924514.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711213924514.png" class title="This is an example image">
+
+
+
+<h4 id="3、部署产品包"><a href="#3、部署产品包" class="headerlink" title="3、部署产品包"></a>3、部署产品包</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711213953628.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711213953628.png" class title="This is an example image">
+
+
+
+<h4 id="4、产初始化"><a href="#4、产初始化" class="headerlink" title="4、产初始化"></a>4、产初始化</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214247523.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214247523.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214312429.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214312429.png" class title="This is an example image">
+
+
+
+<h4 id="5、常见问题"><a href="#5、常见问题" class="headerlink" title="5、常见问题"></a>5、常见问题</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214352349.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214352349.png" class title="This is an example image">
+
+
+
+<h3 id="五、数据采集工具"><a href="#五、数据采集工具" class="headerlink" title="五、数据采集工具"></a>五、数据采集工具</h3><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214550923.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214550923.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214616750.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214616750.png" class title="This is an example image">
+
+
+
+<h4 id="【EXCEL】上报"><a href="#【EXCEL】上报" class="headerlink" title="【EXCEL】上报"></a>【EXCEL】上报</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711214649343.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711214649343.png" class title="This is an example image">
+
+
+
+<h5 id="1、采集准备"><a href="#1、采集准备" class="headerlink" title="1、采集准备"></a>1、采集准备</h5><p>目的：设置一个数据库的信息，定义EXCEL要采集到的目的数据库。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711215307093.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711215307093.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711215422913.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711215422913.png" class title="This is an example image">
+
+
+
+<h5 id="2、建采集模板"><a href="#2、建采集模板" class="headerlink" title="2、建采集模板"></a>2、建采集模板</h5><p>目的：将EXCEL数据区域的【起始行】、【起始列】、【表头区域】等信息设置好。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711215453706.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711215453706.png" class title="This is an example image">
+
+
+
+<p>a、上传模板</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711215636849.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711215636849.png" class title="This is an example image">
+
+
+
+<p>b、模板配置</p>
+<p>【数据所属】就是ODS表中的【DATA_VERSION】</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711215905173.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711215905173.png" class title="This is an example image">
+
+
+
+<p>c、指定报表</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711220017370.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711220017370.png" class title="This is an example image">
+
+
+
+<p>d、指定字段</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711220102314.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711220102314.png" class title="This is an example image">
+
+
+
+<p>点击【完成】后关系才会存到数据库中。</p>
+<h6 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h6><p>【模板】是基于【元数据】的层面来建立的。</p>
+<p>a、手动添加</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711220711225.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711220711225.png" class title="This is an example image">
+
+
+
+<p>b、自动采集</p>
+<p>数据库中已经建好的。【模式】：即为数据库账号。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711220737645.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711220737645.png" class title="This is an example image">
+
+
+
+<p>建完采集作业后需要进行作业调度，才能真正把数据抽过来。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711221034048.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711221034048.png" class title="This is an example image">
+
+
+
+<h6 id="模板复制"><a href="#模板复制" class="headerlink" title="模板复制"></a>模板复制</h6><p>视频：数据采集1</p>
+<h5 id="3、设采集任务"><a href="#3、设采集任务" class="headerlink" title="3、设采集任务"></a>3、设采集任务</h5><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711221914653.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711221914653.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711222004296.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711222004296.png" class title="This is an example image">
+
+
+
+<h6 id="数据上报"><a href="#数据上报" class="headerlink" title="数据上报"></a>数据上报</h6><p>专家模式”</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711222408933.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711222408933.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711222451960.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711222451960.png" class title="This is an example image">
+
+
+
+<h5 id="4、审数据审核"><a href="#4、审数据审核" class="headerlink" title="4、审数据审核"></a>4、审数据审核</h5><p>目的：数据上传后进的是一个临时表【npcs_ods_tmp】，审核后才会进入ODS表.（临时表中会自动消失）</p>
+<h3 id="六、预警功能"><a href="#六、预警功能" class="headerlink" title="六、预警功能"></a>六、预警功能</h3><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223257471.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223257471.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223309887.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223309887.png" class title="This is an example image">
+
+
+
+<h4 id="1、预警指标设置"><a href="#1、预警指标设置" class="headerlink" title="1、预警指标设置"></a>1、预警指标设置</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223443273.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223443273.png" class title="This is an example image">
+
+
+
+<h5 id="【信息设置】：导入信息表"><a href="#【信息设置】：导入信息表" class="headerlink" title="【信息设置】：导入信息表"></a>【信息设置】：导入信息表</h5><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223549229.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223549229.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223619013.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223619013.png" class title="This is an example image">
+
+
+
+<h5 id="【指标创建】"><a href="#【指标创建】" class="headerlink" title="【指标创建】"></a>【指标创建】</h5><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223710805.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223710805.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711223738392.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711223738392.png" class title="This is an example image">
+
+
+
+<h4 id="2、预警指标执行"><a href="#2、预警指标执行" class="headerlink" title="2、预警指标执行"></a>2、预警指标执行</h4><p>【执行策略】选择【增量】。</p>
+<p>【全量】：是把该条预警中的预警信息全部删掉再进行插入。这样的话后续操作时会造成预警信息标志位的丢失。</p>
+<p>【主键重复策略】：选择【跳过，保留原有数据】</p>
+<h5 id="定时执行"><a href="#定时执行" class="headerlink" title="定时执行"></a>定时执行</h5><p>【指标执行】还可以通过平台的调度任务【定时】执行。</p>
+<p> st1：【数据平台】–【存储过程调度】–【预警指标执行】–【添加】</p>
+<p>选择【数据源】、【名称】（及存储过程名称）</p>
+<p>需要把预警【存储过程模型】添加进来。此操作就是把启用的、有效期内的预警进行执行。</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230204315.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230204315.png" class title="This is an example image">
+
+
+
+<p>st2：【数据平台】–【调度执行】–【添加】</p>
+<p>【模型信息】选择【存储过程模型】</p>
+<p>此步就是那个添加一个任务</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230452596.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230452596.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230522359.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230522359.png" class title="This is an example image">
+
+
+
+<h4 id="3、预警查询"><a href="#3、预警查询" class="headerlink" title="3、预警查询"></a>3、预警查询</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230631084.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230631084.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230646611.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230646611.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711230704305.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711230704305.png" class title="This is an example image">
+
+
+
+<p>【三级穿透，四级展示】</p>
+<h4 id="4、预警处理"><a href="#4、预警处理" class="headerlink" title="4、预警处理"></a>4、预警处理</h4><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711231245918.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711231245918.png" class title="This is an example image">
+
+
+
+<p>【只能选择一种方式】</p>
+<h3 id="七、实战之财政预算审查"><a href="#七、实战之财政预算审查" class="headerlink" title="七、实战之财政预算审查"></a>七、实战之财政预算审查</h3><p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711232051910.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711232051910.png" class title="This is an example image">
+
+
+
+<p>报表的展示依赖于ODS层的数据。</p>
+<p>第一步：分析表的展示还需进行【编码匹配】，即要到ODS表中补充【XM_CODE】这一列。</p>
+<p>第二步：然后及逆行ETL调度，即把数据从ODS层面抽取到DW层面。（分析表的展示是依赖于DW层的数据）</p>
+<p>st1：【数据采集】–【数据匹配】–找到相应报表，确定信息，点击【批量匹配】</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711233525715.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711233525715.png" class title="This is an example image">
+
+
+
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711233710469.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711233710469.png" class title="This is an example image">
+
+<p>注：【批量匹配会有遗漏，需要后续刷编码】</p>
+<p>st2：【数据采集】–【调度执行】–选中对应作业点击【立即执行】</p>
+<p>（可以在【看看历史】查看调度情况）</p>
+<p><img src="/2020/07/12/IMG/IMG%5Cimage-20200711234050474.png" alt></p>
+<img src="/2020/07/12/IMG/image-20200711234050474.png" class title="This is an example image">]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/05/31/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
+
+<h2 id="文本插图"><a href="#文本插图" class="headerlink" title="文本插图"></a>文本插图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img XXX.png This is an example image %&#125;</span><br><span class="line">&#123;% asset_img 图片名称 图片赘述 %&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>FAN`SQL</title>
@@ -371,83 +1260,6 @@
 　　
 　</p>
 <p>　create or replace view<br>　　v_sale(year,month1,month2,month3,month4,month5,month6,　　<br>　　month7,month8,month9,month10,month11,month12)<br>　　as<br>　　select<br>　　substrb(month,1,4),<br>　　sum(decode(substrb(month,5,2),’01’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’02’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’03’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’04’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’05’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’06’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’07’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’08’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’09’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’10’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’11’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’12’,sell,0))<br>　　from sale<br>　　group by substrb(month,1,4);<br>————————————————<br>版权声明：本文为CSDN博主「小小工匠」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/yangshangwei/java/article/details/51425458" target="_blank" rel="noopener">https://blog.csdn.net/yangshangwei/java/article/details/51425458</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>NODE</title>
-    <url>/2020/06/17/YY%60NODE/</url>
-    <content><![CDATA[<h3 id="1、首页工作台问题"><a href="#1、首页工作台问题" class="headerlink" title="1、首页工作台问题"></a>1、首页工作台问题</h3><p>【工作台】中点击没有挂载报表的【四个模块】后，系统中其他菜单触发无效<br>修改办法：–&gt;找到人大包相应路径文件【npcs-web-8.30\npcs\functionPages\workbench_cp】，将以下代码更改</p>
-<p>更改前：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">                   parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);         </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
-<p>更改后：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*打开页签*/</span></span><br><span class="line">        budgetClick: function(item) &#123;</span><br><span class="line">        	if(item.AREA_CODE)&#123;</span><br><span class="line">                     parent.$addTab(&#123;</span><br><span class="line">	                menuId: item.AREA_CODE,</span><br><span class="line">	                menuName: item.AREA_NAME,</span><br><span class="line">	                url: item.URL,</span><br><span class="line">	                menuLogo: ''</span><br><span class="line">	            &#125;);</span><br><span class="line">        	&#125;            </span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、审查菜单配置"><a href="#2、审查菜单配置" class="headerlink" title="2、审查菜单配置"></a>2、审查菜单配置</h3><p>【菜单审查配置】中【业务分类】无法更换问题：<br>解决办法：–&gt;找到人大包相应路径文件【\npcs\menuandshowplan\menuandshowplan.js】，将以下代码【覆盖】原始代码</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">getPlanLbRela:function(showPlan_id,selectFlag)&#123;</span><br><span class="line">                var that = this;</span><br><span class="line">                axios.get("/ywgl/getPlanByMenu",&#123;</span><br><span class="line">                    params:&#123;</span><br><span class="line">                        menuid:that.menudata.menu_id,</span><br><span class="line">                        subject_id:that.version_id</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).then(function(res)&#123;</span><br><span class="line">                    var data = res.data;</span><br><span class="line">                    if(data.errorCode=='1')&#123;</span><br><span class="line">                        that.delScMlList=[];</span><br><span class="line">                        if(data.showplanList&amp;&amp;data.showplanList.length&amp;&amp;!selectFlag)&#123;</span><br><span class="line">                         that.showPlanData=data.showplanList[0];</span><br><span class="line">                            that.assignFrom(that.showPlanData);</span><br><span class="line">                        &#125;</span><br><span class="line">                        that.ywScMlList=data.reviewLbList;</span><br><span class="line">                        that.ywScMlIdList=[];</span><br><span class="line">                        for(var i = 0;i&lt;that.ywScMlList.length;i++)&#123;</span><br><span class="line">                            that.ywScMlIdList.push(that.ywScMlList[i].LB_ID);</span><br><span class="line">                        &#125;</span><br><span class="line">                        // this.handleSelect(this.curYwId);</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        that.$message(&#123;</span><br><span class="line">                            message: "查询失败",</span><br><span class="line">                            type: 'warning'</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).catch(function(e)&#123;</span><br><span class="line"></span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、报表弹窗重影"><a href="#3、报表弹窗重影" class="headerlink" title="3、报表弹窗重影"></a>3、报表弹窗重影</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">修改相应主题表文件夹的脚本，将对应弹窗中的txt(<span class="string">""</span>)置空</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、审查阶段设置"><a href="#4、审查阶段设置" class="headerlink" title="4、审查阶段设置"></a>4、审查阶段设置</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">数据库中对表【<span class="selector-tag">NPCS_SYS_VERSION</span>】中【<span class="selector-tag">IDX_NO</span>】字段进行排序设置，并在<span class="selector-tag">BI</span>中设置相应报表中【审查阶段】如下的默认值。</span><br><span class="line">&lt;#=ardb("SELECT min(T.VERSION_CODE)  FROM NPCS_SYS_VERSION T  WHERE T.PARENT_VERSION_CODE = '"+diminf("审查类别",@sclb,'VERSION_CODE')+"' ORDER BY  T.VERSION_CODE").join(";")#&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5、修改端口后注意事项"><a href="#5、修改端口后注意事项" class="headerlink" title="5、修改端口后注意事项"></a>5、修改端口后注意事项</h3><h4 id="01、数据库中5个端口"><a href="#01、数据库中5个端口" class="headerlink" title="01、数据库中5个端口"></a>01、数据库中5个端口</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> npcs_module t <span class="keyword">set</span> t.module_url = <span class="keyword">replace</span>(t.module_url,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_analysis t <span class="keyword">set</span> t.analysis_url = <span class="keyword">replace</span>(t.analysis_url,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_sys_manage t <span class="keyword">set</span> t.chr_value = <span class="keyword">replace</span>(t.chr_value,<span class="string">'http://10.82.1.98:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> npcs_portal_area_conf t <span class="keyword">set</span> t.url = <span class="keyword">replace</span>(t.url,<span class="string">'http://192.168.1.8:7001/bi'</span>,<span class="string">'http://10.82.1.96:7001/bi'</span>);</span><br><span class="line"><span class="keyword">update</span> sys_menu t <span class="keyword">set</span> t.url = <span class="keyword">replace</span>(t.url,<span class="string">'10.10.65.14:8001'</span>,<span class="string">'10.82.1.96:8005'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> sys_userpara <span class="keyword">WHERE</span> chr_code <span class="keyword">LIKE</span> <span class="string">'NPCS_REPORT_URL%'</span><span class="keyword">for</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="02、BI中的端口"><a href="#02、BI中的端口" class="headerlink" title="02、BI中的端口"></a>02、BI中的端口</h4><p>BI中<font color="gree">分析与展现</font>–&gt;<font color="gree">公式模块</font>的端口</p>
-<h3 id="6、BI"><a href="#6、BI" class="headerlink" title="6、BI"></a>6、BI</h3><h4 id="01、版本问题"><a href="#01、版本问题" class="headerlink" title="01、版本问题"></a>01、版本问题</h4><p>一般我们拿到的都是预算批复的数据，为了防止点其他版本的时候数据显示的问题，所以需要进行如下设置：<br>在报表上面的参数栏里添加两个参数，一个是<font color="gree">数据版本</font>，参数名为<font color="gree">@data_version</font>。一个是<font color="gree">默认版本</font>，参数名是<font color="gree">@mrbb</font>，默认值要这样设置:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.默认版本：</span><br><span class="line">&lt;#=ardb('select max(data_version) from V_NPCS_WARNING_FB_RPT').max()#&gt;</span><br><span class="line"><span class="selector-tag">b</span>.浮动维的过滤条件里面也要加上语句：</span><br><span class="line"><span class="selector-tag">if</span>(<span class="keyword">@data_version</span>=''|<span class="keyword">@data_version</span>='null'|<span class="keyword">@data_version</span>='undefined',V_NPCS_WARNING_FB_RPT.DATA_VERSION=<span class="keyword">@mrbb</span>,V_NPCS_WARNING_FB_RPT.DATA_VERSION=<span class="keyword">@data_version</span>)</span><br></pre></td></tr></table></figure>
-
-<p>注：将语句中的<font color="gree">主题表</font>改成相应的主题表。</p>
-<h4 id="02、系统中表明显示业务类型"><a href="#02、系统中表明显示业务类型" class="headerlink" title="02、系统中表明显示业务类型"></a>02、系统中表明显示业务类型</h4><p>在BI中触发一下相应主体域的<font color="gree">维表</font></p>
-<h3 id="7、预警"><a href="#7、预警" class="headerlink" title="7、预警"></a>7、预警</h3><h4 id="01、预警图片"><a href="#01、预警图片" class="headerlink" title="01、预警图片"></a>01、预警图片</h4><p>str1，flag添加 设置字符型  没有flag需要添加flag字段<br>str2，修改图片前缀</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">if(Q4=9,'',if(Q4 IN [2,3,4],'vfs/root/products/ebi/sys/picture/绿色.png',if(O4=1,'vfs/root/products/ebi/sys/picture/蓝色.png',IF(O4=2,'vfs/root/products/ebi/sys/picture/黄色.png',IF(O4=3,'vfs/root/products/ebi/sys/picture/红色.png','')))))</span><br></pre></td></tr></table></figure>
-
-<h4 id="02、预警提示"><a href="#02、预警提示" class="headerlink" title="02、预警提示"></a>02、预警提示</h4><p>常见模板：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">时序过快：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度高于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line"></span><br><span class="line">时序过慢：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度低于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">比上年同期降幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数低于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line"></span><br><span class="line">比上年同期增幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数高于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数不足预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，低于阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数超出预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，超出阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数超出调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，超出阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数不足调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，低于阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="03、预警涉及的表"><a href="#03、预警涉及的表" class="headerlink" title="03、预警涉及的表"></a>03、预警涉及的表</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">npcs_jdyj_yjjbdy</span>:预警级别定义表（可修改预警的颜色）</span><br></pre></td></tr></table></figure>
-
-<h4 id="04、预警点颜色问题"><a href="#04、预警点颜色问题" class="headerlink" title="04、预警点颜色问题"></a>04、预警<font color="greed">点</font>颜色问题</h4><p>a、【预警查询统计】：</p>
-<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource%5C_posts%5CYY%60NODE%5C%E9%A2%84%E8%AD%A61.png" alt></p>
-<img src="/2020/06/17/YY%60NODE/%E9%A2%84%E8%AD%A61.png" class title="This is an example image">
-
-<p>修改：<font color="greed">npcs-web-8.30\pages\rd\yjxxcx</font>的==YJXXCX.JS==文件</p>
-<p>b、【预警信息明细】：</p>
-<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource%5C_posts%5CYY%60NODE%5C%E9%A2%84%E8%AD%A62.png" alt></p>
-<img src="/2020/06/17/YY%60NODE/%E9%A2%84%E8%AD%A62.png" class title="This is an example image">
-
-<p>修改：<font color="greed">npcs_jdyj_yjjbdy</font>表中的颜色码</p>
-<p>c、【预警信息分析】：</p>
-<p>【预警信息分析】首页及其下钻取的各个页面中的颜色，需要到BI中对应的表中修改<font color="gree">图片前缀</font></p>
-<h3 id="8、清除weblogic缓存"><a href="#8、清除weblogic缓存" class="headerlink" title="8、清除weblogic缓存"></a>8、清除<font color="gree">weblogic</font>缓存</h3><p>删除相应域的对应文件夹</p>
-<p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5CYY%60NODE%5C2.jpg" alt></p>
-<h3 id="9、系统授权过期"><a href="#9、系统授权过期" class="headerlink" title="9、系统授权过期"></a>9、系统授权过期</h3><p>常见提示：</p>
-<p>1、<font color="red">java.lang.IllegalArgumentException</font>: 授权已过期!</p>
-<h3 id="10、刷编码"><a href="#10、刷编码" class="headerlink" title="10、刷编码"></a>10、刷编码</h3><p>注释：<br>rownum = 1等待全表扫描完成，然后返回一行；<br>NPCS_ODS_BMJS_SZZB（数据表）可从报表管理中查看；<br> 数据表里含有类、款、项编码时，需将其合并一起组成需要的编码，例：xm_code=hode1||hode2(||是拼接的意思)；<br>数据表里本身含有编码的则不需要刷；<br>财政预算里会出现一张表里含有多个区县，刷编码时，先随意为其匹配一个编码，再将一块区县的编码清空，然后去数据匹配里进行匹配，其他块的区县按照弄好的一块进行匹配。<br>部门决算编码匹配代码：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--收入功能</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.xm_code=(<span class="keyword">select</span> xm_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code=<span class="string">'015'</span> <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.xm_name=t.xm_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--收入结余</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.incbalacc_code=(<span class="keyword">select</span> incbalacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.xm_name=t.xm_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出功能</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.expfunc_code=(<span class="keyword">select</span> expfunc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.expfunc_name=t.expfunc_name <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出功能结余</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.expbalacc_code=(<span class="keyword">select</span> expbalacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.expfunc_name=t.expfunc_name <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>   <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> xm_name <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>  <span class="keyword">and</span> xm_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="comment">--支出性质或经济分类</span></span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.depexpeco_code=(<span class="keyword">select</span> depexpeco_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2018</span> <span class="keyword">and</span> s.depexpeco_name=t.depexpeco_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span> )</span><br><span class="line"><span class="keyword">where</span> yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span>    <span class="keyword">and</span> depexpeco_code <span class="keyword">is</span> <span class="literal">null</span>  ;</span><br><span class="line"><span class="keyword">update</span> NPCS_ODS_BMJS_SZZB t <span class="keyword">set</span> t.balacc_code=(<span class="keyword">select</span> balacc_code <span class="keyword">from</span> NPCS_ODS_BMJS_SZZB s <span class="keyword">where</span></span><br><span class="line">yw_type=<span class="string">'CZ_JS_BM_BM_0001'</span> <span class="keyword">and</span> dept_code =<span class="string">'015'</span>  <span class="keyword">and</span> <span class="keyword">year</span>=<span class="number">2019</span> <span class="keyword">and</span> s.depexpeco_name=t.depexpeco_name  <span class="keyword">and</span> <span class="keyword">rownum</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="11、报告反馈问题"><a href="#11、报告反馈问题" class="headerlink" title="11、报告反馈问题"></a>11、报告反馈问题</h3><h4 id="a、反馈时上传的附件word文档"><a href="#a、反馈时上传的附件word文档" class="headerlink" title="a、反馈时上传的附件word文档"></a>a、反馈时上传的附件word文档</h4><p>系统中下载的word文档后缀默认为【doc】,填写反馈内容后还需把后缀名改为【docx】才能正常上传。</p>
-<h3 id="12、服务器端口总结"><a href="#12、服务器端口总结" class="headerlink" title="12、服务器端口总结"></a>12、服务器端口总结</h3><h4 id="a、182-92-199-36"><a href="#a、182-92-199-36" class="headerlink" title="a、182.92.199.36"></a>a、182.92.199.36</h4><p><img src="/2020/06/17/YY%60NODE/C:%5CFAN-MOMO%5Chexo%5Csource_posts%5CYY%60NODE%5C%E7%AB%AF%E5%8F%A31.jpg" alt></p>
-<img src="/2020/06/17/YY%60NODE/%E7%AB%AF%E5%8F%A31.jpg" class title="This is an example image">]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/05/31/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h2 id="摘要显示"><a href="#摘要显示" class="headerlink" title="摘要显示"></a>摘要显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">开启：excerpt_description: <span class="literal">true</span></span><br><span class="line">方法1：description: 显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">方法2：&lt;!--more--&gt; （文章截断）</span><br></pre></td></tr></table></figure>
-
-<h2 id="文本插图"><a href="#文本插图" class="headerlink" title="文本插图"></a>文本插图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img XXX.png This is an example image %&#125;</span><br><span class="line">&#123;% asset_img 图片名称 图片赘述 %&#125;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
 </search>
