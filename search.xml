@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>RDCS</title>
+    <url>/2020/07/12/RDCS/</url>
+    <content><![CDATA[<p>能级测试1</p>
+<a id="more"></a>
+
+<h3 id="初级"><a href="#初级" class="headerlink" title="初级"></a>初级</h3><p><img src="/2020/07/12/RDCS/RDCS%5C%E5%88%9D%E7%BA%A7.png" alt></p>
+<img src="/2020/07/12/RDCS/%E5%88%9D%E7%BA%A7.png" class title="人大初级自主测试">
+
+<h3 id="中级"><a href="#中级" class="headerlink" title="中级"></a>中级</h3><p><img src="/2020/07/12/RDCS/RDCS%5C%E4%B8%AD%E7%BA%A7.png" alt></p>
+<img src="/2020/07/12/RDCS/%E4%B8%AD%E7%BA%A7.png" class title="人大中级自主测试">]]></content>
+  </entry>
+  <entry>
     <title>IMG</title>
     <url>/2020/07/12/IMG/</url>
     <content><![CDATA[<p>人大初级测试</p>
@@ -788,16 +800,9 @@
 <img src="/2020/07/12/IMG/image-20200711234050474.png" class title="This is an example image">]]></content>
   </entry>
   <entry>
-    <title>RDCS</title>
-    <url>/2020/07/12/RDCS/</url>
-    <content><![CDATA[<p>能级测试1</p>
-<a id="more"></a>
-
-<h3 id="初级"><a href="#初级" class="headerlink" title="初级"></a>初级</h3><p><img src="/2020/07/12/RDCS/RDCS%5C%E5%88%9D%E7%BA%A7.png" alt></p>
-<img src="/2020/07/12/RDCS/%E5%88%9D%E7%BA%A7.png" class title="人大初级自主测试">
-
-<h3 id="中级"><a href="#中级" class="headerlink" title="中级"></a>中级</h3><p><img src="/2020/07/12/RDCS/RDCS%5C%E4%B8%AD%E7%BA%A7.png" alt></p>
-<img src="/2020/07/12/RDCS/%E4%B8%AD%E7%BA%A7.png" class title="人大中级自主测试">]]></content>
+    <title>aa</title>
+    <url>/2020/06/29/aa/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>NODE</title>
@@ -907,11 +912,6 @@
 <h3 id="832单个模块触发报500问题"><a href="#832单个模块触发报500问题" class="headerlink" title="832单个模块触发报500问题"></a>832单个模块触发报500问题</h3><h4 id="情形一、预警指标、参数管理报500"><a href="#情形一、预警指标、参数管理报500" class="headerlink" title="情形一、预警指标、参数管理报500"></a>情形一、<font color="red">预警指标、参数管理</font>报500</h4><p><font color="greed">conf</font>文件夹下<font color="yellow">application.properties</font>中缺少【redis.password=】这一行参数</p>
 <p><img src="/2020/06/17/YY%60NODE/YY%60NODE%5C7.png" alt></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>aa</title>
-    <url>/2020/06/29/aa/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>FAN`SQL</title>
