@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/3.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="会当临绝顶，一览众山小。🧗‍♂️">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FAN&#96;SQL">
+<meta property="og:url" content="http://yoursite.com/2020/06/28/FAN%60SQL/index.html">
+<meta property="og:site_name" content="木马">
+<meta property="og:description" content="会当临绝顶，一览众山小。🧗‍♂️">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-28T08:09:54.000Z">
+<meta property="article:modified_time" content="2020-06-30T05:08:48.000Z">
+<meta property="article:author" content="墨寒">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/06/28/FAN%60SQL/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>FAN`SQL | 木马</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before, .use-motion .logo-line-after {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line-before"></i>
+      <h1 class="site-title">木马</h1>
+      <i class="logo-line-after"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-函数简介："><span class="nav-text">decode()函数简介：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值型函数"><span class="nav-text">数值型函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#返回绝对值-abs-x"><span class="nav-text">返回绝对值 abs(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回正负值-sign-x"><span class="nav-text">返回正负值 sign(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回较大的最小整数-ceil-x"><span class="nav-text">返回较大的最小整数 ceil(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回较小的最大整数-floor-x"><span class="nav-text">返回较小的最大整数 floor(x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回x的y次幂-power-x-y"><span class="nav-text">返回x的y次幂 power(x,y)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#【相近】exp-y"><span class="nav-text">【相近】exp(y)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SIN-1-57079"><span class="nav-text">SIN(1.57079)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COS-3-1415927"><span class="nav-text">COS(-3.1415927)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COSH-20"><span class="nav-text">  COSH(20)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASIN-0-5"><span class="nav-text"> ASIN(0.5)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ATAN-1"><span class="nav-text">   ATAN(1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电话号码"><span class="nav-text">电话号码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UPP"><span class="nav-text">UPP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AABBCCDD"><span class="nav-text">AABBCCDD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UPPER"><span class="nav-text">UPPER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INSTRING"><span class="nav-text">  INSTRING</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LPAD-‘杨’-10-’-’"><span class="nav-text">LPAD(‘杨’,10,’*’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RPAD-‘GAO’-10-’-A’"><span class="nav-text">RPAD(‘GAO’,10,’*A’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT"><span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-1"><span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-2"><span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEXT-3"><span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST"><span class="nav-text">TEST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TEST-1"><span class="nav-text">TEST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SYSDATE"><span class="nav-text">SYSDATE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EXTRACT-YEARFROMDATE’2001-2-16"><span class="nav-text">EXTRACT(YEARFROMDATE’2001-2-16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LOCALTIMESTAMP"><span class="nav-text">LOCALTIMESTAMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CURRENT-TIMESTAMP"><span class="nav-text">CURRENT_TIMESTAMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DBTIMEZONE"><span class="nav-text">DBTIMEZONE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CHARTOROWID-‘AAAADEAABAAAAZSAA"><span class="nav-text">CHARTOROWID(‘AAAADEAABAAAAZSAA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROWIDTOCHAR-ROWID"><span class="nav-text">ROWIDTOCHAR(ROWID)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conversion"><span class="nav-text">conversion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CONVERSION"><span class="nav-text">CONVERSION</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXTORAW-‘A123’"><span class="nav-text">HEXTORAW(‘A123’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RAWTOHEX-‘A123’"><span class="nav-text">RAWTOHEX(‘A123’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TO-CHAR-TO-DATE-‘2016-06-02’-’"><span class="nav-text">TO_CHAR(TO_DATE(‘2016-06-02’,’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TO-CHAR-100-’XX’"><span class="nav-text">TO_CHAR(100,’XX’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test"><span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test-1"><span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NLS-CHARSET-ID-‘ZHS16GBK’"><span class="nav-text">NLS_CHARSET_ID(‘ZHS16GBK’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NLS-CHARSET-NAME-852"><span class="nav-text">NLS_CHARSET_NAME(852)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-NULL-1-2-3"><span class="nav-text">COALESCE(NULL,1,2,3)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-88-3-4-5-99"><span class="nav-text">COALESCE(88,3,4,5,99)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#COALESCE-NULL-NULL-NULL-NULL"><span class="nav-text">COALESCE(NULL,NULL,NULL,NULL)</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="墨寒"
+      src="/images/1.png">
+  <p class="site-author-name" itemprop="name">墨寒</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Google</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.sioe.cn/yingyong/yanse-rgb-16" title="color → https:&#x2F;&#x2F;www.sioe.cn&#x2F;yingyong&#x2F;yanse-rgb-16" rel="noopener" target="_blank"><i class="fab fa-lastfm fa-fw"></i>color</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/yourname" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/FAN%60SQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.png">
+      <meta itemprop="name" content="墨寒">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木马">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          FAN`SQL
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-28 16:09:54" itemprop="dateCreated datePublished" datetime="2020-06-28T16:09:54+08:00">2020-06-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-30 13:08:48" itemprop="dateModified" datetime="2020-06-30T13:08:48+08:00">2020-06-30</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">会当临绝顶，一览众山小。🧗‍♂️</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <a id="more"></a>
+
+
+
+<h3 id="decode-函数简介："><a href="#decode-函数简介：" class="headerlink" title="decode()函数简介："></a>decode()函数简介：</h3><p>主要作用：将查询结果翻译成其他值（即以其他形式表现出来，以下举例说明）；</p>
+<p>使用方法：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span> <span class="keyword">decode</span>（columnname，值<span class="number">1</span>,翻译值<span class="number">1</span>,值<span class="number">2</span>,翻译值<span class="number">2</span>,...值n,翻译值n,缺省值）</span><br><span class="line"><span class="keyword">From</span> talbename</span><br><span class="line"><span class="keyword">Where</span> …</span><br><span class="line">其中columnname为要选择的<span class="keyword">table</span>中所定义的<span class="keyword">column</span>，</span><br><span class="line">·含义解释：</span><br><span class="line"><span class="keyword">decode</span>(条件,值<span class="number">1</span>,翻译值<span class="number">1</span>,值<span class="number">2</span>,翻译值<span class="number">2</span>,...值n,翻译值n,缺省值)的理解如下：</span><br><span class="line"><span class="keyword">if</span> （条件==值<span class="number">1</span>）</span><br><span class="line"> <span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值<span class="number">1</span>)</span><br><span class="line"><span class="keyword">elsif</span> （条件==值<span class="number">2</span>）</span><br><span class="line"><span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值<span class="number">2</span>)　　　　</span><br><span class="line">......</span><br><span class="line"><span class="keyword">elsif</span> （条件==值n）</span><br><span class="line"> <span class="keyword">then</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(翻译值n)</span><br><span class="line"><span class="keyword">else</span>　　　　</span><br><span class="line"><span class="keyword">return</span>(缺省值)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
+
+<p>注：其中缺省值可以是你要选择的column name 本身，也可以是你想定义的其他值，比如Other等；</p>
+<h3 id="数值型函数"><a href="#数值型函数" class="headerlink" title="数值型函数"></a>数值型函数</h3><h4 id="返回绝对值-abs-x"><a href="#返回绝对值-abs-x" class="headerlink" title="返回绝对值 abs(x)"></a>返回绝对值 abs(x)</h4><p>ABS(X)<br>【功能】返回x的绝对值<br>【参数】x，数字型表达式<br>【返回】数字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">SQL&gt; select abs(100) , abs(-100) from dual ;</span><br><span class="line">  ABS(100)  ABS(-100)</span><br><span class="line">  <span class="comment">------------------</span></span><br><span class="line">     100        100</span><br></pre></td></tr></table></figure>
+
+<h4 id="返回正负值-sign-x"><a href="#返回正负值-sign-x" class="headerlink" title="返回正负值 sign(x)"></a>返回正负值 sign(x)</h4><p>sign(x)<br>【功能】返回x的正负值<br>【参数】x，数字型表达式<br>【返回】数字，若为正值返回1，负值返回-1，0返回0</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">SQL&gt; select sign(100), sign(-100),sign(0) from dual ;</span><br><span class="line">SIGN(100) SIGN(-100)    SIGN(0)</span><br><span class="line"><span class="comment">-------------------</span></span><br><span class="line">1         -1          0</span><br></pre></td></tr></table></figure>
+
+<h4 id="返回较大的最小整数-ceil-x"><a href="#返回较大的最小整数-ceil-x" class="headerlink" title="返回较大的最小整数 ceil(x)"></a>返回较大的最小整数 ceil(x)</h4><p>ceil(x)<br>【功能】返回大于等于x的最小整数值<br>【参数】x，数字型表达式<br>【返回】数字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">SQL&gt; select ceil(3.1) , ceil(3.1+5.2), ceil(0) from dual ;</span><br><span class="line"> CEIL(3.1) CEIL(3.1+5.2)    CEIL(0)</span><br><span class="line"> <span class="comment">----------------------------</span></span><br><span class="line"> 4             9          0</span><br></pre></td></tr></table></figure>
+
+<h4 id="返回较小的最大整数-floor-x"><a href="#返回较小的最大整数-floor-x" class="headerlink" title="返回较小的最大整数 floor(x)"></a>返回较小的最大整数 floor(x)</h4><p>floor(x)<br>【功能】返回小于等于x的最大整数值<br>【参数】x，数字型表达式<br>【返回】数字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">SQL&gt; select floor(3.1) , floor(3.1+5.2), floor(0) from dual ;</span><br><span class="line">FLOOR(3.1) FLOOR(3.1+5.2)   FLOOR(0)</span><br><span class="line"><span class="comment">-------------------------</span></span><br><span class="line">3              8          0</span><br></pre></td></tr></table></figure>
+
+<h4 id="返回x的y次幂-power-x-y"><a href="#返回x的y次幂-power-x-y" class="headerlink" title="返回x的y次幂 power(x,y)"></a>返回x的y次幂 power(x,y)</h4><p>power(x,y)<br>【功能】返回x的y次幂<br>【参数】x，y 数字型表达式<br>【返回】数字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">SQL&gt; select power(2.5 ,2), power(1.5,0),power(20,-1) from dual ;</span><br><span class="line">POWER(2.5,2) POWER(1.5,0) POWER(20,-1)</span><br><span class="line"><span class="comment">-------------------------</span></span><br><span class="line">6.25            1         0.05</span><br></pre></td></tr></table></figure>
+
+<h5 id="【相近】exp-y"><a href="#【相近】exp-y" class="headerlink" title="【相近】exp(y)"></a>【相近】exp(y)</h5><p>返回e的y次幂。（e为数学常量）</p>
+<p>【关系】z=power(x,y),则y=1/log(z,x) (条件z,x&gt;0)</p>
+<p>返回常量e的y次幂 exp(y)<br>exp(y)<br>【功能】返回e的y次幂（e为数学常量）<br>【参数】y，数字型表达式<br>【返回】数字</p>
+<p>SQL&gt; select exp(3) ,exp(0),exp(-3) from dual ;</p>
+<pre><code>EXP(3)     EXP(0)    EXP(-3)</code></pre><hr>
+<p>20.0855369          1 0.04978706<br>1<br>2<br>3<br>4<br>5<br>【相近】power(x,y)<br>返回e的y次幂。</p>
+<p>【相反】ln(y)<br>返回e为底的自然对数。</p>
+<p>返回以x为底的y的对数 log(x,y)<br>【功能】返回以x为底的y的对数<br>【参数】x，y,数字型表达式，<br>【条件】x,y都必须大于0<br>【返回】数字</p>
+<p>SQL&gt; select power(4,2) , log(16,2),1/log(16,4) from dual ;</p>
+<p>POWER(4,2)  LOG(16,2) 1/LOG(16,4)</p>
+<hr>
+<pre><code>16       0.25           2</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>SQL&gt; select power(6.5,3),log(274.625,3),1/log(power(6.5,3),6.5) from dual;</p>
+<p>POWER(6.5,3) LOG(274.625,3) 1/LOG(POWER(6.5,3),6.5)</p>
+<hr>
+<pre><code>274.625 0.195642520743                       3</code></pre><p>1<br>2<br>3<br>4<br>5<br>【相近】ln(y)<br>返回e为底的y的对数。（e为数学常量）</p>
+<p>【关系】z=power(x,y),则y=1/log(z,x) (条件z,x&gt;0)</p>
+<p>返回以e为底的y的对数（e为数学常量）<br>ln(y)<br>【功能】返回以e为底的y的对数（e为数学常量）<br>【参数】y，数字型表达式 (条件y&gt;0)<br>【返回】数字</p>
+<p>SQL&gt; select exp(3),exp(-3),ln(20.0855369),ln(0.049787068) from dual;</p>
+<pre><code>EXP(3)    EXP(-3) LN(20.0855369) LN(0.049787068)</code></pre><hr>
+<p>20.0855369 0.04978706 2.999999998845 -3.000000007388<br>1<br>2<br>3<br>4<br>5<br>6<br>【相近】log(x,y)<br>返回以x为底的y的对数</p>
+<p>【相反】exp(y)<br>返回e的y次幂</p>
+<p>返回x除以y的余数 mod(x,y)<br>【功能】返回x除以y的余数<br>【参数】x,y，数字型表达式<br>【返回】数字</p>
+<p>SQL&gt; select mod(23,8),mod(24,8) from dual;</p>
+<p> MOD(23,8)  MOD(24,8)</p>
+<hr>
+<pre><code>7          0</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>返回四舍五入后的值 round(x[,y])<br>round(x[,y])<br>【功能】返回四舍五入后的值<br>【参数】x,y，数字型表达式,<br>如果y不为整数则截取y整数部分，<br>如果y&gt;0则四舍五入为y位小数，<br>如果y小于0则四舍五入到小数点向左第y位。<br>【返回】数字</p>
+<p>SQL&gt;  select round(5555.6666,2.1),round(5555.6666,-2.6),round(5555.6666) from dual;</p>
+<p>ROUND(5555.6666,2.1) ROUND(5555.6666,-2.6) ROUND(5555.6666)</p>
+<hr>
+<pre><code>5555.67                  5600             5556</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>【相近】trunc(x[,y])<br>返回截取后的值，用法同round(x[,y]),只是不四舍五入</p>
+<p>返回x按精度y截取后的值 trun(x[,y])<br>【功能】返回x按精度y截取后的值<br>【参数】x,y，数字型表达式,</p>
+<p>如果y不为整数则截取y整数部分，<br>如果y&gt;0则截取到y位小数，<br>如果y小于0则截取到小数点向左第y位，小数前其它数据用0表示。<br>【返回】数字</p>
+<p>SQL&gt;  select trunc(5555.66666,2.1),trunc(5555.66666,-2.6),trunc(5555.033333)  from dual;</p>
+<p>TRUNC(5555.66666,2.1) TRUNC(5555.66666,-2.6) TRUNC(5555.033333)</p>
+<hr>
+<pre><code>5555.66                   5500               5555</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>【相近】round(x[,y])<br>返回截取后的值，用法同trunc(x[,y]),只是要做四舍五入</p>
+<p>返回x的平方根 sqrt(x)<br>sqrt(x)<br>【功能】返回x的平方根<br>【参数】x数字型表达式<br>【返回】数字</p>
+<p>SQL&gt; select sqrt(64),sqrt(10) from dual;</p>
+<p>  SQRT(64)   SQRT(10)</p>
+<hr>
+<pre><code>8 3.16227766</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>三角函数<br>SIN(x)<br>【功能】返回一个数字的正弦值</p>
+<p>SQL&gt; select sin(1.57079) from dual;</p>
+<h2 id="SIN-1-57079"><a href="#SIN-1-57079" class="headerlink" title="SIN(1.57079)"></a>SIN(1.57079)</h2><p>0.9999999999<br>1<br>2<br>3<br>4<br>5<br>SIGH(x)<br>【功能】返回双曲正弦的值</p>
+<p>SQL&gt; select sin(20),sinh(20) from dual;</p>
+<p>   SIN(20)   SINH(20)</p>
+<hr>
+<p>0.91294525 242582597.<br>1<br>2<br>3<br>4<br>5<br>COS(x)<br>【功能】返回一个给定数字的余弦</p>
+<p>SQL&gt; select cos(-3.1415927) from dual;</p>
+<h2 id="COS-3-1415927"><a href="#COS-3-1415927" class="headerlink" title="COS(-3.1415927)"></a>COS(-3.1415927)</h2><p>-0.999999999999<br>1<br>2<br>3<br>4<br>5<br>6<br>COSH(x)<br>【功能】返回一个数字反余弦值</p>
+<p>SQL&gt; select cosh(20) from dual;</p>
+<h2 id="COSH-20"><a href="#COSH-20" class="headerlink" title="  COSH(20)"></a>  COSH(20)</h2><p>242582597.<br>1<br>2<br>3<br>4<br>5<br>TAN<br>【功能返回数字的正切值</p>
+<p>SQL&gt; select tan(20),tan(10) from dual;</p>
+<p>   TAN(20)    TAN(10)</p>
+<hr>
+<p>2.23716094 0.64836082<br>1<br>2<br>3<br>4<br>5<br>TANH<br>【功能返回数字n的双曲正切值</p>
+<p>SQL&gt; select tanh(20),tan(20) from dual;</p>
+<p>  TANH(20)    TAN(20)</p>
+<hr>
+<pre><code>1 2.23716094</code></pre><p>1<br>2<br>3<br>4<br>5<br>ASIN(x)<br>【功能】给出反正弦的值<br>【示例】select asin(0.5) from dual;<br>返回：0.52359878</p>
+<p>ACOS(x)<br>【功能】给出反余弦的值</p>
+<p>SQL&gt; select asin(0.5) from dual;</p>
+<h2 id="ASIN-0-5"><a href="#ASIN-0-5" class="headerlink" title=" ASIN(0.5)"></a> ASIN(0.5)</h2><p>0.52359877<br>1<br>2<br>3<br>4<br>5<br>6<br>ATAN(x)<br>【功能】返回一个数字的反正切值</p>
+<p>SQL&gt;  select atan(1) from dual;</p>
+<h2 id="ATAN-1"><a href="#ATAN-1" class="headerlink" title="   ATAN(1)"></a>   ATAN(1)</h2><p>0.78539816<br>1<br>2<br>3<br>4<br>5<br>字符型函数<br>返回字符表达式最左端字符的ASCII 码值 ASCII(x1)<br>ASCII(x1)<br>【功能】：返回字符表达式最左端字符的ASCII 码值。<br>【参数】：x1，字符表达式<br>【返回】：数值型</p>
+<p>SQL&gt; select ascii(‘A’) A,ascii(‘a’) a,ascii(‘ ‘) space,ascii(‘示’) hz from dual;</p>
+<pre><code>A          A      SPACE         HZ</code></pre><hr>
+<pre><code>65         97         32      51902</code></pre><p>1<br>2<br>3<br>4<br>5<br>【说明】在ASCII（）函数中，纯数字的字符串可不用‘’括起来，但含其它字符的字符串必须用‘’括起来使用，否则会出错。<br>　　如果最左端是汉字，只取汉字最左半边字符的ASCII 码</p>
+<p>【互反函数】：chr()</p>
+<p>返回ASCII为x的字符 chr()<br>CHR(n1)<br>【功能】：将ASCII 码转换为字符。<br>【参数】：n1,为0 ~ 255，整数<br>【返回】：字符型</p>
+<p>SQL&gt;  select chr(54740) zhao,chr(65) chr65 from dual;</p>
+<p>ZHAO CHR65</p>
+<hr>
+<p>赵   A<br>1<br>2<br>3<br>4<br>5<br>6<br>【互反函数】：ASCII</p>
+<p>连接两个字符串 concat(c1,c2)<br>CONCAT(c1,c2)<br>【功能】连接两个字符串<br>【参数】c1，c2 字符型表达式<br>【返回】字符型<br>同：c1||c2</p>
+<p>SQL&gt; select concat(‘010-‘,’88888888’)||’转3456’ 电话号码 from dual;</p>
+<h2 id="电话号码"><a href="#电话号码" class="headerlink" title="电话号码"></a>电话号码</h2><p>010-88888888转3456<br>1<br>2<br>3<br>4<br>5<br>把每个单词的首字个字母变成大写 initcap(c1)<br>INITCAP(c1)<br>【功能】返回字符串并将字符串的第一个字母变为大写，其它字母小写;<br>【参数】c1字符型表达式<br>【返回】字符型</p>
+<p>SQL&gt; select initcap(‘smith abc aBC’) upp from dual ;</p>
+<h2 id="UPP"><a href="#UPP" class="headerlink" title="UPP"></a>UPP</h2><p>Smith Abc Abc<br>1<br>2<br>3<br>4<br>5<br>把整个字符串转换为小写 lower(c1)<br>LOWER(c1)<br>【功能】：将字符串全部转为小写<br>【参数】：c1，字符表达式<br>【返回】：字符型</p>
+<p>SQL&gt; select lower(‘AaBbCcDd’)AaBbCcDd from dual;</p>
+<h2 id="AABBCCDD"><a href="#AABBCCDD" class="headerlink" title="AABBCCDD"></a>AABBCCDD</h2><p>aabbccdd<br>1<br>2<br>3<br>4<br>5<br>把整个字符串转换为大写 upper(c1)<br>UPPER(c1)<br>【功能】将字符串全部转为大写<br>【参数】c1，字符表达式<br>【返回】字符型</p>
+<p>SQL&gt;  select upper(‘AaBbCcDd’) upper from dual;</p>
+<h2 id="UPPER"><a href="#UPPER" class="headerlink" title="UPPER"></a>UPPER</h2><p>AABBCCDD<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>把每个单词首个字母变为大写 nls_initcap(x[,y])<br>NLS_INITCAP(x[,y])<br>【功能】返回字符串并将字符串的第一个字母变为大写，其它字母小写;<br>【参数】x字符型表达式<br>【参数】Nls_param可选，<br>查询数据级的NLS设置:select * from nls_database_parameters;</p>
+<p>例如：<br>指定排序的方式(nls_sort=) 。<br>nls_sort=SCHINESE_RADICAL_M（部首、笔画）<br>nls_sort=SCHINESE_STROKE_M（笔画、部首SCHINESE_PINYIN_M（拼音））</p>
+<p>【返回】字符型</p>
+<p>SQL&gt; select nls_initcap(‘ab cde’) “test”, nls_initcap(‘a c b d e’,’nls_sort= SCHINESE_PINYIN_M’) “test1” from dual;</p>
+<p>test   test1</p>
+<hr>
+<p>Ab Cde A C B D E<br>1<br>2<br>3<br>4<br>5</p>
+<p>SQL&gt; select nls_initcap(‘ab cde’) “test”,nls_initcap(‘a c b d e’,’NLS_LANGUAGE=AMERICAN’) “test1” from dual;</p>
+<p>test   test1</p>
+<hr>
+<p>Ab Cde A C B D E<br>1<br>2<br>3<br>4<br>5<br>6<br>把整个字符串转换为小写 nls_lower(x[,y])<br>NLS_LOWER(x[,y])<br>【功能】返回字符串并将字符串的变为小写;<br>【参数】x字符型表达式<br>【参数】Nls_param可选，指定排序的方式(nls_sort=) 。<br>SCHINESE_RADICAL_M（部首、笔画）<br>SCHINESE_STROKE_M（笔画、部首SCHINESE_PINYIN_M（拼音））<br>【返回】字符型</p>
+<p>SQL&gt;  select nls_LOWER(‘ab cde’) “test”,nls_LOWER(‘a c b d e’,’nls_sort= SCHINESE_PINYIN_M’) “test1” from dual;</p>
+<p>test   test1</p>
+<hr>
+<p>ab cde a c b d e<br>1<br>2<br>3<br>4<br>5<br>把整个字符串转换为大写 nls_upper(x[,y])<br>NLS_UPPER(x[,y])<br>【功能】返回字符串并将字符串的转换为大写;<br>【参数】x字符型表达式<br>【参数】Nls_param可选，指定排序的方式(nls_sort=) 。<br>SCHINESE_RADICAL_M（部首、笔画）<br>SCHINESE_STROKE_M（笔画、部首SCHINESE_PINYIN_M（拼音））<br>【返回】字符型</p>
+<p>SQL&gt; select NLS_UPPER(‘ab cde’) “test”,NLS_UPPER(‘a c b d e’,’nls_sort= SCHINESE_PINYIN_M’) “test1” from dual;</p>
+<p>test   test1</p>
+<hr>
+<p>AB CDE A C B D E<br>1<br>2<br>3<br>4<br>5<br>字符串中搜索字符位置(全角算1字符) instr(C1,C2[,I[,J]])<br>INSTR(C1,C2[,I[,J]])<br>【功能】在一个字符串中搜索指定的字符,返回发现指定的字符的位置;<br>【说明】多字节符(汉字、全角符等)，按1个字符计算<br>【参数】<br>C1 被搜索的字符串<br>C2 希望搜索的字符串<br>I 搜索的开始位置,默认为1<br>J 第J次出现的位置,默认为1<br>【返回】数值</p>
+<p>SQL&gt; select instr(‘oracle traning’,’ra’,1,2) instring from dual;</p>
+<h2 id="INSTRING"><a href="#INSTRING" class="headerlink" title="  INSTRING"></a>  INSTRING</h2><pre><code>9</code></pre><p>1<br>2<br>3<br>4<br>5<br>SQL&gt; select instr(‘重庆某软件公司’,’某’,1,1),instrb(‘重庆某软件公司’,’某’,1,1) instring from dual;</p>
+<p>INSTR(‘重庆某软件公司’,’某’,1,   INSTRING</p>
+<hr>
+<pre><code>3          5</code></pre><p>1<br>2<br>3<br>4<br>5<br>字符串中搜索字符位置(全角算2字符) instrb(C1,C2[,I[,J]])<br>INSTRB(C1,C2[,I[,J]])<br>【功能】在一个字符串中搜索指定的字符,返回发现指定的字符的位置;<br>【说明】多字节符(汉字、全角符等)，按2个字符计算<br>【参数】<br>C1 被搜索的字符串<br>C2 希望搜索的字符串<br>I 搜索的开始位置,默认为1<br>J 第J次出现的位置,默认为1<br>【返回】数值</p>
+<p>SQL&gt; select instr(‘重庆某软件公司’,’某’,1,1),instrb(‘重庆某软件公司’,’某’,1,1) instring from dual;</p>
+<p>INSTR(‘重庆某软件公司’,’某’,1,   INSTRING</p>
+<hr>
+<pre><code>3          5</code></pre><p>1<br>2<br>3<br>4<br>5<br>返回字符串的长度（全角算1字符） length(c1)<br>LENGTH(c1)<br>【功能】返回字符串的长度;<br>【说明】多字节符(汉字、全角符等)，按1个字符计算<br>【参数】C1 字符串<br>【返回】数值型</p>
+<p>SQL&gt;  select length(‘小工匠’),length(‘北京市海锭区’),length(‘北京TO_CHAR’) from dual;</p>
+<p>LENGTH(‘小工匠’) LENGTH(‘北京市海锭区’) LENGTH(‘北京TO_CHAR’)</p>
+<hr>
+<pre><code>3                      6                     9</code></pre><p>1<br>2<br>3<br>4<br>5<br>返回字符串的长度（全角算2字符）lengthb(c1)<br>LENGTH(c1)<br>【功能】返回字符串的长度;<br>【说明】多字节符(汉字、全角符等)，按2个字符计算<br>【参数】C1 字符串<br>【返回】数值型</p>
+<p>SQL&gt;  select lengthb(‘小工匠’),lengthb(‘北京市海锭区’),lengthb(‘北京TO_CHAR’) from dual;</p>
+<p>LENGTHB(‘小工匠’) LENGTHB(‘北京市海锭区’) LENGTHB(‘北京TO_CHAR’)</p>
+<hr>
+<pre><code>6                      12                     11</code></pre><p>1<br>2<br>3<br>4<br>5<br>返回字符串的长度（其他）lengthc(c1) length2(c1) length4(c1)<br>LENGTHC(c1).LENGTH2(c1).LENGTH4(c1)<br>【功能】返回字符串的长度;<br>【说明】多字节符(汉字、全角符等)，按1个字符计算<br>【参数】C1 字符串<br>【返回】数值型</p>
+<p>SQL&gt;  select length(‘小工匠’),length(‘北京市海锭区’),length(‘北京TO_CHAR’) from dual;</p>
+<p>LENGTH(‘小工匠’) LENGTH(‘北京市海锭区’) LENGTH(‘北京TO_CHAR’)</p>
+<hr>
+<pre><code>3                      6                     9</code></pre><p>1<br>2<br>3<br>4<br>5<br>Oracle中的字符函数中，有一类函数是求字符长度的函数，length、lengthB、lengthC、length2、length4几个函数中比较常用的是length、lengthB。</p>
+<p>他们的含义分别是：<br>Length函数返回字符的个数，使用定义是给定的字符集来计算字符的个数<br>LENGTHB给出该字符串的byte<br>LENGTHC使用纯Unicode<br>LENGTH2使用UCS2<br>LENGTH4使用UCS4</p>
+<p>SQL&gt; Select length(‘你好’), lengthB(‘你好’),lengthC(‘你好’),length2(‘你好’), length4(‘你好’)  from dual;</p>
+<p>LENGTH(‘你好’) LENGTHB(‘你好’) LENGTHC(‘你好’) LENGTH2(‘你好’) LENGTH4(‘你好’)</p>
+<hr>
+<pre><code>2               4               2               2               2</code></pre><p>1<br>2<br>3<br>4<br>5<br>在左边添加字符 lpad(c1,n[,c2])<br>LPAD(c1,n[,c2])<br>【功能】在字符串c1的左边用字符串c2填充，直到长度为n时为止<br>【参数】C1 字符串<br>n 追加后字符总长度<br>c2 追加字符串,默认为空格<br>【返回】字符型<br>【说明】如果c1长度大于n，则返回c1左边n个字符<br>如果如果c1长度小于n，c2和c1连接后大于n，则返回连接后的右边n个字符</p>
+<p>SQL&gt;  select lpad(‘杨’,10,’*’) from dual;</p>
+<h2 id="LPAD-‘杨’-10-’-’"><a href="#LPAD-‘杨’-10-’-’" class="headerlink" title="LPAD(‘杨’,10,’*’)"></a>LPAD(‘杨’,10,’*’)</h2><p><strong>****</strong>杨<br>1<br>2<br>3<br>4<br>5<br>不够字符则用*来填满</p>
+<p>【相似】RPAD()在列的右边粘贴字符<br>【相反】LTRIM() 删除左边出现的字符串</p>
+<p>在右边添加字符 rpad(c1,n[,c2])<br>RPAD(c1,n[,c2])<br>【功能】在字符串c1的右边用字符串c2填充，直到长度为n时为止<br>【参数】C1 字符串<br>n 追加后字符总长度<br>c2 追加字符串,默认为空格<br>【返回】字符型<br>【说明】如果c1长度大于n，则返回c1左边n个字符<br>如果如果c1长度小于n，c1和c2连接后大于n，则返回连接后的左边n个字符<br>如果如果c1长度小于n，c1和c2连接后小于n，则返回c1与多个重复c2连接(总长度&gt;=n)后的左边n个字符</p>
+<p>SQL&gt;  select rpad(‘gao’,10,’*a’) from dual;</p>
+<h2 id="RPAD-‘GAO’-10-’-A’"><a href="#RPAD-‘GAO’-10-’-A’" class="headerlink" title="RPAD(‘GAO’,10,’*A’)"></a>RPAD(‘GAO’,10,’*A’)</h2><p>gao<em>a</em>a<em>a</em><br>1<br>2<br>3<br>4<br>5<br>【相似】LPAD()在列的左边粘贴字符<br>【相反】RTRIM() 删除右边出现的字符串</p>
+<p>删除左边字符 ltrim(c1,[,c2])<br>LTRIM(c1,[,c2])<br>【功能】删除左边出现的字符串<br>【参数】C1 字符串<br>c2 追加字符串,默认为空格<br>【返回】字符型</p>
+<p>SQL&gt; select LTRIM(‘   xiao gong jiang’,’ ‘) text from dual;</p>
+<h2 id="TEXT"><a href="#TEXT" class="headerlink" title="TEXT"></a>TEXT</h2><p>xiao gong jiang</p>
+<p>或者</p>
+<p>SQL&gt; select ltrim(‘   xiao gong jiang’) text from dual;</p>
+<h2 id="TEXT-1"><a href="#TEXT-1" class="headerlink" title="TEXT"></a>TEXT</h2><p>xiao gong jiang</p>
+<p>SQL&gt; select ltrim(‘x   xiao gong jiang’ ,’x’) text from dual;</p>
+<h2 id="TEXT-2"><a href="#TEXT-2" class="headerlink" title="TEXT"></a>TEXT</h2><p>   xiao gong jiang<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>删除右边字符 rtrim(c1,[,c2])<br>RTRIM(c1,[,c2])<br>【功能】删除右边出现的字符串<br>【参数】C1 字符串<br>c2 追加字符串,默认为空格<br>【返回】字符型</p>
+<p>SQL&gt;  select RTRIM(‘ xiao gong jiang XXXX’,’X’) text from dual;</p>
+<h2 id="TEXT-3"><a href="#TEXT-3" class="headerlink" title="TEXT"></a>TEXT</h2><p> xiao gong jiang<br>1<br>2<br>3<br>4<br>5<br>【相似】LTRIM()删除左边出现的字符串<br>【相反】RPAD() 在列的右边粘贴字符</p>
+<p>替换子串字符 replace(c1,c2[,c3])<br>REPLACE(c1,c2[,c3])<br>【功能】将字符表达式值中，部分相同字符串，替换成新的字符串<br>【参数】<br>c1 希望被替换的字符或变量<br>c2 被替换的字符串<br>c3 要替换的字符串，默认为空(即删除之意，不是空格)<br>【返回】字符型</p>
+<p>SQL&gt; select replace(‘he love you’,’he’,’i’) test from dual;</p>
+<h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><p>i love you<br>1<br>2<br>3<br>4<br>5<br>字符串语音表示形式 soundex(c1)<br>SOUNDEX(c1)<br>【功能】返回字符串参数的语音表示形式<br>【参数】c1,字符型<br>【返回】字符串<br>【说明】相对于比较一些读音相同，但是拼写不同的单词是非常有用的。</p>
+<p>计算语音的算法：<br>　　1.保留字符串首字母，但删除a、e、h、i、o、w、y<br>　　2.将下表中的数字赋给相对应的字母<br>　　(1) 1：b、f、p、v<br>　　(2) 2：c、g、k、q、s、x、z<br>　　(3) 3：d、t<br>　　(4) 4：l<br>　　(5) 5：m、n<br>　　(6) 6：r<br>　　3. 如果字符串中存在拥有相同数字的2个以上（包含2个）的字母在一起（例如b和f），或者只有h或w，则删除其他的，只保留1个<br>　　4.只返回前4个字节，不够用0填充</p>
+<p>示例：
+　　</p>
+<p>SQL&gt; select soundex(‘two’),soundex(‘too’),soundex(‘to’) from dual ;</p>
+<p>SOUNDEX(‘TWO’) SOUNDEX(‘TOO’) SOUNDEX(‘TO’)</p>
+<hr>
+<p>T000           T000           T000<br>1<br>2<br>3<br>4<br>5<br>SQL&gt; select soundex(‘cap’),soundex(‘cup’) from dual ;</p>
+<p>SOUNDEX(‘CAP’) SOUNDEX(‘CUP’)</p>
+<hr>
+<p>C100           C100<br>1<br>2<br>3<br>4<br>5</p>
+<p>SQL&gt; select soundex(‘house’),soundex(‘horse’) from dual ;</p>
+<p>SOUNDEX(‘HOUSE’) SOUNDEX(‘HORSE’)</p>
+<hr>
+<p>H200             H620<br>1<br>2<br>3<br>4<br>5<br>6<br>截取字符串（全角算1字符） substr(c1,n1[,n2])<br>SUBSTR(c1,n1[,n2])<br>【功能】取子字符串<br>【说明】多字节符(汉字、全角符等)，按1个字符计算<br>【参数】在字符表达式c1里，从n1开始取n2个字符;若不指定n2,则从第y个字符直到结束的字串.<br>【返回】字符型</p>
+<p>SQL&gt; select substr(‘1301234567890’,3,8) test from dual;</p>
+<h2 id="TEST-1"><a href="#TEST-1" class="headerlink" title="TEST"></a>TEST</h2><p>01234567<br>1<br>2<br>3<br>4<br>5<br>6<br>截取字符串（全角算2字符） substrb(c1,n1[,n2])<br>SUBSTRB(c1,n1[,n2])<br>【功能】取子字符串<br>【说明】多字节符(汉字、全角符等)，按2个字符计算<br>【参数】在字符表达式c1里，从n1开始取n2个字符;若不指定n2,则从第y个字符直到结束的字串.<br>【返回】字符型,如果从多字符右边开始,则用空格表示。</p>
+<p>SQL&gt; select substr(‘我手机13012345678’,4,11),substrb(‘我手机13012345678’,4,11),substrb(‘我手机13012345678’,3,11) test from dual;</p>
+<p>SUBSTR(‘我手机13012345678’,4,1 SUBSTRB(‘我手机13012345678’,4, TEST</p>
+<hr>
+<p>13012345678                     机13012345                    手机1301234<br>1<br>2<br>3<br>4<br>5<br>6<br>替换子字符 translate(c1,c2,c3)<br>TRANSLATE(c1,c2,c3)<br>【功能】将字符表达式值中，指定字符替换为新字符<br>【说明】多字节符(汉字、全角符等)，按1个字符计算<br>【参数】<br>c1 希望被替换的字符或变量<br>c2 查询原始的字符集<br>c3 替换新的字符集，将c2对应顺序字符，替换为c3对应顺序字符<br>如果c3长度大于c2，则c3长出后面的字符无效<br>如果c3长度小于c2，则c2长出后面的字符均替换为空(删除)<br>如果c3长度为0，则返回空字符串。<br>如果c2里字符重复，按首次位置为替换依据</p>
+<p>【返回】字符型</p>
+<p>SQL&gt; select TRANSLATE(‘he love you’,’he’,’i’),<br>  2  TRANSLATE(‘重庆的人’,’重庆的’,’上海男’),<br>  3  TRANSLATE(‘重庆的人’,’重庆的重庆’,’北京男士们’),<br>  4  TRANSLATE(‘重庆的人’,’重庆的重庆’,’1北京男士们’),<br>  5  TRANSLATE(‘重庆的人’,’1重庆的重庆’,’北京男士们’) from dual;</p>
+<p>TRANSLATE(‘HELOVEYOU’,’HE’,’I’ TRANSLATE(‘重庆的人’,’重庆的’, TRANSLATE(‘重庆的人’,’重庆的重 TRANSLATE(‘重庆的人’,’重庆的重 TRANSLATE(‘重庆的人’,’1重庆的?</p>
+<hr>
+<p>i lov you                      上海男人                       北京男人                       1北京人                        京男士人<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>删除左边和右边字符串 trim(c1 from c2)<br>TRIM(c1 from c2)<br>【功能】删除左边和右边出现的字符串<br>【参数】C2 删除前字符串<br>c1 删除字符串,默认为空格<br>【返回】字符型</p>
+<p>SQL&gt;  select TRIM(‘X’ from ‘XXXxiao gong jiangXXXX’),TRIM(‘X’ from ‘XXXxiaoXXgongXXXX’) text from dual;</p>
+<p>TRIM(‘X’FROM’XXXXIAOGONGJIANGX TEXT</p>
+<hr>
+<p>xiao gong jiang                xiaoXXgong<br>1<br>2<br>3<br>4<br>5<br>日期函数<br>返回系统当前日期 sysydate<br>sysdate<br>【功能】：返回当前日期。<br>【参数】：没有参数，没有括号<br>【返回】：日期</p>
+<p>SQL&gt; select sysdate from dual;</p>
+<h2 id="SYSDATE"><a href="#SYSDATE" class="headerlink" title="SYSDATE"></a>SYSDATE</h2><p>2016-5-25 0<br>1<br>2<br>3<br>4<br>5<br>返回指定月数的日期 add_months()<br>add_months(d1,n1)<br>【功能】：返回在日期d1基础上再加n1个月后新的日期。<br>【参数】：d1，日期型，n1数字型<br>【返回】：日期</p>
+<p>SQL&gt; select sysdate ,add_months(sysdate,5) from dual ;</p>
+<p>SYSDATE     ADD_MONTHS(SYSDATE,5)</p>
+<hr>
+<p>2016-5-25 0 2016-10-25 00:27:59<br>1<br>2<br>3<br>4<br>5<br>6<br>返回本月最后一天的日期 last_day()<br>last_day(d1)<br>【功能】：返回日期d1所在月份最后一天的日期。<br>【参数】：d1，日期型<br>【返回】：日期</p>
+<p>SQL&gt; select sysdate , last_day(sysdate) from dual ;</p>
+<p>SYSDATE     LAST_DAY(SYSDATE)</p>
+<hr>
+<p>2016-5-25 0 2016-5-31 00:30:0<br>1<br>2<br>3<br>4<br>5<br>返回两个日期间隔月数 months_between<br>months_between(d1,d2)<br>【功能】：返回日期d1到日期d2之间的月数。<br>【参数】：d1，d2 日期型</p>
+<p>【返回】：数字<br>如果d1&gt;d2，则返回正数<br>如果d1</p>
+<p>SQL&gt; select sysdate , months_between(sysdate ,to_date(‘2016-12-25’,’YYYY-MM-DD’)),  months_between(sysdate ,to_date(‘2015-05-25’,’YYYY-MM-DD’)) from dual ;</p>
+<p>SYSDATE     MONTHS_BETWEEN(SYSDATE,TO_DATE MONTHS_BETWEEN(SYSDATE,TO_DATE</p>
+<hr>
+<p>2016-5-25 0                             -7                             12<br>1<br>2<br>3<br>4<br>5<br>返回时区的对应时间 new_time()<br>NEW_TIME(dt1,c1,c2)<br>【功能】：给出时间dt1在c1时区对应c2时区的日期和时间<br>【参数】：dt1，d2 日期型</p>
+<p>【返回】：日期时间</p>
+<p>【参数】：c1,c2对应的 时区及其简写<br>大西洋标准时间：AST或ADT<br>阿拉斯加_夏威夷时间：HST或HDT<br>英国夏令时：BST或BDT<br>美国山区时间：MST或MDT<br>美国中央时区：CST或CDT<br>新大陆标准时间：NST<br>美国东部时间：EST或EDT<br>太平洋标准时间：PST或PDT<br>格林威治标准时间：GMT<br>Yukou标准时间：YST或YDT</p>
+<p>SQL&gt; select to_char(sysdate,’yyyy.mm.dd hh24:mi:ss’) bj_time,<br>  2  to_char(new_time(sysdate,’PDT’,’GMT’),’yyyy.mm.dd hh24:mi:ss’) los_angles from dual;</p>
+<p>BJ_TIME             LOS_ANGLES</p>
+<hr>
+<p>2016.05.25 00:48:56 2016.05.25 07:48:56<br>1<br>2<br>3<br>4<br>5<br>6<br>SQL&gt; select sysdate bj_time,<br>  2  new_time(sysdate,’PDT’,’GMT’) los_angles from dual;</p>
+<p>BJ_TIME     LOS_ANGLES</p>
+<hr>
+<p>2016-5-25 0 2016-5-25 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>四舍五入后的日期第一天 round()<br>round(d1[,c1])<br>【功能】：给出日期d1按期间(参数c1)四舍五入后的期间的第一天日期（与数值四舍五入意思相近）<br>【参数】：d1日期型,c1为字符型(参数)，c1默认为j（即最近0点日期)<br>【参数表】：c1对应的参数表:<br>最近0点日期: 取消参数c1或j<br>最近的星期日：day或dy或d<br>最近月初日期：month或mon或mm或rm<br>最近季日期：q<br>最近年初日期：syear或year或yyyy或yyy或yy或y(多个y表示精度)<br>最近世纪初日期：cc或scc</p>
+<p>SQL&gt; select sysdate 当时日期,<br>  2  round(sysdate) 最近0点日期,<br>  3  round(sysdate,’day’) 最近星期日,<br>  4  round(sysdate,’month’) 最近月初,<br>  5  round(sysdate,’q’) 最近季初日期,<br>  6  round(sysdate,’year’) 最近年初日期 from dual;</p>
+<p>当时日期    最近0点日期 最近星期日  最近月初    最近季初日期 最近年初日期</p>
+<hr>
+<p>2016-5-25 0 2016-5-25   2016-5-22   2016-6-1    2016-7-1     2016-1-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>返回日期所在期间的第一天 trunc()<br>trunc(d1[,c1])<br>【功能】：返回日期d1所在期间(参数c1)的第一天日期<br>【参数】：d1日期型,c1为字符型(参数)，c1默认为j（即当前日期)<br>【参数表】：c1对应的参数表:<br>最近0点日期: 取消参数c1或j<br>最近的星期日：day或dy或d (每周顺序：日，一，二，三，四，五，六）<br>最近月初日期：month或mon或mm或rm<br>最近季日期：q<br>最近年初日期：syear或year或yyyy或yyy或yy或y(多个y表示精度)<br>最近世纪初日期：cc或scc</p>
+<p>SQL&gt; select sysdate 当时日期,<br>  2  trunc(sysdate) 今天日期,<br>  3  trunc(sysdate,’day’) 本周星期日,<br>  4  trunc(sysdate,’month’) 本月初,<br>  5  trunc(sysdate,’q’) 本季初日期,<br>  6  trunc(sysdate,’year’) 本年初日期 from dual;</p>
+<p>当时日期    今天日期    本周星期日  本月初      本季初日期  本年初日期</p>
+<hr>
+<p>2016-5-25 0 2016-5-25   2016-5-22   2016-5-1    2016-4-1    2016-1-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>返回下周某一天的日期 next_day()<br>next_day(d1[,c1])<br>【功能】：返回日期d1在下周，星期几(参数c1)的日期<br>【参数】：d1日期型,c1为字符型(参数)，c1默认为j（即当前日期)<br>【参数表】：c1对应:星期一，星期二，星期三……星期日<br>【返回】：日期</p>
+<p>SQL&gt; select sysdate 当时日期,<br>  2  next_day(sysdate,’星期一’) 下周星期一,<br>  3  next_day(sysdate,’星期二’) 下周星期二,<br>  4  next_day(sysdate,’星期三’) 下周星期三,<br>  5  next_day(sysdate,’星期四’) 下周星期四,<br>  6  next_day(sysdate,’星期五’) 下周星期五,<br>  7  next_day(sysdate,’星期六’) 下周星期六,<br>  8  next_day(sysdate,’星期日’) 下周星期日 from dual;</p>
+<p>当时日期    下周星期一  下周星期二  下周星期三  下周星期四  下周星期五  下周星期六  下周星期日</p>
+<hr>
+<p>2016-5-25 0 2016-5-30 0 2016-5-31 0 2016-6-1 00 2016-5-26 0 2016-5-27 0 2016-5-28 0 2016-5-29 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>提取时间日期中的数据 extract()<br>extract(c1 from d1)<br>【功能】：日期/时间d1中，参数(c1)的值<br>【参数】：d1日期型(date)/日期时间型(timestamp),c1为字符型(参数)<br>【参数表】：c1对应的参数表详见示例<br>【返回】：字符</p>
+<p>SQL&gt; select<br>  2  extract(hour from timestamp ‘2001-2-16 2:38:40 ‘ ) 小时,<br>  3  extract(minute from timestamp ‘2001-2-16 2:38:40 ‘ ) 分钟,<br>  4  extract(second from timestamp ‘2001-2-16 2:38:40 ‘ ) 秒,<br>  5  extract(DAY from timestamp ‘2001-2-16 2:38:40 ‘ ) 日,<br>  6  extract(MONTH from timestamp ‘2001-2-16 2:38:40 ‘ ) 月,<br>  7  extract(YEAR from timestamp ‘2001-2-16 2:38:40 ‘ ) 年<br>  8   from dual;</p>
+<pre><code>小时       分钟         秒         日         月         年</code></pre><hr>
+<pre><code>2         38         40         16          2       2001</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>SQL&gt; select extract (YEAR from date ‘2001-2-16’ ) from dual;</p>
+<h2 id="EXTRACT-YEARFROMDATE’2001-2-16"><a href="#EXTRACT-YEARFROMDATE’2001-2-16" class="headerlink" title="EXTRACT(YEARFROMDATE’2001-2-16"></a>EXTRACT(YEARFROMDATE’2001-2-16</h2><pre><code>2001</code></pre><p>1<br>2<br>3<br>4<br>5<br>SQL&gt; select sysdate 当前日期,<br>  2  extract(DAY from sysdate ) 日,<br>  3  extract(MONTH from sysdate ) 月,<br>  4  extract(YEAR from sysdate ) 年<br>  5   from dual;</p>
+<p>当前日期            日         月         年</p>
+<hr>
+<p>2016-5-25 0         25          5       2016<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>返回会话中的时间和日期 localtimestamp<br>localtimestamp<br>【功能】：返回会话中的日期和时间<br>【参数】：没有参数，没有括号<br>【返回】：日期</p>
+<p>SQL&gt; select localtimestamp from dual;</p>
+<h2 id="LOCALTIMESTAMP"><a href="#LOCALTIMESTAMP" class="headerlink" title="LOCALTIMESTAMP"></a>LOCALTIMESTAMP</h2><p>25-MAY-16 06.55.31.054928 PM<br>1<br>2<br>3<br>4<br>5<br>返回当前会话时区中的当前日期和时间 current_timestamp<br>current_timestamp<br>【功能】：以timestamp with time zone数据类型返回当前会话时区中的当前日期<br>【参数】：没有参数，没有括号<br>【返回】：日期</p>
+<p>SQL&gt; select current_timestamp from dual ;</p>
+<h2 id="CURRENT-TIMESTAMP"><a href="#CURRENT-TIMESTAMP" class="headerlink" title="CURRENT_TIMESTAMP"></a>CURRENT_TIMESTAMP</h2><p>25-MAY-16 06.58.09.388569 PM +08:00<br>1<br>2<br>3<br>4<br>5<br>6<br>返回数据库时区设置 dbtimezone<br>dbtimezone<br>【功能】：返回时区<br>【参数】：没有参数，没有括号<br>【返回】：字符型</p>
+<p>SQL&gt; select dbtimezone from dual ;</p>
+<h2 id="DBTIMEZONE"><a href="#DBTIMEZONE" class="headerlink" title="DBTIMEZONE"></a>DBTIMEZONE</h2><p>+08:00<br>1<br>2<br>3<br>4<br>5<br>6<br>返回当前会话时区 sessiontimezone<br>SESSIONTIMEZONE<br>【功能】：返回会话时区<br>【参数】：没有参数，没有括号<br>【返回】：字符型</p>
+<p>SQL&gt; select dbtimezone ,sessiontimezone from dual ;</p>
+<p>DBTIMEZONE SESSIONTIMEZONE</p>
+<hr>
+<p>+08:00 +08:00<br>1<br>2<br>3<br>4<br>5<br>变动日期时间数值 interval<br>INTERVAL c1 set1<br>【功能】：变动日期时间数值<br>【参数】：c1为数字字符串或日期时间字符串，set1为日期参数<br>【参数表】：set1具体参照示例<br>【返回】：日期时间格式的数值,前面多个+号<br>以天或天更小单位时可用数值表达式借用，如1表示1天，1/24表示1小时，1/24/60表示1分钟</p>
+<p>SQL&gt; select  trunc(sysdate) ,<br>  2  trunc(sysdate)+(interval ‘1’ second) as pluse1sec, –加1秒(1/24/60/60)<br>  3  trunc(sysdate)+(interval ‘1’ minute) as pluse1min, –加1分钟(1/24/60)<br>  4  trunc(sysdate)+(interval ‘1’ hour) as pluse1hour , –加1小时(1/24)<br>  5  trunc(sysdate)+(INTERVAL ‘1’ DAY) as pluse1day,  –加1天(1)<br>  6  trunc(sysdate)+(INTERVAL ‘1’ MONTH) as pluse1mon, –加1月<br>  7  trunc(sysdate)+(INTERVAL ‘1’ YEAR)as pluse1year, –加1年<br>  8  trunc(sysdate)+(interval ‘01:02:03’ hour to second) as pluseSpecTime1, –加指定小时到秒<br>  9  trunc(sysdate)+(interval ‘01:02’ minute to second) as pluseSpecTime2, –加指定分钟到秒<br> 10  trunc(sysdate)+(interval ‘01:02’ hour to minute) as pluseSpecTime3, –加指定小时到分钟<br> 11  trunc(sysdate)+(interval ‘2 01:02’ day to minute) as pluseSpecTime4 –加指定天数到分钟<br> 12  from dual;</p>
+<p>TRUNC(SYSDATE) PLUSE1SEC PLUSE1MIN PLUSE1HOUR PLUSE1DAY PLUSE1MON PLUSE1YEAR PLUSESPECTIME1 PLUSESPECTIME2 PLUSESPECTIME3 PLUSESPECTIME4</p>
+<hr>
+<p>2016-05-25 2016-05-25  2016-05-25  2016-05-25  2016-05-26 2016-06-25 2017-05-25 2016-05-25 1:0 2016-05-25 0:0 2016-05-25 1:0 2016-05-27 1:0</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>转换函数<br>字符串转为rowid值 chartorowid(c1)<br>chartorowid(c1) 。。<br>【功能】转换varchar2类型为rowid值<br>【参数】c1,字符串，长度为18的字符串，字符串必须符合rowid格式<br>【返回】返回rowid值</p>
+<p>SQL&gt; SELECT chartorowid(‘AAAADeAABAAAAZSAAA’) FROM DUAL;</p>
+<h2 id="CHARTOROWID-‘AAAADEAABAAAAZSAA"><a href="#CHARTOROWID-‘AAAADEAABAAAAZSAA" class="headerlink" title="CHARTOROWID(‘AAAADEAABAAAAZSAA"></a>CHARTOROWID(‘AAAADEAABAAAAZSAA</h2><p>AAAADeAABAAAAZSAAA<br>1<br>2<br>3<br>4<br>5<br>【说明】<br>在Oracle中，每一条记录都有一个rowid，rowid在整个数据库中是唯一的，rowid确定了每条记录是在Oracle中的哪一个数据文件、块、行上。<br>在重复的记录中，可能所有列的内容都相同，但rowid不会相同.</p>
+<p>rowid的值转换为字符串 rowidtochar(rowid)<br>ROWIDTOCHAR(rowid) 。。<br>【功能】转换rowid值为varchar2类型<br>【参数】rowid,固定参数<br>【返回】返回长度为18的字符串</p>
+<p>SQL&gt; select rowidtochar(rowid) from dual ;</p>
+<h2 id="ROWIDTOCHAR-ROWID"><a href="#ROWIDTOCHAR-ROWID" class="headerlink" title="ROWIDTOCHAR(ROWID)"></a>ROWIDTOCHAR(ROWID)</h2><p>AAAAECAABAAAAgqAAA<br>1<br>2<br>3<br>4<br>5<br>6<br>【说明】<br>在Oracle中，每一条记录都有一个rowid，rowid在整个数据库中是唯一的，rowid确定了每条记录是在Oracle中的哪一个数据文件、块、行上。<br>在重复的记录中，可能所有列的内容都相同，但rowid不会相同.</p>
+<p>字符串语言字符集转换 convert(c1,set1,set2)<br>CONVERT(c1,set1,set2)<br>【功能】将源字符串c1 从一个语言字符集set2转换到另一个目的set1字符集<br>【参数】c1,字符串，set1,set2为字符型参数<br>【返回】字符串</p>
+<p>SQL&gt; select convert(‘strutz’,’we8hp’,’f7dec’) “conversion” from dual;</p>
+<h2 id="conversion"><a href="#conversion" class="headerlink" title="conversion"></a>conversion</h2><p>strutz<br>1<br>2<br>3<br>4<br>5<br>SQL&gt; select convert(‘strutz’,’we8hp’,’f7dec’)  as conversion from dual;</p>
+<h2 id="CONVERSION"><a href="#CONVERSION" class="headerlink" title="CONVERSION"></a>CONVERSION</h2><p>strutz<br>1<br>2<br>3<br>4<br>5<br>十六进制构成的字符串转换为二进制 HEXTORAW(c1)<br>HEXTORAW(c1)<br>【功能】将一个十六进制构成的字符串转换为二进制<br>【参数】c1,十六进制的字符串<br>【返回】字符串</p>
+<p>SQL&gt; select HEXTORAW(‘A123’)  from dual;</p>
+<h2 id="HEXTORAW-‘A123’"><a href="#HEXTORAW-‘A123’" class="headerlink" title="HEXTORAW(‘A123’)"></a>HEXTORAW(‘A123’)</h2><p>A123<br>1<br>2<br>3<br>4<br>5<br>二进制构成的字符串转换为十六进制 rawtohex(c1)<br>RAWTOHEX(c1)<br>【功能】将一个二进制构成的字符串转换为十六进制<br>【参数】c1,二进制的字符串<br>【返回】字符串</p>
+<p>SQL&gt; select rawtohex(‘A123’) from dual ;</p>
+<h2 id="RAWTOHEX-‘A123’"><a href="#RAWTOHEX-‘A123’" class="headerlink" title="RAWTOHEX(‘A123’)"></a>RAWTOHEX(‘A123’)</h2><p>41313233<br>1<br>2<br>3<br>4<br>5<br>将日期或数据转换为char数据类型TO_CHAR(x[[,c2],C3])<br>【功能】将日期或数据转换为char数据类型<br>【参数】<br>x是一个date或number数据类型。<br>c2为格式参数<br>c3为NLS设置参数<br>如果x为日期nlsparm=NLS_DATE_LANGUAGE 控制返回的月份和日份所使用的语言。<br>如果x为数字nlsparm=NLS_NUMERIC_CHARACTERS 用来指定小数位和千分位的分隔符，以及货币符号。<br>NLS_NUMERIC_CHARACTERS =”dg”, NLS_CURRENCY=”string”<br>【返回】varchar2字符型</p>
+<p>【说明1】x为数据型时</p>
+<p>to_char(1210.73, ‘9999.9’) 返回 ‘1210.7’<br>to_char(1210.73, ‘9,999.99’) 返回 ‘1,210.73’<br>to_char(1210.73, ‘$9,999.00’) 返回 ‘$1,210.73’<br>to_char(21, ‘000099’) 返回 ‘000021’<br>to_char(852,’xxxx’) 返回’ 354’<br>1<br>2<br>3<br>4<br>5<br>6<br>【说明2】x为日期型,c2可用参数</p>
+<p>to_char(sysdate,’d’) 每周第几天<br>to_char(sysdate,’dd’) 每月第几天<br>to_char(sysdate,’ddd’) 每年第几天<br>to_char(sysdate,’ww’) 每年第几周<br>to_char(sysdate,’mm’) 每年第几月<br>to_char(sysdate,’q’) 每年第几季<br>to_char(sysdate,’yyyy’) 年<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>【示例】带C3示例</p>
+<p>SQL&gt; select to_char(to_date(‘2016-06-02’,’yyyy-mm-dd’),’day’,’NLS_DATE_LANGUAGE = American’) from dual;</p>
+<h2 id="TO-CHAR-TO-DATE-‘2016-06-02’-’"><a href="#TO-CHAR-TO-DATE-‘2016-06-02’-’" class="headerlink" title="TO_CHAR(TO_DATE(‘2016-06-02’,’"></a>TO_CHAR(TO_DATE(‘2016-06-02’,’</h2><p>thursday<br>1<br>2<br>3<br>4<br>5<br>字符串转换为日期型 TO_DATE(X[,c2[,c3]])<br>【功能】将字符串X转化为日期型<br>【参数】c2,c3,字符型，参照to_char()<br>【返回】字符串</p>
+<p>如果x格式为日期型(date)格式时，则相同表达：date x<br>如果x格式为日期时间型(timestamp)格式时，则相同表达：timestamp x</p>
+<p>【相反】 to_char(date[,c2[,c3]])</p>
+<p>SQL&gt; select to_date(‘199912’,’yyyymm’),<br>  2  to_date(‘2000.05.20’,’yyyy.mm.dd’),<br>  3  (date ‘2008-12-31’) XXdate,<br>  4  to_date(‘2008-12-31 12:31:30’,’yyyy-mm-dd hh24:mi:ss’),<br>  5  (timestamp ‘2008-12-31 12:31:30’) XXtimestamp<br>  6  from dual;</p>
+<p>TO_DATE(‘199912’,’YYYYMM’) TO_DATE(‘2000.05.20’,’YYYY.MM. XXDATE TO_DATE(‘2008-12-3112:31:30’,’ XXTIMESTAMP</p>
+<hr>
+<p>1999-12-01      2000-05-20          2008-12-31 2008-12-31 12:31:30 31-DEC-08 12.31.30.000000000 PM<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>字符串转换为字符型TO_NUMBER(X[[,c2],c3])<br>TO_NUMBER(X[[,c2],c3])<br>【功能】将字符串X转化为数字型<br>【参数】c2,c3,字符型，参照to_char()<br>【返回】数字串<br>【相反】 to_char(date[[,c2],c3])</p>
+<p>SQL&gt; select TO_NUMBER(‘199912’),TO_NUMBER(‘450.05’) from dual;</p>
+<p>TO_NUMBER(‘199912’) TO_NUMBER(‘450.05’)</p>
+<hr>
+<pre><code>199912              450.05</code></pre><p>1<br>2<br>3<br>4<br>5<br>转换为16进制。<br>TO_CHAR(100,’XX’)= 64 </p>
+<p>SQL&gt; select TO_CHAR(100,’XX’) from dual ;</p>
+<h2 id="TO-CHAR-100-’XX’"><a href="#TO-CHAR-100-’XX’" class="headerlink" title="TO_CHAR(100,’XX’)"></a>TO_CHAR(100,’XX’)</h2><p> 64<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>半角转化为全角TO_MULTI_BYTE(c1)<br>TO_MULTI_BYTE(c1)<br>【功能】将字符串中的半角转化为全角<br>【参数】c1,字符型<br>【返回】字符串</p>
+<p>SQL&gt; select to_multi_byte(‘高A’) text from dual;</p>
+<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>高Ａ<br>1<br>2<br>3<br>4<br>5<br>全角转化为半角to_single_byte(c1)<br>to_single_byte(c1)<br>【功能】将字符串中的全角转化为半角<br>【参数】c1,字符型<br>【返回】字符串</p>
+<p>SQL&gt; select to_multi_byte(‘高Ａ’) text from dual;</p>
+<h2 id="test-1"><a href="#test-1" class="headerlink" title="test"></a>test</h2><p>高A<br>1<br>2<br>3<br>4<br>5<br>字符集名称转换为ID nls_charset_id(c1)<br>nls_charset_id(c1)<br>【功能】返回字符集名称参应id值<br>【参数】c1,字符型<br>【返回】数值型</p>
+<p>SQL&gt; select nls_charset_id(‘zhs16gbk’) from dual;</p>
+<h2 id="NLS-CHARSET-ID-‘ZHS16GBK’"><a href="#NLS-CHARSET-ID-‘ZHS16GBK’" class="headerlink" title="NLS_CHARSET_ID(‘ZHS16GBK’)"></a>NLS_CHARSET_ID(‘ZHS16GBK’)</h2><pre><code>852</code></pre><p>1<br>2<br>3<br>4<br>5<br>字符集ID转换为名称 nls_charset_name(n1)<br>nls_charset_name(n1)<br>【功能】返回字符集名称参应id值<br>【参数】n1,数值型<br>【返回】字符型</p>
+<p>SQL&gt; select nls_charset_name(852) from dual;</p>
+<h2 id="NLS-CHARSET-NAME-852"><a href="#NLS-CHARSET-NAME-852" class="headerlink" title="NLS_CHARSET_NAME(852)"></a>NLS_CHARSET_NAME(852)</h2><p>ZHS16GBK<br>1<br>2<br>3<br>4<br>5<br>聚组函数<br>统计平均值 AVG([distinct|all]x)<br>AVG([distinct|all]x)<br>【功能】统计数据表选中行x列的平均值。<br>【参数】all表示对所有的值求平均值,distinct只对不同的值求平均值，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。<br>【参数】x，只能为数值型字段<br>【返回】数字值</p>
+<p>SQL&gt; create table table3(xm varchar(8),sal number(7,2));</p>
+<p>Table created<br>SQL&gt; insert into table3 values(‘gao’,1111.11);</p>
+<p>1 row inserted<br>SQL&gt; insert into table3 values(‘gao’,1111.11);</p>
+<p>1 row inserted<br>SQL&gt; insert into table3 values(‘zhu’,5555.55);</p>
+<p>1 row inserted<br>SQL&gt; commit;</p>
+<p>Commit complete</p>
+<p>SQL&gt; select * from table3 ;</p>
+<p>XM         SAL</p>
+<hr>
+<p>gao    1111.11<br>gao    1111.11<br>zhu     5555.55</p>
+<p>SQL&gt; select avg(all sal)   ,avg(distinct sal) , avg(sal) from table3;</p>
+<p>AVG(ALLSAL) AVG(DISTINCTSAL)   AVG(SAL)</p>
+<hr>
+<pre><code>2592.59          3333.33    2592.59</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>统计合计值 SUM([distinct|all]x)<br>【功能】统计数据表选中行x列的合计值。<br>【参数】all表示对所有的值求合计值,distinct只对不同的值求合计值，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。<br>【参数】x，只能为数值型字段<br>【返回】数字值</p>
+<p>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>commit;</p>
+<p>执行统计：<br>SQL&gt; select SUM(distinct sal),SUM(all sal),SUM(sal) from table3;</p>
+<p>SUM(DISTINCTSAL) SUM(ALLSAL)   SUM(SAL)</p>
+<hr>
+<pre><code>6666.66     7777.77    7777.77</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>统计标准误差 STDDEV([distinct|all]x)<br>【功能】统计数据表选中行x列的标准误差。<br>【参数】all表示对所有的值求标准误差,distinct只对不同的值求标准误差，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。<br>【参数】x，只能为数值型字段<br>【返回】数字值</p>
+<p>【示例】<br>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>commit;</p>
+<p>执行统计：<br>SQL&gt; select STDDEV(distinct sal),STDDEV(all sal),STDDEV(sal) from table3;</p>
+<p>STDDEV(DISTINCTSAL) STDDEV(ALLSAL) STDDEV(SAL)</p>
+<hr>
+<p>   3142.69366257674 2565.998630397 2565.998630<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>统计方差 VARIANCE([distinct|all]x)<br>【功能】统计数据表选中行x列的方差。<br>【参数】all表示对所有的值求方差,distinct只对不同的值求方差，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。<br>【参数】x，只能为数值型字段<br>【返回】数字值</p>
+<p>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>commit;</p>
+<p>执行统计：<br>SQL&gt; select VARIANCE(distinct sal),VARIANCE(all sal),VARIANCE(sal) from table3;</p>
+<p>VARIANCE(DISTINCTSAL) VARIANCE(ALLSAL) VARIANCE(SAL)</p>
+<hr>
+<pre><code>9876523.4568     6584348.9712  6584348.9712</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>统计查询所得的行数 count(<em>|[distinct|all]x)<br>count(</em>|[distinct|all]x)<br>【功能】统计数据表选中行x列的合计值。<br>【参数】<br>*表示对满足条件的所有行统计，不管其是否重复或有空值(NULL)<br>all表示对所有的值统计,默认为all<br>distinct只对不同的值统计，<br>如果有参数distinct或all，需有空格与x(列)隔开，均忽略空值(NULL)。<br>【参数】x，可为数字、字符、日期型及其它类型的字段<br>【返回】数字值</p>
+<p>【示例】<br>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>insert into table3 values(‘’,1111.11);<br>insert into table3 values(‘zhu’,0);<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>SQL&gt; select count(*),count(xm),count(all xm),count(distinct sal),count(all sal),count(sal),sum(1) from table3;</p>
+<p>  COUNT(*)  COUNT(XM) COUNT(ALLXM) COUNT(DISTINCTSAL) COUNT(ALLSAL) COUNT(SAL)     SUM(1)</p>
+<hr>
+<pre><code>5          4            4                  3             5          5          5</code></pre><p>1<br>2<br>3<br>4<br>5<br>统计最大值 MAX([distinct|all]x)<br>【功能】统计数据表选中行x列的最大值。<br>【参数】all表示对所有的值求最大值,distinct只对不同的值求最大值，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。<br>【参数】x，可为数字、字符或日期型字段<br>【返回】对应x字段类型</p>
+<p>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>insert into table3 values(‘’,1111.11);<br>insert into table3 values(‘zhu’,0);<br>commit;</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>SQL&gt; select MAX(distinct sal),MAX(xm) from table3;</p>
+<p>MAX(DISTINCTSAL) MAX(XM)</p>
+<hr>
+<pre><code>5555.55 zhu</code></pre><p>1<br>2<br>3<br>4<br>5<br>6<br>统计最小值 MIN([distinct|all]x)<br>【功能】统计数据表选中行x列的最小值。</p>
+<p>【参数】all表示对所有的值求最小值,distinct只对不同的值求最小值，默认为all<br>如果有参数distinct或all，需有空格与x(列)隔开。</p>
+<p>【参数】x，可为数字、字符或日期型字段</p>
+<p>【返回】对应x字段类型<br>注：字符型字段，将忽略空值(NULL)</p>
+<p>环境：<br>create table table3(xm varchar(8),sal number(7,2));<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘gao’,1111.11);<br>insert into table3 values(‘zhu’,5555.55);<br>insert into table3 values(‘’,1111.11);<br>insert into table3 values(‘zhu’,0);<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>SQL&gt; select MIN(distinct sal),MIN(xm),MIN(distinct xm),MIN(all xm) from table3;</p>
+<p>MIN(DISTINCTSAL) MIN(XM) MIN(DISTINCTXM) MIN(ALLXM)</p>
+<hr>
+<pre><code>0 gao  gao         gao</code></pre><p>1<br>2<br>3<br>4<br>5<br>其它函数<br>为空值赋值 nvl() nvl2()<br>nvl()</p>
+<p>【语法】NVL (expr1, expr2) 【功能】若expr1为NULL，返回expr2；expr1不为NULL，返回expr1。<br>注意两者的类型要一致</p>
+<p>nvl2():</p>
+<p>【语法】NVL2 (expr1, expr2, expr3)<br>【功能】expr1不为NULL，返回expr2；expr2为NULL，返回expr3。<br>expr2和expr3类型不同的话，expr3会转换为expr2的类型</p>
+<p>COALESCE函数<br>C,此表达式的功能为返回第一个不为空的表达式，如果都为空则返回空值。</p>
+<p>【语法】OALESCE(表达式1,表达式2,…,表达式n)，n&gt;=2<br>【功能】返回第一个不为空的表达式，如果都为空则返回空值<br>所有表达式必须为同一类型或者能转换成同一类型</p>
+<p>SQL&gt; select coalesce(null ,1,2,3) from dual;</p>
+<h2 id="COALESCE-NULL-1-2-3"><a href="#COALESCE-NULL-1-2-3" class="headerlink" title="COALESCE(NULL,1,2,3)"></a>COALESCE(NULL,1,2,3)</h2><pre><code>1</code></pre><p>SQL&gt;  select coalesce(88,3,4,5,99) from dual;</p>
+<h2 id="COALESCE-88-3-4-5-99"><a href="#COALESCE-88-3-4-5-99" class="headerlink" title="COALESCE(88,3,4,5,99)"></a>COALESCE(88,3,4,5,99)</h2><pre><code>88</code></pre><p>SQL&gt; select coalesce(null,null,null,null) from dual;</p>
+<h2 id="COALESCE-NULL-NULL-NULL-NULL"><a href="#COALESCE-NULL-NULL-NULL-NULL" class="headerlink" title="COALESCE(NULL,NULL,NULL,NULL)"></a>COALESCE(NULL,NULL,NULL,NULL)</h2><p>SQL&gt;<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>所有表达式必须为同一类型或者能转换成同一类型</p>
+<p>条件取值 decode<br>decode(条件,值1,翻译值1,值2,翻译值2,…值n,翻译值n,缺省值)</p>
+<p>【功能】根据条件返回相应值</p>
+<p>【参数】c1, c2, …,cn,字符型/数值型/日期型，必须类型相同或null 注：值1……n<br>不能为条件表达式,这种情况只能用case when then end解决</p>
+<p>·含义解释：　　
+　</p>
+<p>　decode(条件,值1,翻译值1,值2,翻译值2,…值n,翻译值n,缺省值)　<br>1<br>　　该函数的含义如下：　　<br>　　IF 条件=值1 THEN<br>　　RETURN(翻译值1)<br>　　ELSIF 条件=值2 THEN<br>　　RETURN(翻译值2)<br>　　……<br>　　ELSIF 条件=值n THEN<br>　　RETURN(翻译值n)　　<br>　　ELSE<br>　　RETURN(缺省值)<br>　　END IF<br>或者：<br>　when case 条件=值1 THEN<br>　　RETURN(翻译值1)<br>　　ElseCase 条件=值2 THEN<br>　　RETURN(翻译值2)<br>　　……<br>　　ElseCase 条件=值n THEN<br>　　RETURN(翻译值n)　　<br>　　ELSE<br>　　RETURN(缺省值)<br>　　END</p>
+<p>【示例】<br>　　·使用方法：　　<br>　　1、比较大小　　<br>　　select decode(sign(变量1-变量2),-1,变量1,变量2) from dual; –取较小值<br>　　sign()函数根据某个值是0、正数还是负数，分别返回0、1、-1　　<br>　　例如：<br>　　变量1=10，变量2=20<br>　　则sign(变量1-变量2)返回-1，decode解码结果为“变量1”，达到了取较小值的目的。<br>　　<br>　　2、表、视图结构转化　　<br>　　现有一个商品销售表sale，表结构为：　　
+　</p>
+<p>　month　　　 char(6)　　　　　 –月份<br>　　sell　　　　number(10,2)　　　–月销售金额　<br>1<br>2<br>　<br>　　现有数据为：　　
+　</p>
+<p>　200001　　1000<br>　　200002　　1100<br>　　200003　　1200<br>　　200004　　1300<br>　　200005　　1400<br>　　200006　　1500<br>　　200007　　1600<br>　　200101　　1100<br>　　200202　　1200<br>　　200301　　1300<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>　　<br>　　想要转化为以下结构的数据：　　</p>
+<p>　　year　　　char(4)　　　　　 –年份<br>　　month1　　number(10,2)　　　–1月销售金额<br>　　month2　　number(10,2)　　　–2月销售金额<br>　　month3　　number(10,2)　　　–3月销售金额<br>　　month4　　number(10,2)　　　–4月销售金额<br>　　month5　　number(10,2)　　　–5月销售金额<br>　　month6　　number(10,2)　　　–6月销售金额<br>　　month7　　number(10,2)　　　–7月销售金额<br>　　month8　　number(10,2)　　　–8月销售金额<br>　　month9　　number(10,2)　　　–9月销售金额<br>　　month10　　number(10,2)　　　–10月销售金额<br>　　month11　　number(10,2)　　　–11月销售金额<br>　　month12　　number(10,2)　　　–12月销售金额<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>　　<br>　　结构转化的SQL语句为：
+　　
+　</p>
+<p>　create or replace view<br>　　v_sale(year,month1,month2,month3,month4,month5,month6,　　<br>　　month7,month8,month9,month10,month11,month12)<br>　　as<br>　　select<br>　　substrb(month,1,4),<br>　　sum(decode(substrb(month,5,2),’01’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’02’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’03’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’04’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’05’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’06’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’07’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’08’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’09’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’10’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’11’,sell,0)),<br>　　sum(decode(substrb(month,5,2),’12’,sell,0))<br>　　from sale<br>　　group by substrb(month,1,4);<br>————————————————<br>版权声明：本文为CSDN博主「小小工匠」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/yangshangwei/java/article/details/51425458" target="_blank" rel="noopener">https://blog.csdn.net/yangshangwei/java/article/details/51425458</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/17/YY%60NODE/" rel="prev" title="NODE">
+      <i class="fa fa-chevron-left"></i> NODE
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/12/RDCS/" rel="next" title="RDCS">
+      RDCS <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">墨寒</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
