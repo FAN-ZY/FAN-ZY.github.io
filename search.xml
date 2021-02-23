@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/09/18/hello-world/</url>
+    <title>hexo 📦</title>
+    <url>/2020/01/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
@@ -20,23 +20,136 @@
 
 <h2 id="文本插图"><a href="#文本插图" class="headerlink" title="文本插图"></a>文本插图</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img XXX.png This is an example image %&#125;</span><br><span class="line">&#123;% asset_img 图片名称 图片赘述 %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>纪实——冲刺正当季，奋楫莫放松<br>星月轮转，滴水石穿，2020年的这场马拉松开跑便是“举步维艰”，我们的团队却也脚踏实地的坚持到了冲刺的阶段。</p>
-<p>“与星星同行，与月亮作伴”便是近期我们最真实的写照。清丰县、中牟县两个县区的人大项目作为战略性的项目意义非凡，两个项目的时间又严重的重叠，无疑是给我们的团队增加了不小的压力，高时效高质量的标准无疑是一个严峻的考验。我们的团队在理性的对两个项目进行分析后，果断的做出正确的部署，科学的规划，两个项目并行启动，每个人都在自己的岗位上认真努力的发挥着自己最大的热能，经过短短五天的时间，两个项目如期的保质保量地完成了建设！</p>
-<p>也许冲刺的意义就在于此，即便终点就在眼前，不放松，不懈怠，再冲一把，站在终点的时候，汗水才会是甜的！</p>
-<p>勇士——</p>
-<p>“这里情况不严重，不过你们来了也要多注意安全！”——来自客户的叮嘱。</p>
-<p>2020年注定是不平凡的一年，清丰县的人大项目建设完成后，我们与客户积极的沟通准备进一步项目上线的工作，然而，濮阳市区却爆出一例境外输入复阳新冠患者，清丰县也受到波及，并已排查出近三百例密切接触人员，事态尤为严峻！清丰县人大项目是一个战略性项目，客户的信任、关怀以及公司文化熏陶的责任感，让我们告诫自己：不容迟疑，责无旁贷！在同事及领导的叮嘱中我踏上了奔向清丰县的列车，之前觉得这是只一份工作，现在觉得这更是一场战役，说实话，这次的差旅，让我有一种前所未有的使命感。到达客户现场后，我便积极的与客户沟通开展项目上线的工作，“晚上注意安全，尽量不要外出走动”，“有什么事你直接打电话说就好，不用这么麻烦的跑一趟”，“宾馆暖气还没开，如果冷了记得跟前台说加床被子”……客户的关怀，让我们的工作倍感舒心，疫情的乍起也仿佛不曾发生。在与客户的紧密的配合下，清丰县人大项目如期的完成了上线的工作。</p>
-<p>责任感，让我们责无旁贷；使命感，让我们无所畏惧！客户的满意与认可，让我们奋勇直前！</p>
-<p>故事——</p>
-<p>“丰武跟你去，你就不用担心了，有他带你，好好历练一下。”——陈总如是说。</p>
-<p>当接到清丰县的项目时，我脑子中出现了片刻的空白，从没有带过项目的我对自己产生的很大的怀疑，想起面对的是政府的领导时更是有一种自卑的感觉。领导告知我可以选一人帮带我一遭，我首先想到的就是公司的元老级人物——袁丰武。当我向丰武告知此事时，他爽快的应许了，真是艺高人胆大，做事不含糊！</p>
-<p>当我与袁丰武同志到达客户现场时，因为是我负责的项目，在与客户沟通时丰武都把我放在了前位，这一无意的之举着实微妙。在于客户项沟通需求及项目介绍时，袁丰武同志的言辞精准到位，游刃有余，不卑不亢，很快便与客户”打成了一片“，关于项目的洽谈也在顺利的进行着。在高效的完成项目建设初期的环境调研及需求调研外，也给对方留下了专业、负责的好印象。在返程中，袁丰武同志还帮我做项目总结，并提出多点注意事项，作为同事敬佩之余也着实让我感到汗颜……</p>
-<p>这次清丰县的同行，袁丰武同志让我再一次意识到用友是一个大家庭，同事之间只有”竞“，没有“争”，积极进取，共同进步，有“老大哥”头前带路，着实事半功倍！</p>
+<h2 id="指令整理"><a href="#指令整理" class="headerlink" title="指令整理"></a>指令整理</h2><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo -g #安装  </span><br><span class="line">npm update hexo -g #升级  </span><br><span class="line">hexo init #初始化</span><br></pre></td></tr></table></figure>
+
+<h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p</code> == <code>hexo publish</code><br><code>hexo g</code> == <code>hexo generate</code>#生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code>#部署</p>
+<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
+<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署</p>
+<h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单<br><code>hexo generate --watch</code> #监视文件变动</p>
+<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><blockquote>
+<p>两个命令的作用是相同的<br><code>hexo generate --deploy</code><br><code>hexo deploy --generate</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo deploy -g&#96;</span><br><span class="line">&#96;hexo server -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h3><p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;&#96;</span><br><span class="line">&#96;hexo new photo &quot;My Gallery&quot;&#96;</span><br><span class="line">&#96;hexo new &quot;Hello World&quot; --lang tw</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 使用Hexo搭建个人博客</span><br><span class="line">layout: post</span><br><span class="line">date: 2014-03-03 19:07:43</span><br><span class="line">comments: true</span><br><span class="line">categories: Blog</span><br><span class="line">tags: [Hexo]</span><br><span class="line">keywords: Hexo, Blog</span><br><span class="line">description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span><br></pre></td></tr></table></figure>
+
+<h3 id="模版（Scaffold）"><a href="#模版（Scaffold）" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new photo &quot;My Gallery&quot;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody></table>
+<h3 id="设置文章摘要"><a href="#设置文章摘要" class="headerlink" title="设置文章摘要"></a>设置文章摘要</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">以上是文章摘要 &lt;!--more--&gt; 以下是余下全文</span><br></pre></td></tr></table></figure>
+
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;title&gt;&#96;</span><br><span class="line">&#96;hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>:year</td>
+<td>建立的年份（4 位数）</td>
+</tr>
+<tr>
+<td>:month</td>
+<td>建立的月份（2 位数）</td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td>建立的月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td>:day</td>
+<td>建立的日期（2 位数）</td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td>建立的日期（去掉开头的零）</td>
+</tr>
+</tbody></table>
+<h3 id="推送到服务器上"><a href="#推送到服务器上" class="headerlink" title="推送到服务器上"></a>推送到服务器上</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n&#96; #写文章</span><br><span class="line">&#96;hexo g&#96; #生成</span><br><span class="line">&#96;hexo d&#96; #部署 #可与&#96;hexo g&#96;合并为 &#96;hexo d -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><h4 id="1-找不到git部署"><a href="#1-找不到git部署" class="headerlink" title="1.找不到git部署"></a>1.找不到git部署</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a><strong>解决方法</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-部署类型设置git"><a href="#2-部署类型设置git" class="headerlink" title="2.部署类型设置git"></a>2.部署类型设置git</h4><p>hexo 3.0 部署类型不再是<code>github</code>，<code>_config.yml</code> 中修改</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: http:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@***.github.com:***&#x2F;***.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-xcodebuild"><a href="#3-xcodebuild" class="headerlink" title="3. xcodebuild"></a>3. xcodebuild</h4><p>xcode-select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install bcrypt</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-RSS不显示"><a href="#4-RSS不显示" class="headerlink" title="4. RSS不显示"></a>4. RSS不显示</h4><h6 id="安装RSS插件"><a href="#安装RSS插件" class="headerlink" title="安装RSS插件"></a>安装RSS插件</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<h6 id="开启RSS功能"><a href="#开启RSS功能" class="headerlink" title="开启RSS功能"></a>开启RSS功能</h6><p>编辑hexo/_config.yml，添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rss: &#x2F;atom.xml #rss地址  默认即可</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h3><p>1.我使用多说代替自带的评论，在<a href="http://duoshuo.com/" target="_blank" rel="noopener">多说</a> 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name</p>
+<ol>
+<li>在根目录 <code>_config.yml</code> 添加一行 <code>disqus_shortname: jslite</code> 是在多说注册时产生的</li>
+<li>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">&lt;section id&#x3D;&quot;comments&quot;&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;disqus_thread&quot;&gt;</span><br><span class="line">  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href&#x3D;&quot;&#x2F;&#x2F;disqus.com&#x2F;?ref_noscript&quot;&gt;comments powered by Disqus.&lt;&#x2F;a&gt;&lt;&#x2F;noscript&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">  &lt;section id&#x3D;&quot;comments&quot;&gt;</span><br><span class="line">    &lt;!-- 多说评论框 start --&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;ds-thread&quot; data-thread-key&#x3D;&quot;&lt;%&#x3D; post.layout %&gt;-&lt;%&#x3D; post.slug %&gt;&quot; data-title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; data-url&#x3D;&quot;&lt;%&#x3D; page.permalink %&gt;&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;!-- 多说评论框 end --&gt;</span><br><span class="line">    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">    &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    var duoshuoQuery &#x3D; &#123;short_name:&#39;&lt;%&#x3D; config.disqus_shortname %&gt;&#39;&#125;;</span><br><span class="line">      (function() &#123;</span><br><span class="line">        var ds &#x3D; document.createElement(&#39;script&#39;);</span><br><span class="line">        ds.type &#x3D; &#39;text&#x2F;javascript&#39;;ds.async &#x3D; true;</span><br><span class="line">        ds.src &#x3D; (document.location.protocol &#x3D;&#x3D; &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;&#x2F;&#x2F;static.duoshuo.com&#x2F;embed.js&#39;;</span><br><span class="line">        ds.charset &#x3D; &#39;UTF-8&#39;;</span><br><span class="line">        (document.getElementsByTagName(&#39;head&#39;)[0] </span><br><span class="line">         || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      &lt;&#x2F;script&gt;</span><br><span class="line">    &lt;!-- 多说公共JS代码 end --&gt;</span><br><span class="line">  &lt;&#x2F;section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">纪实——冲刺正当季，奋楫莫放松</span><br><span class="line">星月轮转，滴水石穿，2020年的这场马拉松开跑便是“举步维艰”，我们的团队却也脚踏实地的坚持到了冲刺的阶段。</span><br><span class="line"></span><br><span class="line">“与星星同行，与月亮作伴”便是近期我们最真实的写照。清丰县、中牟县两个县区的人大项目作为战略性的项目意义非凡，两个项目的时间又严重的重叠，无疑是给我们的团队增加了不小的压力，高时效高质量的标准无疑是一个严峻的考验。我们的团队在理性的对两个项目进行分析后，果断的做出正确的部署，科学的规划，两个项目并行启动，每个人都在自己的岗位上认真努力的发挥着自己最大的热能，经过短短五天的时间，两个项目如期的保质保量地完成了建设！</span><br><span class="line"></span><br><span class="line">也许冲刺的意义就在于此，即便终点就在眼前，不放松，不懈怠，再冲一把，站在终点的时候，汗水才会是甜的！</span><br><span class="line"></span><br><span class="line">勇士——</span><br><span class="line"></span><br><span class="line">“这里情况不严重，不过你们来了也要多注意安全！”——来自客户的叮嘱。</span><br><span class="line"></span><br><span class="line">2020年注定是不平凡的一年，清丰县的人大项目建设完成后，我们与客户积极的沟通准备进一步项目上线的工作，然而，濮阳市区却爆出一例境外输入复阳新冠患者，清丰县也受到波及，并已排查出近三百例密切接触人员，事态尤为严峻！清丰县人大项目是一个战略性项目，客户的信任、关怀以及公司文化熏陶的责任感，让我们告诫自己：不容迟疑，责无旁贷！在同事及领导的叮嘱中我踏上了奔向清丰县的列车，之前觉得这是只一份工作，现在觉得这更是一场战役，说实话，这次的差旅，让我有一种前所未有的使命感。到达客户现场后，我便积极的与客户沟通开展项目上线的工作，“晚上注意安全，尽量不要外出走动”，“有什么事你直接打电话说就好，不用这么麻烦的跑一趟”，“宾馆暖气还没开，如果冷了记得跟前台说加床被子”......客户的关怀，让我们的工作倍感舒心，疫情的乍起也仿佛不曾发生。在与客户的紧密的配合下，清丰县人大项目如期的完成了上线的工作。</span><br><span class="line"></span><br><span class="line">责任感，让我们责无旁贷；使命感，让我们无所畏惧！客户的满意与认可，让我们奋勇直前！</span><br><span class="line"></span><br><span class="line">故事——</span><br><span class="line"></span><br><span class="line">“丰武跟你去，你就不用担心了，有他带你，好好历练一下。”——陈总如是说。</span><br><span class="line"></span><br><span class="line">当接到清丰县的项目时，我脑子中出现了片刻的空白，从没有带过项目的我对自己产生的很大的怀疑，想起面对的是政府的领导时更是有一种自卑的感觉。领导告知我可以选一人帮带我一遭，我首先想到的就是公司的元老级人物——袁丰武。当我向丰武告知此事时，他爽快的应许了，真是艺高人胆大，做事不含糊！</span><br><span class="line"></span><br><span class="line">当我与袁丰武同志到达客户现场时，因为是我负责的项目，在与客户沟通时丰武都把我放在了前位，这一无意的之举着实微妙。在于客户项沟通需求及项目介绍时，袁丰武同志的言辞精准到位，游刃有余，不卑不亢，很快便与客户”打成了一片“，关于项目的洽谈也在顺利的进行着。在高效的完成项目建设初期的环境调研及需求调研外，也给对方留下了专业、负责的好印象。在返程中，袁丰武同志还帮我做项目总结，并提出多点注意事项，作为同事敬佩之余也着实让我感到汗颜......</span><br><span class="line"></span><br><span class="line">这次清丰县的同行，袁丰武同志让我再一次意识到用友是一个大家庭，同事之间只有”竞“，没有“争”，积极进取，共同进步，有“老大哥”头前带路，着实事半功倍！</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
     <title>FAN`SQL</title>
-    <url>/2020/06/28/FAN%60SQL/</url>
+    <url>/2019/12/12/FAN%60SQL/</url>
     <content><![CDATA[<a id="more"></a>
 
 <h3 id="NVL函数："><a href="#NVL函数：" class="headerlink" title="NVL函数："></a>NVL函数：</h3><p><a href="https://baike.baidu.com/item/NVL" target="_blank" rel="noopener">NVL</a>(E1, E2)的功能为：如果E1为NULL，则函数返回E2，否则返回E1本身。但此函数有一定局限，所以就有了NVL2函数。</p>
@@ -1287,8 +1400,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>用友笔记</title>
-    <url>/2020/06/17/YY%60RDBJ/</url>
+    <title>人大系统笔记</title>
+    <url>/2021/01/01/YY%60RDBJ/</url>
     <content><![CDATA[<h3 id="系统部署"><a href="#系统部署" class="headerlink" title="系统部署"></a>系统部署</h3><h4 id="01、查看系统默认表空间位置"><a href="#01、查看系统默认表空间位置" class="headerlink" title="01、查看系统默认表空间位置"></a>01、查看系统默认表空间位置</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--查看表空间</span></span><br><span class="line"><span class="keyword">select</span>  *  <span class="keyword">from</span>  dba_tablespaces</span><br><span class="line"><span class="comment">--查看表空间文件路径</span></span><br><span class="line"> <span class="keyword">select</span> tablespace_name,file_id,<span class="keyword">bytes</span>/<span class="number">1024</span>/<span class="number">1024</span>,file_name</span><br><span class="line">　　 <span class="keyword">from</span> dba_data_files <span class="keyword">order</span> <span class="keyword">by</span> file_id;</span><br><span class="line"><span class="comment">--查看用户和默认表空间的关系</span></span><br><span class="line"><span class="keyword">select</span>  username,default_tablespace  <span class="keyword">from</span>  dba_users;</span><br></pre></td></tr></table></figure>
 
 
@@ -1320,9 +1433,7 @@
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">expdp [npcs_ayrd/oracle@172.16.16.1:1521/ayrd](mailto:npcs_ayrd/oracle@172.16.16.1:1521/ayrd) dumpfile=ayrd_0916.dmp logfile=ayrd_0916.log remap_schema=npcs_aybi:npcs_bi</span><br></pre></td></tr></table></figure>
 
 <p>语句说明</p>
-<p><img src="/2020/06/17/YY%60RDBJ/6.png" alt></p>
-<img src="/2020/06/17/YY%60RDBJ/6.png" class title="This is an example image">
-
+<p><img src="/2021/01/01/YY%60RDBJ/6.png" alt></p>
 <p>备注: 删除表空间语句（删除表空间之前要先把用户删掉）</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">tablespace</span> npcs <span class="keyword">including</span> <span class="keyword">contents</span> <span class="keyword">and</span> <span class="keyword">datafiles</span>;</span><br></pre></td></tr></table></figure>
 
@@ -1411,15 +1522,15 @@
 <h5 id="5、修改执行明细"><a href="#5、修改执行明细" class="headerlink" title="5、修改执行明细"></a>5、修改执行明细</h5><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> T.*,T.ROWID <span class="keyword">FROM</span>    npcs_portal_area_conf t <span class="keyword">where</span> t.area_code=<span class="string">'SZZX'</span>;</span><br><span class="line"><span class="keyword">update</span> npcs_portal_area_conf t <span class="keyword">set</span> t.url=<span class="string">'http://59.207.104.160:8080/bi/showreport.do?resid=EBI$12$LMI51NC6LUUUNKNMIVWMCKUEC7MTYLMN$1$LCU2UQ0UMMDM8U4CMJ7VP0K3ETC5TUW4.rpttpl&amp;showmenu=false&amp;showparams=true&amp;calcnow=true&amp;showtype=hide&amp;escape=true&amp;id=admin&amp;pw=admin'</span>  <span class="keyword">where</span> t.area_code=<span class="string">'SZZX'</span>;</span><br></pre></td></tr></table></figure>
 
 <p>说明：</p>
-<p><img src="/2020/06/17/YY%60RDBJ/1.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/1.png" alt></p>
 <p>浮动数字，通过执行进度；vw_npcs_budget_progress</p>
 <p>，这个视图进行控制，填写对应的收入和支出的业务类型，执行下视图就好了。</p>
 <p>点击收入进度，跳转具体的表的设置：</p>
 <p>通过npcs_portal_area_conf 进行控制的</p>
-<p><img src="/2020/06/17/YY%60RDBJ/3.png" alt></p>
-<p><img src="/2020/06/17/YY%60RDBJ/4.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/3.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/4.png" alt></p>
 <p>修改地方：</p>
-<p><img src="/2020/06/17/YY%60RDBJ/5.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/5.png" alt></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(<span class="number">1</span>) <span class="keyword">count</span>,sz.gzlbbm,fl.yjzbflmc <span class="keyword">from</span> npcs_warning_data da</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">left</span> <span class="keyword">join</span> npcs_jdyj_yjgzsz sz <span class="keyword">on</span> da.warning_id =sz.gzid </span><br><span class="line"></span><br><span class="line">​    <span class="keyword">left</span> <span class="keyword">join</span> npcs_jdyj_yjzbfl fl <span class="keyword">on</span> sz.gzlbbm = fl.yjzbflbm</span><br><span class="line"></span><br><span class="line"> <span class="keyword">where</span> sz.gzlbbm <span class="keyword">like</span> <span class="string">''</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">group</span> <span class="keyword">by</span> sz.gzlbbm,fl.yjzbflmc</span><br></pre></td></tr></table></figure>
 
 <p>数据来源：<code>VW_NPCS_BUDGET_PROGRESS</code></p>
@@ -1443,20 +1554,18 @@
 <h4 id="报告反馈问题"><a href="#报告反馈问题" class="headerlink" title="报告反馈问题"></a>报告反馈问题</h4><h5 id="a、反馈时上传的附件word文档"><a href="#a、反馈时上传的附件word文档" class="headerlink" title="a、反馈时上传的附件word文档"></a>a、反馈时上传的附件word文档</h5><p>系统中下载的word文档后缀默认为【doc】,填写反馈内容后还需把后缀名改为【docx】才能正常上传。</p>
 <h4 id="专题监督"><a href="#专题监督" class="headerlink" title="专题监督"></a>专题监督</h4><h5 id="1、宏观经济分析配置"><a href="#1、宏观经济分析配置" class="headerlink" title="1、宏观经济分析配置"></a>1、宏观经济分析配置</h5><p>第一步：</p>
 <p>进入【管理】-&gt;【菜单管理】-&gt;【分析】-&gt;【宏观经济分析】，把【宏观经济明细分析】下的所有项删掉，保留【综合宏观经济分析】和【宏观经济明细分析】。</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E1.png" alt="img"></p>
+<p><img src="/2021/01/01/YY%60RDBJ/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E1.png" alt="img"></p>
 <p>第二步：</p>
 <p>进入【数据管理】依次进入</p>
 <p>1、  【业务配置】-&gt;“业务列表”中新增【宏观经济分析】，然后再新增的【宏观经济分析】新增【综合宏观经济分析】、【宏观经济明细分析】两个业务阶段</p>
 <p>2、  【审查页签配置】-&gt;选择【宏观经济分析】业务，并在【宏观经济明细分析】增加【16个业务项】，并在各业务项中挂在对应的页签报表-à参考【安阳820：<a href="http://182.92.199.36:7004】">http://182.92.199.36:7004】</a>;</p>
 <p>3、  【审查菜单配置】à配置【宏观经济分析】审查菜单</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E2.png" alt="img"></p>
+<p><img src="/2021/01/01/YY%60RDBJ/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E2.png" alt="img"></p>
 <h4 id="832单个模块触发报500问题"><a href="#832单个模块触发报500问题" class="headerlink" title="832单个模块触发报500问题"></a>832单个模块触发报500问题</h4><h5 id="01、预警指标、参数管理报500"><a href="#01、预警指标、参数管理报500" class="headerlink" title="01、预警指标、参数管理报500"></a>01、<font color="red">预警指标、参数管理</font>报500</h5><h6 id="a、情形一"><a href="#a、情形一" class="headerlink" title="a、情形一"></a>a、情形一</h6><p><font color="greed">conf</font>文件夹下<font color="yellow">application.properties</font>中缺少【redis.password=】这一行参数–【鹤壁832问题】</p>
-<p><img src="/2020/06/17/YY%60RDBJ/7.png" alt></p>
-
-
+<p><img src="/2021/01/01/YY%60RDBJ/7.png" alt></p>
 <h6 id="b、情形二"><a href="#b、情形二" class="headerlink" title="b、情形二"></a>b、情形二</h6><p>服务器网卡变化，重启服务器即可。（普遍现象）</p>
 <h4 id="清除weblogic缓存"><a href="#清除weblogic缓存" class="headerlink" title="清除weblogic缓存"></a>清除<font color="gree">weblogic</font>缓存</h4><p>删除相应域的对应文件夹</p>
-<p><img src="/2020/06/17/YY%60RDBJ/2.jpg" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/2.jpg" alt></p>
 <h4 id="包启动失败"><a href="#包启动失败" class="headerlink" title="包启动失败"></a>包启动失败</h4><p>常见提示：</p>
 <p>1、<font color="red">java.lang.IllegalArgumentException</font>: 授权已过期!</p>
 <p>2、npcs_web….包突然失败：①数据库启动失败；②授权过期</p>
@@ -1490,23 +1599,17 @@
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">if(Q4=9,'',if(Q4 IN [2,3,4],'vfs/root/products/ebi/sys/picture/绿色.png',if(O4=1,'vfs/root/products/ebi/sys/picture/蓝色.png',IF(O4=2,'vfs/root/products/ebi/sys/picture/黄色.png',IF(O4=3,'vfs/root/products/ebi/sys/picture/红色.png','')))))</span><br></pre></td></tr></table></figure>
 
 <h4 id="02、预警提示"><a href="#02、预警提示" class="headerlink" title="02、预警提示"></a>02、预警提示</h4><p>要求：</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E9%A2%84%E8%AD%A6%E6%8F%90%E7%A4%BA.jpg" alt></p>
-
-
+<p><img src="/2021/01/01/YY%60RDBJ/%E9%A2%84%E8%AD%A6%E6%8F%90%E7%A4%BA.jpg" alt></p>
 <p>常见模板：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">时序过快：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度高于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line"></span><br><span class="line">时序过慢：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，本月止累计为预算数为'</span>||[累计为预算数]||<span class="string">'%，实际完成进度低于序时进度'</span>||ROUND([累计为预算数]-[月份]/12*100，2)||<span class="string">'%,超出阀值30%。计算公式：累计为预算数-本月月份/12*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">比上年同期降幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数低于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line"></span><br><span class="line">比上年同期增幅较大：</span><br><span class="line">[项目名称]||<span class="string">'本月累计完成数为'</span>||[累计完成数]||<span class="string">'万元，上年同期完成数为'</span>||[累计上年同期数]||<span class="string">'万元，本月累计完成数高于上年同期完成数'</span>||[累计同比]||<span class="string">'%，超出阀值30%。计算公式：（本月累计完成数-上年同期完成数）/上年同期完成数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数不足预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，低于阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数超出预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，年初预算数为'</span>||[预算数]||<span class="string">'万元，执行数为预算数的'</span>||[执行数比预算数]||<span class="string">'%，超出阀值70%。计算公式：预算数/执行数*100%'</span></span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">-----------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">执行数超出调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，超出阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br><span class="line"></span><br><span class="line">执行数不足调整预算数：</span><br><span class="line">[项目名称]||<span class="string">'执行数为'</span>||[执行数]||<span class="string">'万元，调整预算数为'</span>||[预算调整数]||<span class="string">'万元，执行数为调整预算数'</span>||[执行数比预算调整数]||<span class="string">'%，低于阀值130%。计算公式：执行数/调整预算数*100%'</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="03、预警涉及的表"><a href="#03、预警涉及的表" class="headerlink" title="03、预警涉及的表"></a>03、预警涉及的表</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">npcs_jdyj_yjjbdy</span>:预警级别定义表（可修改预警的颜色）</span><br><span class="line"><span class="selector-tag">NPCS_WARNING_REPORT</span>：预警报告表</span><br><span class="line"><span class="selector-tag">npcs_warning_data</span>：预警信息表</span><br><span class="line"><span class="selector-tag">QD_INDEX--</span>预警指标表</span><br><span class="line"><span class="selector-tag">QD_INDEX_JOB--</span>指标执行表</span><br><span class="line"><span class="selector-tag">QD_INDEX_JOB_GROUP--</span>指标执行分组</span><br><span class="line"><span class="selector-tag">npcs_jdyj_yjgzsz--</span>预警规则设置</span><br></pre></td></tr></table></figure>
 
 <h4 id="04、预警点颜色问题"><a href="#04、预警点颜色问题" class="headerlink" title="04、预警点颜色问题"></a>04、预警<font color="greed">点</font>颜色问题</h4><p>a、【预警查询统计】：</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E9%A2%84%E8%AD%A61.png" alt></p>
-<img src="/2020/06/17/YY%60RDBJ/%E9%A2%84%E8%AD%A61.png" class title="This is an example image">
-
+<p><img src="/2021/01/01/YY%60RDBJ/%E9%A2%84%E8%AD%A61.png" alt></p>
 <p>修改：<font color="greed">npcs-web-8.30\pages\rd\yjxxcx</font>的==YJXXCX.JS==文件</p>
 <p>b、【预警信息明细】：</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E9%A2%84%E8%AD%A62.png" alt></p>
-<img src="/2020/06/17/YY%60RDBJ/%E9%A2%84%E8%AD%A62.png" class title="This is an example image">
-
+<p><img src="/2021/01/01/YY%60RDBJ/%E9%A2%84%E8%AD%A62.png" alt></p>
 <p>修改：<font color="greed">npcs_jdyj_yjjbdy</font>表中的颜色码</p>
 <p>颜色码对照表</p>
 <table>
@@ -2367,13 +2470,9 @@
 
 
 
-<h3 id="端口总结"><a href="#端口总结" class="headerlink" title="端口总结"></a>端口总结</h3><h4 id="01、182-92-199-36"><a href="#01、182-92-199-36" class="headerlink" title="01、182.92.199.36"></a>01、182.92.199.36</h4><p><img src="/2020/06/17/YY%60RDBJ/%E7%AB%AF%E5%8F%A31.jpg" alt></p>
-<img src="/2020/06/17/YY%60RDBJ/%E7%AB%AF%E5%8F%A31.jpg" class title="This is an example image">
-
+<h3 id="端口总结"><a href="#端口总结" class="headerlink" title="端口总结"></a>端口总结</h3><h4 id="01、182-92-199-36"><a href="#01、182-92-199-36" class="headerlink" title="01、182.92.199.36"></a>01、182.92.199.36</h4><p><img src="/2021/01/01/YY%60RDBJ/%E7%AB%AF%E5%8F%A31.jpg" alt></p>
 <h4 id="02、端口修改"><a href="#02、端口修改" class="headerlink" title="02、端口修改"></a>02、端口修改</h4><p>修改服务路径【fan-830\config】下的<font color="yellow">config.xml</font>文件；</p>
-<p><img src="/2020/06/17/YY%60RDBJ/%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80.png" alt></p>
-<img src="/2020/06/17/YY%60RDBJ/%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80.png" class title="This is an example image">
-
+<p><img src="/2021/01/01/YY%60RDBJ/%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80.png" alt></p>
 <h3 id="年结接口"><a href="#年结接口" class="headerlink" title="年结接口"></a>年结接口</h3><h4 id="A：新年度系统功能年份调整"><a href="#A：新年度系统功能年份调整" class="headerlink" title="A：新年度系统功能年份调整"></a>A：新年度系统功能年份调整</h4><p>  <font color="GREE">备份数据库</font></p>
 <p> st1、在<font color="greed">npcs_year</font>中新增年度,并将相应字段值改为‘1’</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">Select</span> * <span class="selector-tag">from</span> <span class="selector-tag">NPCS_YEAR</span> <span class="selector-tag">ORDER</span> <span class="selector-tag">BY</span> <span class="selector-tag">c_year</span>;</span><br><span class="line">UPDATE NPCS_YEAR SET IS_CURRENT='0',IS_CURRENT_PROCESS='' WHERE IS_CURRENT=1 OR IS_CURRENT_PROCESS=1;</span><br></pre></td></tr></table></figure>
@@ -2436,17 +2535,17 @@
 
 <h3 id="数据问题"><a href="#数据问题" class="headerlink" title="数据问题"></a>数据问题</h3><h4 id="部门预算执行"><a href="#部门预算执行" class="headerlink" title="部门预算执行"></a>部门预算执行</h4><p>系统出现的问题：</p>
 <p>部门预算执行的几张表中，2019年的实际下达预算数据均为0，而2020年实际下达预算数有数据（如图显示），正常应该为2019年有数据。</p>
-<p><img src="/2020/06/17/YY%60RDBJ/8.jpg" alt></p>
-<p><img src="/2020/06/17/YY%60RDBJ/9.jpg" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/8.jpg" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/9.jpg" alt></p>
 <p>造成该问题的原因是存储过程PROC_GET_DIMDATA中有段sql有逻辑错误，当日期为2020年1月1日时，就会把指标表npcs_jk_budget_data中2019年的数据更新为2020年1月的数据，导致表中没有2019年的数据。</p>
-<p><img src="/2020/06/17/YY%60RDBJ/10.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/10.png" alt></p>
 <p>解决方案：</p>
 <p>将2019年系统备份的数据，还原到数据库中，将以下几张表中2019数据导出sql，</p>
-<p><img src="/2020/06/17/YY%60RDBJ/11.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/11.png" alt></p>
 <p>在最新的系统数据库中删除对应的表2019年数据，将导出的2019数据插入到新的数据库中。</p>
 <p>建议操作：在导出的数据sql中插入delete from NPCS_ODS_** where year=2019，在最后添加commit，在最新的系统数据库中执行该sql即可。</p>
-<p><img src="/2020/06/17/YY%60RDBJ/12.png" alt></p>
-<p><img src="/2020/06/17/YY%60RDBJ/13.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/12.png" alt></p>
+<p><img src="/2021/01/01/YY%60RDBJ/13.png" alt></p>
 <p>如果备份的数据库没有2019年12月31号的数据，则系统就不能还原到2019年最新数据了</p>
 <h3 id="常用报表"><a href="#常用报表" class="headerlink" title="常用报表"></a>常用报表</h3><p>1、文件夹中的重要文件：–&gt;npcs-web-8.30–&gt;upload–&gt;(政策法规类文档)<br>      ==yjwdzl==<br>      ==yjzcfg==</p>
 <p>2、四个重要的表</p>
@@ -2628,7 +2727,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>人大测试</title>
+    <title>人大能级测试</title>
     <url>/2020/07/12/YY%60RDCS/</url>
     <content><![CDATA[<p>能级测试1</p>
 <a id="more"></a>
@@ -2640,7 +2739,7 @@
 <img src="/2020/07/12/YY%60RDCS/%E4%B8%AD%E7%BA%A7.png" class title="人大中级自主测试">]]></content>
   </entry>
   <entry>
-    <title>业务随笔</title>
+    <title>人大业务随笔</title>
     <url>/2020/12/11/YWSB/</url>
     <content><![CDATA[<p>部门决算：</p>
 <p>1、调整预算数：</p>
