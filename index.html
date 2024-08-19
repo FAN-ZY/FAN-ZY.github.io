@@ -1,1316 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-  <!-- keywords -->
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo</title>
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-
-  
-<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
-
-  
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 
-  
-      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("your_app_id", "your_app_key");</script>
 
-<script src="/js/Counter.js"></script>
 
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-<body>
-  <div id="container">
-    <div id="particles-js"></div>
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
-			
-		</a>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
-		</hgroup>
 
-		
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
-			        
-			        </div>
-				</section>
-				
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
 
-				
-			</div>
-		</div>
-	</header>				
-</div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author"></h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-fan-cs" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2024/08/08/fan-cs/" class="article-date">
-  	<time datetime="2024-08-08T14:20:15.000Z" itemprop="datePublished">2024-08-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/08/08/fan-cs/">
-        fan-cs
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>长风破浪会有时，直挂云帆济沧海！</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2024/08/08/fan-cs/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="fan-cs">
-         &nbsp;
-        view
-    </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
-  
-</article>
 
+  <div class="site-meta">
 
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-
-
-
-
-  
-    <article id="post-FAN-软件实施工程师笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/" class="article-date">
-  	<time datetime="2024-08-08T14:20:15.000Z" itemprop="datePublished">2024-08-08</time>
-</a>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/">
-        软件实施工程师必备技能
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <span id="more"></span>
-<h1 id="一、什么是软件实施"><a href="#一、什么是软件实施" class="headerlink" title="一、什么是软件实施"></a><strong>一、什么是软件实施</strong></h1><h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>通过技术、功能、操作等方面进行系统安装调试、人员培训、上线使用、后期维护等一系列的工作。</p>
-<hr>
-<h2 id="地位"><a href="#地位" class="headerlink" title="地位"></a>地位</h2><p>软件开发：注重软件的功能和质量</p>
-<p>软件实施：使用体验和效果</p>
-<hr>
-<h2 id="岗位职责"><a href="#岗位职责" class="headerlink" title="岗位职责"></a>岗位职责</h2><p>1、负责公司软件产品系统的安装、配置、使用、维护以及性能的分析、优化、故障处理等相关工作；<br>2、协助项目经理进行项目实施推进与现场沟通协作，以及控制项目需求，进行线上、线下客户使用培训及答疑；<br>3、负责驻场实施软件安装与调试；协助项目经理完成调研、上线问题处理等；<br>4、<strong>能够独立处理项目相关的数据实施工作</strong>；<br>5、协助项目经理进行实施进度管理，完成实施相关的文档整理，配合项目验收相关工作；<br>6、负责项目实施相关文档的撰写，整理，收集客户需求，并给与产品反馈，优化产品升级。<br>7、监控并汇报项目现场情况，收集用户反馈意见，巩固客户关系，提高客户满意度。</p>
-<hr>
-<h2 id="岗位区别"><a href="#岗位区别" class="headerlink" title="岗位区别"></a><strong>岗位区别</strong></h2><table>
-<thead>
-<tr>
-<th></th>
-<th>实施工程师</th>
-<th>实施顾问</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>关注点</td>
-<td>需要熟悉项目的技术细节，理解系统的整体架构，在项目实施过程中，更多从事系统架构安装、软件调试、程序编写等工作</td>
-<td>需要关注客户的需求，在项目实施过程中，主要负责项目整体规划和方案设计，针对不同行业、不同企业的实际业务，制定相应的解决方案</td>
-</tr>
-<tr>
-<td>工作流程</td>
-<td>承担技术的实际操作，比如安装和调试系统、程序编写和代码调节等任务</td>
-<td>承担实施的管理和规划，负责项目的前期分析和调查，方案和需求的制订以及方案的实施计划等任务</td>
-</tr>
-<tr>
-<td>岗位要求</td>
-<td>技术培训、项目部署和软件开发等方面的能力<br/>对技术要求更高</td>
-<td>方案设计、项目管理和客户沟通等方面的能力<br/>对业务要求更高</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="发展方向"><a href="#发展方向" class="headerlink" title="发展方向"></a>发展方向</h2><table>
-<thead>
-<tr>
-<th>管理能力</th>
-<th>业务能力</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>项目经理</td>
-<td>咨询顾问</td>
-</tr>
-<tr>
-<td>实施能力和管理能力逐渐提升后，可向项目经理岗位发展，项目经理需要对 实施各个阶段负责。</td>
-<td>针对某行业积累了丰富的实施经验、行业知识、业务知识、管理知识，能够协助项目经理完成解决方案的确定</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="薪资待遇"><a href="#薪资待遇" class="headerlink" title="薪资待遇"></a>薪资待遇</h2><table>
-<thead>
-<tr>
-<th>薪资结构</th>
-<th>规范</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>基本工资：</td>
-<td>每月最低收入工资，受绩效工资影响</td>
-</tr>
-<tr>
-<td>绩效工资：</td>
-<td>基本工资包含绩效工资，绩效工资占比按照入职公司规定</td>
-</tr>
-<tr>
-<td>出差补助：</td>
-<td>按照公司管理规定</td>
-</tr>
-<tr>
-<td>项目提成：</td>
-<td>按照公司管理规定</td>
-</tr>
-<tr>
-<td>其他：</td>
-<td>五险一金、通讯费、住宿费补助等</td>
-</tr>
-</tbody></table>
-<h1 id="二、实施过程中的具体工作"><a href="#二、实施过程中的具体工作" class="headerlink" title="二、实施过程中的具体工作"></a><strong>二、实施过程中的具体工作</strong></h1><h2 id="①投标阶段："><a href="#①投标阶段：" class="headerlink" title="①投标阶段："></a>①投标阶段：</h2><p>  寻找投标机会、购买&#x2F;制作标书、标书打印&#x2F;投递、材料存档</p>
-<h2 id="②项目实施启动阶段："><a href="#②项目实施启动阶段：" class="headerlink" title="②项目实施启动阶段："></a>②项目实施启动阶段：</h2><p>  需求调研，包括：管理流程调研、功能需求调研、报表要求调研、查询需求调研等。</p>
-<h2 id="③系统培训阶段："><a href="#③系统培训阶段：" class="headerlink" title="③系统培训阶段："></a>③系统培训阶段：</h2><p>  系统标准化材料准备、搭建培训环境、组织培训。</p>
-<h2 id="④系统安装测试及试运行阶段："><a href="#④系统安装测试及试运行阶段：" class="headerlink" title="④系统安装测试及试运行阶段："></a>④系统安装测试及试运行阶段：</h2><p>  编制计划、搭建测试环境及数据准备、组织及运行测试、测试结果总结。</p>
-<h2 id="⑤总体验收阶段："><a href="#⑤总体验收阶段：" class="headerlink" title="⑤总体验收阶段："></a>⑤总体验收阶段：</h2><p>  组织引导客户对项目各个阶段的可交付结果进行验收，测试即使运行结束后进行项目整体验收。</p>
-<h2 id="⑥系统交接阶段："><a href="#⑥系统交接阶段：" class="headerlink" title="⑥系统交接阶段："></a>⑥系统交接阶段：</h2><p>向用户移交项目，包括：软件产品、项目实施过程文档、软件项目知识成果的转移等；《用户满意度调查》、项目实施各阶段的评价等；依据合同协同销售及项目经理追收项目尾款。</p>
-<h1 id="三、工作能力需求"><a href="#三、工作能力需求" class="headerlink" title="三、工作能力需求"></a><strong>三、工作能力需求</strong></h1><h2 id="1、技能要求"><a href="#1、技能要求" class="headerlink" title="1、技能要求"></a>1、技能要求</h2><p>  软件：办公软件、数据库（Oracle、MySQL、SQL server）、操作系统、云平台</p>
-<p>  硬件：服务器、计算机网络</p>
-<p><strong>Ⅰ、产品运行环境部署</strong><br>    网络知识、Linux | windows server、</p>
-<p>​	中间件（WEB服务器）apache nginx tomcat（java，php）、IIS（.NET）</p>
-<p>​	缓存 redis、数据库sqlserver、 oracle 、mysql（web）安装</p>
-<p>​	Linux环境下如何产品部署、windows server产品部署、云平台部署、docker容器的部署</p>
-<p><strong>Ⅱ、数据库维护和使用</strong><br>    1、sglserver、oracle基础<br>    2、基于真实项目SQL强化<br>    3、存储过程、函数、触发器的使用<br>    4、数据的迁移的方式和方法<br>    5、数据库的备份恢复、故障处理、升级、日志查看</p>
-<table>
-<thead>
-<tr>
-<th>常见软件安装与项目部署</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Java JDK环境（Windows版）</td>
-<td>Java JDK环境（Linux版）</td>
-</tr>
-<tr>
-<td>MySQL数据库（Windows版）</td>
-<td>MySQL数据库（Linux版）</td>
-</tr>
-<tr>
-<td>Redis服务器（Linux版）</td>
-<td>Redis服务器（Windows版）</td>
-</tr>
-<tr>
-<td>SQL Server数据库（Windows版）</td>
-<td>Tomcat服务器（Linux版）</td>
-</tr>
-<tr>
-<td>Tomcat服务器（Windows版）</td>
-<td>防火墙的设置（Linux版）</td>
-</tr>
-<tr>
-<td>IIS服务器（Windows版）</td>
-<td>ERP项目部署（Linux版）</td>
-</tr>
-<tr>
-<td>Nignx服务器（Windows版）</td>
-<td>网上商城项目部署（Windows版）</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<hr>
-<table>
-<thead>
-<tr>
-<th>常见数据库必备知识</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MySQL</td>
-<td>SQL server</td>
-<td>oracle</td>
-</tr>
-<tr>
-<td>1、认识MySQL数据库</td>
-<td>1.SQL Server 2019数据库的安装</td>
-<td></td>
-</tr>
-<tr>
-<td>2.Mysql的安装和配置</td>
-<td>2.数据库理基础知识.</td>
-<td></td>
-</tr>
-<tr>
-<td>3.创建和维护数据库</td>
-<td>3.配置管理器与SSMS工具的使用</td>
-<td></td>
-</tr>
-<tr>
-<td>4.MySQL数据库的数据类型</td>
-<td>4.创建与管理数据库</td>
-<td></td>
-</tr>
-<tr>
-<td>5.创建和操作数据表</td>
-<td>5.数据库的备份与还原</td>
-<td></td>
-</tr>
-<tr>
-<td>6.实现数据的完整性</td>
-<td>6.创建与管理数据表</td>
-<td></td>
-</tr>
-<tr>
-<td>7.添加、修改和删除数据</td>
-<td>7.关系型数据库理论知识</td>
-<td></td>
-</tr>
-<tr>
-<td>8.单表查询</td>
-<td>8.关系数据库的数据完整性</td>
-<td></td>
-</tr>
-<tr>
-<td>MySQL数据库</td>
-<td>9.查询数据表之简单查询</td>
-<td></td>
-</tr>
-<tr>
-<td>9.多表查询</td>
-<td>10.查询数据表之分组查询</td>
-<td></td>
-</tr>
-<tr>
-<td>10.试图与索引</td>
-<td>11.查询数据表之连接查询</td>
-<td></td>
-</tr>
-<tr>
-<td>11.Msql数据库编程基础知识</td>
-<td>12.查询数据表之子查询</td>
-<td></td>
-</tr>
-<tr>
-<td>13.系统函数与自定义函数</td>
-<td>13.优化查询-索引</td>
-<td></td>
-</tr>
-<tr>
-<td>14.存储过程与触发器</td>
-<td>14.优化查询-视图</td>
-<td></td>
-</tr>
-<tr>
-<td>15.用户与权限</td>
-<td>15.用户与权限</td>
-<td></td>
-</tr>
-<tr>
-<td>16.数据备份和恢</td>
-<td>16.SQL Server的数据备份和恢复</td>
-<td></td>
-</tr>
-<tr>
-<td>17.MySQL的日志备份与恢复</td>
-<td>17.数据库练习题讲解</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="①网络："><a href="#①网络：" class="headerlink" title="①网络："></a>①网络：</h3><h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><p>UDP（User Datagram Protocol，用户数据报协议），是一个简单的传输层协议。UDP不保证数据包会到达其最终目的，不保证各个数据包的先后顺序，不保证每个数据包只到达一次。<br><strong>特性</strong><br>1.无连接<br>UDP提供无连接服务，UDP服务器和客户端之间不必存在任何长期关系。<br>2.传输效率高<br>UDP 没有可靠性保证，但因此 UDP 在数据传输中有着延迟小、传输效率高的特性。<br>3.面向报文<br>UDP 是面向报文的，与 TCP 面向流相对，UDP 会保留报文的边界信息。</p>
-<table>
-<thead>
-<tr>
-<th align="center">TCP</th>
-<th align="center">UDP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">面向连接</td>
-<td align="center">面向数据报</td>
-</tr>
-<tr>
-<td align="center">可靠</td>
-<td align="center">不可靠</td>
-</tr>
-<tr>
-<td align="center">较慢</td>
-<td align="center">传输速度快</td>
-</tr>
-</tbody></table>
-<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><ul>
-<li><strong>ping</strong> 命令是用来探测本机与网络中另一主机之间是否可达的命令，如果两台主机之间ping不通，则表明这两台主机不能建立起连接。ping是定位网络通不通的一个重要手段。</li>
-<li><strong>telnet</strong> 是一种Internet进行远程登录的必备协议。telnet协议是属于tcp中的一种协议。使用这种协议，就可以实现在本地计算机上远程登录控制服务器的能力。</li>
-<li><strong>route</strong> 命令可以在数据包没有有效传递的情况下，利用route命令查看路由表；如果traceroute命令揭示出一条异常或低效白传输路径，则可以用route命令来确认为何选择该路径，而且可以配置一个更有效的路由。</li>
-<li><strong>Netstat</strong> 是控制台命令，是一个监控TCP&#x2F;IP网络的非常有用的工具，它可以显示路由表，实际的网络连接以及每一个网络接口设备的状态信息。</li>
-<li><strong>Isnrctl</strong> 命令是作为oracle监听命令。</li>
-</ul>
-<h4 id="常见问题："><a href="#常见问题：" class="headerlink" title="常见问题："></a>常见问题：</h4><p><strong>1.局域网内，一台机器不能上网，而其他机器可以，所有的机器都安装的winxp系统，而且电脑都可以访问局域网内电脑，是分析原因？</strong><br>    检查有无Microsoft网络客户端，Microsoft网络的文件和打印机共享，Internet协议TCP&#x2F;IP.<br>    检查IP地址，网关，DNS服务器，网络是否连接上。<br>    查杀木马和病毒<br><strong>2.路由器上是否做了相关配置7、同在一个网络环境中A电脑IP：192.168.1.100，B电脑IP：192.168.0.100，路由器的IP：192.168.1.1.请问用哪些方法可以让B电脑既可以上公网也可以访问到A电脑？</strong><br>    如果你的公网是需要拨号的，那么这需要两个路由器来进行转换，首先要使一个路由能上公网。再使用另一	台路由器进行两个网段进行路由转换，在路由器中设置静态路由转换，一个为192.168.1.，一个192.168.0，	这样这两台电脑就能进行互访。把这台路由器和一台电脑分别连接到原公网的路由上就能使两个不同网段的	电脑都能上网。如果你的公网不需要拨号，你可以把原连接公网的那台路由器更换为交换机就OK，其他连接	同上。</p>
-<p><strong>故障1：系统运行缓慢</strong><br>    此问题的可能原因可能是：处理器相关问题、磁盘相关问题、网络相关问题、硬件相关问题<br>    排查思路<br>    <strong>检查处理器</strong><br>    检查内存统计信息和虚拟内存统计信息，可以了解哪个进程占用了多少内存。<br>    常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.top  2.free  3.1scpu</span><br></pre></td></tr></table></figure>
-
-<p>​	<strong>检查磁盘</strong><br>​	有时磁盘已满，这会导致系统运行缓慢并延迟处理其他进程。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.df-u  2.du  3.iostat  4.Isof</span><br></pre></td></tr></table></figure>
-
-<p>​	<strong>检查网络</strong><br>​	检查网络哪个端口正在侦听什么，并显示已传输和接收的数据包。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.topdump  2.iftop  3.netstat  4.traceroute</span><br></pre></td></tr></table></figure>
-
-<p>​	<strong>检查硬件和其他事项</strong><br>​	检查硬件是否有物理损坏，并检查系统正常运行时间，了解系统未关闭多长时间。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.iscpu  2.isblk  3.ispci  4.uptime</span><br></pre></td></tr></table></figure>
-
-<p><strong>故障2：Wi-Fi连接速度缓慢</strong><br>    排查思路：<br>    检查互联网的带宽速度。<br>    重新启动调制解调器和路由器。有时，路由器会卡在错误状态，可以通过重新启动来解决此问题。<br>    调整Wi-Fi的位置。强烈建议将路由器放置在较高的位置，因为在某些情况下，较厚的墙壁或某些金属可能会	阻碍信号。<br>    使用QoS修复缓慢的互联网问题。在应用程序之间划分Wi-Fi 网络上的可用带宽。<br>    尝试更改 DNS（域名服务器）。DNS 服务器由 ISP 提供。但如果它们速度慢且过载，请切换DNS。</p>
-<p><strong>故障3：设备过热故障</strong><br>    排查思路：<br>    这个问题可以有两个方面，外部因素和内部因素。<br>    <strong>外部因素：</strong><br>    检查并清洁风扇。<br>    抬高设备以实现适当的通风。<br>    使设备远离热源。<br>    <strong>内部因素：</strong><br>    避免使用激烈的过程。确定流程的优先级。<br>    常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.nice</span><br></pre></td></tr></table></figure>
-
-<p>​	检查是否存在任何类型的硬件相关问题。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.iscpu 2.isblk 3.ispci 4.uptime</span><br></pre></td></tr></table></figure>
-
-<p><strong>故障4：设备内存不足排查思路：</strong><br>    确定正在使用内存的进程。<br>    常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.top</span><br></pre></td></tr></table></figure>
-
-<p>​	终止或重新启动导致高内存利用率的进程。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.kill  2.systemctl</span><br></pre></td></tr></table></figure>
-
-<p>​	确定进程的优先级。<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.nice  2.renice</span><br></pre></td></tr></table></figure>
-
-<p>​	添加虚拟内存，扩展虚拟内存。</p>
-<p>​	以物理和虚拟方式添加内存。</p>
-<p><strong>故障5：无法连接到互联网</strong><br>    排查思路：<br>    查找连接网线相关的问题。<br>    检查路由器指示灯&#x2F;重新启动路由器。<br>    检查您使用的是否正确 SSID（路由器名称）<br>    如果使用 Windows，请运行 Windows 网络故障排除。<br>    重置 TCP&#x2F;IP常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh init ip reset</span><br></pre></td></tr></table></figure>
-
-<p>​	刷新域名解析<br>​	常用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig/release ipconfig/renew</span><br></pre></td></tr></table></figure>
-
-<p>​	重新安装网络驱动程序。</p>
-<h3 id="②操作系统"><a href="#②操作系统" class="headerlink" title="②操作系统"></a>②操作系统</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>Windows</th>
-<th>linux</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>优势</td>
-<td>Windows系统主打家庭办公，操作方便，多用于日常办公、娱乐。</td>
-<td>Windows系统为收费系统，不是开源软件，漏洞多，并且不太稳定，长时间开机可能出现明显的卡顿情况。</td>
-</tr>
-<tr>
-<td>劣势</td>
-<td>Linux系统主打网络服务，专业性强，为免费开源系统，主要用于搭建服务器，性能稳定，长时间开机不出现卡顿情况，漏洞少，更安全。</td>
-<td>Linux系统是专业系统，对业余人员不是很友好，代码操作难度较高。</td>
-</tr>
-</tbody></table>
-<h4 id="Linux："><a href="#Linux：" class="headerlink" title="Linux："></a>Linux：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Linux的特点</span><br><span class="line">1、一切皆文件</span><br><span class="line">	Linux系统中的一切都归结为文件。对于操作系统内核而言，命令、硬件和软件设备、进程等，都被视为拥有各自特性的文件。</span><br><span class="line">2、完全兼容POSIX1.0标准</span><br><span class="line">	该标准使得在Linux下通过相应的模拟器可以运行常见的DOS、Windows的程序，这为用户从Windows转到Linux奠定了基础。</span><br><span class="line">3、多用户、多任务</span><br><span class="line">	Linux中各个用户对于其文件设备有特殊的支配权，保证了各用户之间互不影响，多个程序同时并独立地运行，从而提高整个系统的效率。</span><br><span class="line">4、完全免费</span><br><span class="line">	Linlux是免费的操作系统，用户可以通过网络或其他途径获得，并可以任意修改其源发一点，Linux吸收了无数爱好者，他们都参与了Linux的修改与编写工作。</span><br><span class="line">5、网络功能出色、安全稳定、支持多平台</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h5><p>chmod（change mode）命令是控制用户对文件的权限的命令。</p>
-<p>Linux&#x2F;Unix的文件调用权限分为三级：文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">chmod mode file</span><br><span class="line">其中mode可以设定为字符串[ugoa][+-=][rwx]</span><br><span class="line">	[ugoa]表示</span><br><span class="line">        u（owner）表示文件所有者，即创建文件的人</span><br><span class="line">        g（group）：表示和文件所有者相同组的用户</span><br><span class="line">        o（other）：表示非文件所有者和相同group的用户</span><br><span class="line">        a（a11）：表示所有用户</span><br><span class="line">	[±=]表示</span><br><span class="line">		+：表示给指定的用户授权指定的权限</span><br><span class="line">		-：表示撤销指定用户的某个权限</span><br><span class="line">		=：将指定用户的指定权限重新设置</span><br><span class="line">	[rwx]表示</span><br><span class="line">		r：可读权限</span><br><span class="line">		W：可写权限</span><br><span class="line">		X：可执行权限</span><br></pre></td></tr></table></figure>
-
-<p>chmod可以使用八进制数来指定权限，无需再使用指定的权限和用户的字母来进行标识，通过读写执行等3个权限的数字来进行设置。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">八进制语法</span><br><span class="line">#	权限	rwx</span><br><span class="line">7	读+写+执行	rwx</span><br><span class="line">6	读+写	rw-</span><br><span class="line">5	读+执行	r-x</span><br><span class="line">4	只读	r-</span><br><span class="line">3	写+执行	-WX</span><br><span class="line">2	只写	-W-</span><br><span class="line">1	只执行	-x</span><br><span class="line">0	无权限	-</span><br><span class="line">r（读）的权限的数字为4，w（写）的权限的数字为2，x（执行）的权限数字为1</span><br><span class="line">所以7表示的赋权的用户有读写执行权限，最大的权限</span><br></pre></td></tr></table></figure>
-
-<p>chown 命令，可以认为是”change owner”的缩写，主要用于修改文件（或目录）的所有者。除此之外，这个命令也可以修改文件（或目录）的所属组。</p>
-<h5 id="关机重启"><a href="#关机重启" class="headerlink" title="关机重启"></a>关机重启</h5><p>shutdown 关机重启命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">命令格式：shutdown [选项] 时间</span><br><span class="line">选项：-c：取消前一个关机命令</span><br><span class="line">    -h：关机</span><br><span class="line">    -r：重启</span><br><span class="line">例如：shutdown -c now</span><br></pre></td></tr></table></figure>
-
-<h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">1、显示机器的处理器架构</span><br><span class="line">    arch</span><br><span class="line">    uname -m</span><br><span class="line">2、显示内核版本  </span><br><span class="line">	cat /proc/version</span><br><span class="line">3、查看CPU信息</span><br><span class="line">	iscpu</span><br><span class="line">	Iscpu从sysfs和/proc/c没高到将基spu传系结构信息。</span><br><span class="line">	命令输出的信息包含cpu数量，线程，核数，套接字和Nom-Uniform Memeor Access（NUMA），缓存等</span><br><span class="line">4、查看CPU详细信息</span><br><span class="line">查看物理cpu的个数</span><br><span class="line">    cat/proc/cpuinfo</span><br><span class="line">    查看物理cpu的个数</span><br><span class="line">	cat/proc/cpuinfo | grep&quot;physical id&quot;| sort | uniq| wc -l</span><br><span class="line">    查看cpu核数</span><br><span class="line">    cat/proc/cpuinfo | grep&quot;cpu cores&quot;| uniq</span><br><span class="line">    查看逻辑CPU的个数</span><br><span class="line">    cat/proc/cpuinfo | grep&quot;processor&quot;| wc -l</span><br><span class="line">    查看CPU型号</span><br><span class="line">    cat/proc/cpuinfo | grep name | cut-d：-f2 | uniq</span><br><span class="line">    查看CPU的主频</span><br><span class="line">    cat/proc/cpuinfo | grep MHz | uniq</span><br><span class="line">    </span><br><span class="line">5、查看内存使用情况</span><br><span class="line">    free -m</span><br><span class="line">    -m：内存大小以M为单位.</span><br><span class="line">    totel：机器总的物理内存。</span><br><span class="line">    used：用掉的内存。</span><br><span class="line">    free：空闲的物理内存。</span><br><span class="line">    shared：多个进程共享的内存总和，一般数值为0，当前废弃不用。</span><br><span class="line">    buffers：写缓存，数据存储时，先保存到磁盘缓冲区，然后再写入到永久空间。</span><br><span class="line">    cached：读缓存，数据从磁盘读出后，暂留在缓冲区，预备程序接下来的使用。</span><br><span class="line">    -buffers/cache：序角度上看已经使用的内存数，这才是程序实实在在用掉的内存数。</span><br><span class="line">    + buffers/cache：程序角度上看未使用、可用的内存数。</span><br><span class="line">    Swap：total是交换分区的总内存大小，free是交换分区空闲可用的内存大小。</span><br><span class="line">6、显示正在使用的内核发行号</span><br><span class="line">    uname-a  </span><br><span class="line">    Linux内核版本命名在不同时期有着不同的规范，以CentOS为依据</span><br><span class="line">        [root@192 ~]# uname -a </span><br><span class="line">   		Linux 192.168.25.130 3.10.0-1160.e17.x86_64</span><br><span class="line">    第一个组数字：主版本号</span><br><span class="line">    第二个组数字：次版本号，当前为稳定版本</span><br><span class="line">    第三个组数字：修订版本号</span><br><span class="line">    第四个组数字：表示发型版本的补丁版本</span><br><span class="line">    el7：则表示我正在使用的内核是RedHat/CentOS 系列发行版专用内核</span><br><span class="line">    x86_64：采用的是64位的CPU</span><br><span class="line">7、测试磁盘读写性能</span><br><span class="line">    hdparm-tT/dev/sda</span><br><span class="line">    使用hdparm命令，需要确认是否已经安装过hdparm。</span><br><span class="line">    用来在基于 Linux的系统上获取或设置硬盘参数，包括测试读性能以及缓存性能等</span><br><span class="line">8、检测USB设备</span><br><span class="line">    Isusb-tv </span><br><span class="line">    没有Isusb命令，需要安装usbutils安装包，才能使用Isusb。</span><br><span class="line">    Isusb命令用于显示本机的USB设备列表，以及USB设备的详细信息。</span><br><span class="line">    Isusb命令显示的USB设备信息来自&quot;/proc/bus/usb&quot;目录下的对应文件。</span><br><span class="line">9、列出所有PCI设备</span><br><span class="line">    ispci -tv</span><br><span class="line">    PCI设备就是指插在这些PCI插槽上的设备</span><br><span class="line">    声卡、网卡、内置Modem、内置ADSL Modem、USB2.0卡、IEEE1394卡、IDE接口卡、RAID卡、电视卡、视频采集卡以及其它种类繁多的扩展卡等可以插在PCI插槽上的设备都属于PCI设备。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h6 id="防火墙操作"><a href="#防火墙操作" class="headerlink" title="防火墙操作"></a>防火墙操作</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--查看防火墙状态</span><br><span class="line">systemctl status firewalld</span><br><span class="line">--关闭防火墙</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">--禁用防火墙</span><br><span class="line">systemctl disable firewalld</span><br><span class="line">/*Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service.</span><br><span class="line">Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.*/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h6 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h6><p>Oracle</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">--配置主机名和IP映射</span><br><span class="line">    hostnamectl set-hostname oracledb</span><br><span class="line">    echo &quot;192.168.56.102 oracledb&quot; &gt;&gt; /etc/hosts    #此ip为虚拟机ip</span><br><span class="line">1--官方建议优化步骤：</span><br><span class="line">    echo &quot;fs.file-max = 6815744</span><br><span class="line">    kernel.sem = 250 32000 100 128</span><br><span class="line">    kernel.shmmni = 4096</span><br><span class="line">    kernel.shmall = 1073741824</span><br><span class="line">    kernel.shmmax = 4398046511104</span><br><span class="line">    kernel.panic_on_oops = 1</span><br><span class="line">    net.core.rmem_default = 262144</span><br><span class="line">    net.core.rmem_max = 4194304</span><br><span class="line">    net.core.wmem_default = 262144</span><br><span class="line">    net.core.wmem_max = 1048576</span><br><span class="line">    net.ipv4.conf.all.rp_filter = 2</span><br><span class="line">    net.ipv4.conf.default.rp_filter = 2</span><br><span class="line">    fs.aio-max-nr = 1048576</span><br><span class="line">    net.ipv4.ip_local_port_range = 9000 65500</span><br><span class="line">    &quot; &gt;&gt; /etc/sysctl.conf</span><br><span class="line">2--限制Oracle用户资源</span><br><span class="line">    echo &quot;oracle   soft   nofile    1024</span><br><span class="line">    oracle   hard   nofile    65536</span><br><span class="line">    oracle   soft   nproc    16384</span><br><span class="line">    oracle   hard   nproc    16384</span><br><span class="line">    oracle   soft   stack    10240</span><br><span class="line">    oracle   hard   stack    32768</span><br><span class="line">    oracle   hard   memlock    134217728</span><br><span class="line">    oracle   soft   memlock    134217728</span><br><span class="line">    &quot; &gt;&gt; /etc/security/limits.conf</span><br><span class="line">3--用户组操作</span><br><span class="line">    查看所有用户组</span><br><span class="line">    compgen -g 或 getent group</span><br><span class="line">    查看所有用户</span><br><span class="line">    compgen -u</span><br><span class="line">    查看用户属于哪个组</span><br><span class="line">    groups username</span><br><span class="line">    查看组fan下所有成员</span><br><span class="line">    awk -F&#x27;:&#x27; &#x27;/fan/&#123;print $4&#125;&#x27; /etc/group</span><br><span class="line">    或</span><br><span class="line">    ①先安装members包</span><br><span class="line">    apt install members //ubuntu系统</span><br><span class="line">    yum members //centos系统</span><br><span class="line">    ②查看组fan成员</span><br><span class="line">    members fan</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="1、ubuntu"><a href="#1、ubuntu" class="headerlink" title="1、ubuntu"></a>1、ubuntu</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 查看文件安装位置</span><br><span class="line">	dpkg -L 文件名</span><br><span class="line">2 挂载共享文件夹</span><br><span class="line">	sudo mount -t vboxsf 主机共享文件夹名称 ubuntu目的路径</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><h3 id="③SQL"><a href="#③SQL" class="headerlink" title="③SQL"></a>③SQL</h3><h4 id="1-什么是数据库"><a href="#1-什么是数据库" class="headerlink" title="1.什么是数据库"></a><strong>1.什么是数据库</strong></h4><p>数据库就是存储数据的仓库，是长期储存在计算机内、有组织、可共享的大量数据的集合。<br>数据库就类似于医院里的药房，药柜里放的是药品，数据库里放的是数据。</p>
-<p>数据库是数据表及相关操作对象的集合</p>
-<h5 id=""><a href="#" class="headerlink" title=""></a></h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、<span class="keyword">SQL</span>是什么</span><br><span class="line">    <span class="keyword">SQL</span> 是 Structured Query <span class="keyword">Language</span> 的缩写，是指结构化查询语言，是一种特殊的编程语言，是一种数据库查询和程		序设计语言，用于存取数据以及查询、更新和管理关系数据库系统。</span><br><span class="line">    <span class="keyword">SQL</span>使我们有能力访问数据库，是我们与数据库进行对话的语言。</span><br><span class="line"><span class="number">2</span>、常见语言</span><br><span class="line">	作为程序员，我们需要学习很多语言，这些语言是有分工的，也是有分层的。</span><br><span class="line">    <span class="comment">------------&gt;javascript 负责用户交互</span></span><br><span class="line">    <span class="comment">------------&gt;C#/java 处理业务逻辑</span></span><br><span class="line">    <span class="comment">------------&gt;SQL 操作数据库</span></span><br><span class="line"><span class="number">3</span>、<span class="keyword">SQL</span>能做什么</span><br><span class="line">	<span class="keyword">SQL</span> 面向数据库执行查询</span><br><span class="line">    <span class="keyword">SQL</span> 可从数据库取回数据</span><br><span class="line">    <span class="keyword">SQL</span> 可在数据库中插入新的记录、更新数据库中的数据、从数据库删除记录</span><br><span class="line">    <span class="keyword">SQL</span> 可在数据库中创建新数据库、新表、存储过程、视图</span><br><span class="line">    <span class="keyword">SQL</span> 可以设置表、存储过程和视图的权限</span><br><span class="line"><span class="number">4</span>、<span class="keyword">SQL</span>大小写</span><br><span class="line">	<span class="keyword">SQL</span>不区分大小写</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h4 id="2、学习方向"><a href="#2、学习方向" class="headerlink" title="2、学习方向"></a>2、学习方向</h4><p>确认学习哪个关系型数据库</p>
-<p>实施：<strong>Oracle</strong>，<strong>sqlServer</strong>，Mysql</p>
-<p>运维：Mysql，Oracle，Sqlserver</p>
-<hr>
-<h4 id="3、常见问题"><a href="#3、常见问题" class="headerlink" title="3、常见问题"></a>3、常见问题</h4><p><strong>1.在做SQL备份时应该先开启什么服务？</strong><br>    要开启<strong>SQLServer Agent</strong>，这种服务主要是用于在设定的时间备份、复制数据，以及在自动执行调度表上设置的其他项目。启动这个服务后，设定好在什么时候做什么事，这个服务会让它自动运行，不需要人工干预。</p>
-<p><strong>2.系统启动后，不能连接数据库，可能是哪方面的原因？</strong><br>    和数据库有关的服务没启动<br>    防火墙可能阻挡了数据库的端口<br>    数据库可以启动，而登录不了，可能是密码错误和连接参数配置错误</p>
-<p><strong>3.一般数据库日志满了，会出现什么情况？是否还能使用？</strong><br>    数据库日志满了，就不能使用数据库，数据库日志满是指数据文件达到设置的最大文件大小，没设置的时候最大可用磁盘空间，<strong>只能执行查询，读取操作，不能执行更改和备份操作</strong>，原因是写任何操作都要记录日志，也就是处于不可用状态</p>
-<h4 id="4、基础知识"><a href="#4、基础知识" class="headerlink" title="4、基础知识"></a>4、基础知识</h4><h5 id="1、通配符"><a href="#1、通配符" class="headerlink" title="1、通配符"></a>1、通配符</h5><table>
-<thead>
-<tr>
-<th>通配符</th>
-<th>说明</th>
-<th>范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>%</td>
-<td>任意字符</td>
-<td>A%：A开头的；%A：A结尾的；%A%：包含A的</td>
-</tr>
-<tr>
-<td>_</td>
-<td>一个字符</td>
-<td><em>A_<em>：第一个字符是A的；</em>_A</em>：第二个字符是A的；*__A*：第三个字符是A的</td>
-</tr>
-</tbody></table>
-<h5 id="2、SQL语言分类"><a href="#2、SQL语言分类" class="headerlink" title="2、SQL语言分类"></a>2、SQL语言分类</h5><table>
-<thead>
-<tr>
-<th>类别</th>
-<th>说明</th>
-<th>常用举例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>DDL(定义语言)</td>
-<td>创建、修改、删除<br/>数据库、表、视图、索引、触发器、存储过程</td>
-<td>CREATE、ALTER、DROP</td>
-</tr>
-<tr>
-<td>DML(数据库操作语言)</td>
-<td>对数据库的数据进行操作（增删改查）</td>
-<td>insert、delete、update、select</td>
-</tr>
-<tr>
-<td>DQL(数据查询语言)</td>
-<td>用于从数据库中检索数据</td>
-<td>select</td>
-</tr>
-<tr>
-<td>DCL（数据控制语言）</td>
-<td>用户权限控制、数据安全性</td>
-<td>grant、revoke</td>
-</tr>
-<tr>
-<td>TCL(事务管理语言)</td>
-<td>管理事务、开启事务、提交事务、回滚事务</td>
-<td>begin、commit、rollback</td>
-</tr>
-</tbody></table>
-<h5 id="3、常见删除语言区别"><a href="#3、常见删除语言区别" class="headerlink" title="3、常见删除语言区别"></a>3、常见删除语言区别</h5><p><strong>delete</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">delete 属于数据库操纵语言DML，表示删除表中的数据。</span><br><span class="line">DELETE语句执行删除的过程是每次从表中删除一行，并且同时将该行的删除操作作为事务记录在日志中保存以便进行进行回滚操作。</span><br><span class="line">delete 既可以对table也可以对view，可以全部删除，也可以按条件删除。</span><br><span class="line">语法：</span><br><span class="line">– 删除表中全部数据</span><br><span class="line">	delete from 表名</span><br><span class="line">– 按条件删除</span><br><span class="line">	delete from 表名 where 条件</span><br><span class="line">使用 DELETE 语句能删除表中的行。例如，下面的语句删除 employee 表中的所有行：</span><br><span class="line">	DELETE FROM employee;</span><br></pre></td></tr></table></figure>
-
-<p><strong>drop</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">drop 属于数据库定义语言DDL，表示删除表， 也可以用来删除数据库。</span><br><span class="line">语法：</span><br><span class="line">– 删除 表</span><br><span class="line">	drop table 表名</span><br><span class="line">– 删除数据库</span><br><span class="line">	drop database 数据库名</span><br><span class="line">使用 DROP 删除一个表，然后创建一个同名的表，也可以达到清空表的效果。例如，下面的语句先删除 employe 表，之后再重新创建。</span><br><span class="line">    DROP TABLE EMPLOYEE;</span><br><span class="line">    CREATE TABLE EMPLOYEE(…);</span><br><span class="line">当删除和重新创建表时，所有与之相关联的索引、完整性约束和触发器也被删除。同样，所有针对被删除表的授权也会被删除。</span><br></pre></td></tr></table></figure>
-
-<p><strong>truncate</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">truncate 属于数据库定义语言DDL，表示删除表中所有数据。</span><br><span class="line">truncate 只能对table，执行速度快</span><br><span class="line">语法：</span><br><span class="line">– 删除表中所有数据且不可恢复</span><br><span class="line">	truncate table 表名</span><br><span class="line">使用 TRUNCATE 语句能删除表中的所有行。例如，下面的语句清空 employee 表。</span><br><span class="line">	TRUNCATE TABLE EMPLOYEE;</span><br><span class="line">TRUNCATE 语句为我们提供了一种快速、有效地删除表所有行的方法。并且 TRUNCATE 是一个 DDL 语句，不会产生任何回滚信息。执行 TRUNCATE 会立即提交，而且不能回滚。</span><br><span class="line">TRUNCATE 语句并不影响与被删除的表相关联的任何结构、约束、触发器或者授权。</span><br></pre></td></tr></table></figure>
-
-<p><strong>相同点</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.truncate和不带where子句的delete、以及drop都会删除表内的数据。</span><br><span class="line">2.drop、truncate都是DDL语句(数据定义语言),执行后会自动提交。</span><br><span class="line">区别</span><br><span class="line">    1.执行速度，一般来说： drop&gt; truncate &gt; delete</span><br><span class="line">    2.delete是DML语句,不会自动提交。drop/truncate都是DDL语句,执行后会自动提交</span><br><span class="line">    3.TRUNCATE和DELETE只删除数据， DROP则删除整个表（结构和数据）</span><br><span class="line">    4.truncate、drop是DLL,操作立即生效，原数据不放到 rollback segment中，不能回滚，delete可以回滚</span><br><span class="line">    5.对于由 FOREIGN KEY 约束引用的表，不能使用 TRUNCATE TABLE，而应使用不带 WHERE 子句的 DELETE 语句。</span><br><span class="line">      由于TRUNCATE TABLE 不记录在日志中，所以它不能激活触发器。</span><br><span class="line">    6.TRUNCATE TABLE 不能用于参与了索引视图的表。</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="4、数据库库分类"><a href="#4、数据库库分类" class="headerlink" title="4、数据库库分类"></a>4、数据库库分类</h5><table>
-<thead>
-<tr>
-<th>关系型数据库</th>
-<th>系统数据库</th>
-<th>管理体系</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>SQL server</td>
-<td>master、model、msdb、tempdb</td>
-<td>st1：先创建数据库<br/>st2：在创建用户管理数据库</td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td>mysqls、information_schema<br/>sys、performance_schema</td>
-<td></td>
-</tr>
-<tr>
-<td>Oracle</td>
-<td></td>
-<td>st1：先创建dba用户<br/>st2：创建数据库表等</td>
-</tr>
-<tr>
-<td><font color=red><strong>Access</strong></font></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>非关系型数据库</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>redis</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h6 id="3-1、SQL-server"><a href="#3-1、SQL-server" class="headerlink" title="3.1、SQL server"></a>3.1、SQL server</h6><p>数据库名称、数据库文件逻辑名称、数据库文件名称</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">一修改数据库名词</span><br><span class="line"><span class="keyword">exec</span> sp_renamedb student，teacher</span><br><span class="line">一修改数据库文件的逻辑名字</span><br><span class="line"><span class="keyword">alter</span> database teacher modify file（name<span class="operator">-</span>student，newname<span class="operator">-</span>teacher）</span><br><span class="line"><span class="keyword">alter</span> database teacher modify file（name<span class="operator">=</span> student_log，newname<span class="operator">-</span>teacher_log）</span><br><span class="line">——修改数据库的文件名字</span><br><span class="line">    <span class="number">1.</span>分离操作</span><br><span class="line">    <span class="number">2.</span>修改文件名字</span><br><span class="line">    <span class="number">3.</span>附加操作</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-2、MySQL"><a href="#3-2、MySQL" class="headerlink" title="3.2、MySQL"></a>3.2、MySQL</h6><h6 id="3-3、Oracle"><a href="#3-3、Oracle" class="headerlink" title="3.3、Oracle"></a>3.3、Oracle</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PL<span class="operator">/</span><span class="keyword">SQL</span>是Oracle数据库对<span class="keyword">SQL</span>语句的扩展，叫做过程化<span class="keyword">SQL</span>语言（Procedural <span class="keyword">Language</span><span class="operator">/</span><span class="keyword">SQL</span>）。</span><br></pre></td></tr></table></figure>
-
-
-
-<table>
-<thead>
-<tr>
-<th>版本</th>
-<th>含义</th>
-<th>特性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>10g、11g</td>
-<td>g：表示grid，网格</td>
-<td>采用网格计算方式进行操作</td>
-</tr>
-<tr>
-<td>12c</td>
-<td>c：cloud，云计算</td>
-<td>支持大数据的处理能力</td>
-</tr>
-<tr>
-<td>18c、19c……</td>
-<td>对12c的完善和发展</td>
-<td>并不是大版本的迭代升级</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>OracleserviceORCL</td>
-<td>oracle服务</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>3.3.1 命令窗口操作</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、服务器本机登录</span><br><span class="line">   <span class="comment">--&gt;sqlplus</span></span><br><span class="line">   <span class="comment">--&gt;#用户名# sys as sysdba</span></span><br><span class="line">   <span class="comment">--&gt;#口令# 可以输入设置的口令也可以不输入直接回车   ##必须是在服务器本机</span></span><br><span class="line"><span class="number">2</span>、关闭\启动数据库</span><br><span class="line">   <span class="comment">--&gt;shutdown immediate  #关闭数据库</span></span><br><span class="line">   <span class="comment">--&gt;startup  #启动数据库</span></span><br><span class="line"><span class="number">3</span>、Oracle状态</span><br><span class="line">   #<span class="comment">--&gt;shutdown   完全关闭</span></span><br><span class="line">   #<span class="comment">--&gt;nomount    未加载</span></span><br><span class="line">   #<span class="comment">--&gt;mount      已加载</span></span><br><span class="line">   #<span class="comment">--&gt;open       完全打开（此状态下才能正常操作数据库）</span></span><br></pre></td></tr></table></figure>
-
-<p>3.3.2 图形化工具</p>
-<table>
-<thead>
-<tr>
-<th>工具</th>
-<th>是否收费</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Oracle SQL developer</td>
-<td>收费</td>
-</tr>
-<tr>
-<td>PL&#x2F;SQL developer</td>
-<td>免费</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>3.3.3 操作命令</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、创建表空间（表空间包括多个数据文件）</span><br><span class="line">   <span class="keyword">create</span> <span class="keyword">table</span>space <span class="operator">*</span>表空间名称<span class="operator">*</span></span><br><span class="line">   logging                        #启动日志</span><br><span class="line">   datafile <span class="string">&#x27;数据文件位置\数据文件名称.dbf&#x27;</span></span><br><span class="line">   size <span class="number">200</span>m                      #初始文件大小</span><br><span class="line">   autoextend <span class="keyword">on</span> </span><br><span class="line">   next <span class="number">50</span>m maxsize <span class="number">1000</span>m         #自增长大小及最大值</span><br><span class="line">   extent management <span class="keyword">local</span>;       #增长策略（<span class="keyword">local</span>：本地管理）</span><br><span class="line">   </span><br><span class="line"><span class="number">2</span>、创建数据库用户</span><br><span class="line">   <span class="keyword">create</span> <span class="keyword">user</span> <span class="operator">*</span>用户名<span class="operator">*</span> identified <span class="keyword">by</span> &quot;用户密码&quot; </span><br><span class="line">   <span class="keyword">default</span> tablespace <span class="operator">*</span>指定表空间<span class="operator">*</span></span><br><span class="line">   temporary tablespace temp;      #临时表空间</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">grant</span> <span class="keyword">connect</span>,resoursce,dba <span class="keyword">to</span> <span class="operator">*</span>用户名<span class="operator">*</span>;    #给用户赋权限</span><br><span class="line">   </span><br><span class="line"><span class="number">3</span>、<span class="keyword">CREATE</span> <span class="keyword">TABLE</span> XXX <span class="keyword">AS</span> 语句</span><br><span class="line">    <span class="keyword">create</span> <span class="keyword">table</span> XXX <span class="keyword">as</span> #语句从一个表中选取数据，创建新表，然后把数据插入新表中。</span><br><span class="line">    <span class="keyword">create</span> <span class="keyword">table</span> XXX <span class="keyword">as</span> #语句常用于创建表的备份或者用于对记录进行存档。</span><br><span class="line">    #创建一个新表并插入原表所有数据</span><br><span class="line">   	 <span class="keyword">create</span> <span class="keyword">table</span> 新表名 <span class="keyword">as</span> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 旧表名</span><br><span class="line">    #创建一个新表，只插入指定字段</span><br><span class="line">   	 <span class="keyword">create</span> <span class="keyword">table</span> 新表名 <span class="keyword">as</span> <span class="keyword">select</span> id，personName <span class="keyword">from</span> 旧表名</span><br><span class="line">    #需要注意，原表的主外键设置并不会复制到新表中。</span><br><span class="line">    <span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">as</span> 会创建新表，如果表已经存在，要拷贝数据，需要使用 <span class="keyword">insert</span> <span class="keyword">into</span> 语句</span><br><span class="line">   	 <span class="keyword">insert</span> <span class="keyword">into</span> 新表名 <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 旧表名</span><br><span class="line">   	 </span><br><span class="line"> <span class="number">4</span>、<span class="keyword">Union</span> 语句</span><br><span class="line"> 	#前提：结果集字段必须相同</span><br><span class="line">        <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Person_bak</span><br><span class="line">        <span class="keyword">union</span></span><br><span class="line">        <span class="keyword">select</span><span class="operator">*</span><span class="keyword">from</span> Person;   #组合两个结果集，去重后显示。</span><br><span class="line">    <span class="keyword">Union</span> <span class="keyword">all</span> 语句</span><br><span class="line">        <span class="keyword">select</span><span class="operator">*</span><span class="keyword">from</span> Person_bak</span><br><span class="line">        <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line">        <span class="keyword">select</span><span class="operator">*</span><span class="keyword">from</span> Person;   #重复结果也会列出来</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>、<span class="keyword">Create</span> Index 语句</span><br><span class="line">    <span class="keyword">Create</span> Index语句用于创建索引，索引相当于目录，系统可以根据目录查找相关内容。在不读取整个表的情况下，索引使数据库应用程序可以更快地查找数据。</span><br><span class="line">    #优点</span><br><span class="line">    有索引对数据进行查询的时候是<span class="keyword">Seek</span>，是精准查找。</span><br><span class="line">    没有索引对数据进行查询的时候是Scan，逐条扫描。</span><br><span class="line">    #缺点</span><br><span class="line">    更新一个有索引的表需要比更新一个没有索引的表花费更多的时间，这是由于索引本身也需要更新，保存索引也会大大加	 大磁盘的存储空间。</span><br><span class="line">    大型数据库通常作特殊处理，我们使用Oracle数据库，有时把索引创建在不同磁盘上面，提高查询速度。是不同的磁盘，	不是不同的磁盘分区，不同的磁盘分区并不能提高速度。</span><br><span class="line">    #因此，理想的做法是仅仅在常常被搜索的列（以及表）上面创建索引。</span><br><span class="line">    <span class="keyword">create</span> index 索引名 <span class="keyword">on</span> 表名 (字段名);</span><br><span class="line">    </span><br><span class="line"><span class="number">6</span>、<span class="keyword">create</span> <span class="keyword">view</span> 语句</span><br><span class="line">    <span class="keyword">Create</span> <span class="keyword">View</span>就是创建视图，什么是视图？</span><br><span class="line">    在<span class="keyword">SQL</span>中，视图是基于<span class="keyword">SQL</span>语句的结果集的可视化的表。</span><br><span class="line">    视图包含行和列，就像一个真实的表。视图中的字段就是来自一个或多个数据库中的真实的表中的字段。</span><br><span class="line">    说的通俗一点，试图就像一个表，我们可以对他进行查询操作，但是它本身并不存储数据，它里面的数据是通过查询其它	 的表里面的数据组合得到的。</span><br><span class="line">    <span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span></span><br><span class="line">    <span class="keyword">Create</span> <span class="keyword">View</span> 视图名 </span><br><span class="line">    <span class="keyword">AS</span></span><br><span class="line">    <span class="keyword">select</span> p.id ID，p.PersonName 姓名，d.DepartmentName 部门，p.Address 住址，p.Age年龄，p.city 城市</span><br><span class="line">    <span class="keyword">From</span> 表<span class="number">1</span> p，表<span class="number">2</span> d </span><br><span class="line">    <span class="keyword">where</span> p.DepartID<span class="operator">=</span>d.id;</span><br><span class="line">    <span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span><span class="operator">+</span></span><br><span class="line">    </span><br><span class="line"><span class="number">7</span>、</span><br></pre></td></tr></table></figure>
-
-<p>3.3.4 小常识</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--&gt; select sysdate from dual;  #查看当前时间</span></span><br><span class="line"># 时间格式转换</span><br><span class="line"><span class="comment">--&gt; select to_char(sysdate,&#x27;yyyy-mm-dd&#x27;) from dual;   #格式转换-年月日</span></span><br><span class="line"><span class="comment">--&gt; select to_char(sysdate,&#x27;yyyy-mm-dd hh24:mi:ss&#x27;) from dual;   #格式转换-年月日时分秒</span></span><br><span class="line"># 时间日期加减</span><br><span class="line"><span class="comment">--&gt; select sysdate,add_months(sysdate,12) from dual； #加1年</span></span><br><span class="line"><span class="comment">--&gt; select sysdate,add_months(sysdate,2) from dual;   #增加2个月份</span></span><br><span class="line"><span class="comment">--&gt; select sysdate，to_char（sysdate+7，&#x27;yyyy-mm-dd HH24：MI:ss&#x27;）from dual；          #加1星期</span></span><br><span class="line"><span class="comment">--&gt; select sysdate，to_char（sysdate+1，&#x27;yyyy-mm-dd HH24：MI:ss&#x27;）from dual；           #加1天</span></span><br><span class="line"><span class="comment">--&gt; select sysdate，to_char（sysdate+1/24，&#x27;yyyy-mm-dd HH24：MI:ss&#x27;）from dual；        #加1小时</span></span><br><span class="line"><span class="comment">--&gt; select sysdate，to_charisysdate+1/24/60，&#x27;yyyy-mm-dd HH24：MI:ss&#x27;）from dual；      #加1分钟</span></span><br><span class="line"><span class="comment">--&gt; select sysdate，to_char（sysdate+1/24/60/60，&#x27;yyyy-mm-dd HH24：MI:ss&#x27;）from dual；  #加1秒</span></span><br><span class="line"><span class="comment">--&gt; select to_char(sysdate+1/24/60,&#x27;yyyy-mm-dd hh24:mi:ss&#x27;) from dual;        #增加日期-增加一分钟</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--&gt; 多个语句间结尾必须用&quot;;&quot;</span></span><br><span class="line"></span><br><span class="line"># 关键字查询</span><br><span class="line"><span class="comment">--&gt; select * from v$reserved_words;  #查询关键字</span></span><br><span class="line"><span class="comment">--&gt; select * from v$reserved_words m where m.reserved=&#x27;Y&#x27;;  #查询保留关键字</span></span><br></pre></td></tr></table></figure>
-
-<p>3.3.5 基础知识</p>
-<table>
-<thead>
-<tr>
-<th>中文</th>
-<th>英文</th>
-<th>释义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>主键</td>
-<td>primary key</td>
-<td>一个（单字段主键）或多个字段（复合主键）组成，唯一确定表中的一行数据<br/>别称：关键字、主码；特性：唯一性、非空型</td>
-</tr>
-<tr>
-<td>外键</td>
-<td>foreign key</td>
-<td>B表中A表的主键称为外键，表示两个表之间的相关联系；<br/>主表：外键做主键的表；从表：具有此外键的表称为主表的从表。<br/>目的：控制存储在外键表中俄的数据，使保持数据的一致性；<br/>外键只能引用外键表中外键列的值或使用空值。</td>
-</tr>
-<tr>
-<td>关键字</td>
-<td></td>
-<td>不建议使用关键字或保留关键字设置为列名</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DML语言</th>
-<th align="center">释义</th>
-<th align="left">范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">select</td>
-<td align="center">查询</td>
-<td align="left">select 字段 from 表名;</td>
-</tr>
-<tr>
-<td align="center">insert</td>
-<td align="center">插入</td>
-<td align="left">insert into 表明 (字段1，字段2，字段3，……) values (值1，值2，值3，……)；</td>
-</tr>
-<tr>
-<td align="center">update</td>
-<td align="center">修改</td>
-<td align="left">update 表名 set 字段&#x3D;”新值”;</td>
-</tr>
-<tr>
-<td align="center">delete</td>
-<td align="center">删除</td>
-<td align="left">delete from 表名 &lt;where 字段&#x3D;值&gt;；</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>DDL语言</th>
-<th>释义</th>
-<th>范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>create</td>
-<td>创建</td>
-<td>create table 表名 (字段名  number(10)  not null);</td>
-</tr>
-<tr>
-<td>drop</td>
-<td>删除</td>
-<td>drop table 表名 (字段名  number(10)  not null);</td>
-</tr>
-<tr>
-<td>alter</td>
-<td>修改</td>
-<td>alter table 表名 add 字段名 number(12,2);   <em>新增字段</em><br/>alter table 表名 drop column 字段名;   <em>删除字段</em><br/>alter table 表名 rename column 字段名 to 新字段名;   <em>修改字段</em></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">条件语句</th>
-<th align="center">释义</th>
-<th>范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">where</td>
-<td align="center">条件</td>
-<td>select 字段 from 表名 where ……;   <em>字符型加引号</em><br/>操作符：&#x3D;、&lt;&gt;、&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、between、like<br/>where后面不能直接用聚合函数</td>
-</tr>
-<tr>
-<td align="center">or</td>
-<td align="center">或、并列条件</td>
-<td>select 字段 from 表名 where …… or ……；</td>
-</tr>
-<tr>
-<td align="center">order by</td>
-<td align="center">排序</td>
-<td>select 字段1 from 表名 order by  字段2 asc;    <em>升序</em><br/>select 字段1 from 表名 order by  字段2 desc;   <em>降序</em></td>
-</tr>
-<tr>
-<td align="center">group by</td>
-<td align="center">分组</td>
-<td>select 字段1，字段2，字段3 from 表名 group by 字段1；   <em>单条件分组</em><br/>select p.字段1，d.字段1，字段2，字段3 from 表名1 p,表名2 d <br/> group by p.字段1,d.字段1；   <em>多条件分组</em></td>
-</tr>
-<tr>
-<td align="center">having</td>
-<td align="center">连接聚合函数</td>
-<td>select 字段1，字段2，字段3 from 表名 group by 字段1 having 聚合函数条件；<br/><em>必须搭配在 group by 语句后面</em></td>
-</tr>
-<tr>
-<td align="center">distinct</td>
-<td align="center">去重</td>
-<td>select distinct 字段 from 表名；</td>
-</tr>
-<tr>
-<td align="center">rownum</td>
-<td align="center">行控制</td>
-<td>select * from 表名 where rownum&lt;2; <em>显示一条</em></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">关联语句</th>
-<th align="center">释义</th>
-<th>范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">join</td>
-<td align="center">正关联</td>
-<td>select * from 表1 inner join 表2 on 表1字段&#x3D;表2字段；   <em>inner 可不写</em></td>
-</tr>
-<tr>
-<td align="center">left join</td>
-<td align="center">左关联</td>
-<td>select * from 表1 left join 表2 on 表1字段&#x3D;表2字段；<br/>   <em>左侧表为主表，信息全列出，右侧表列出匹配信息，不匹配的返回null记录补充</em></td>
-</tr>
-<tr>
-<td align="center">right join</td>
-<td align="center">右关联</td>
-<td>select * from 表1 right join 表2 on 表1字段&#x3D;表2字段；<br/>   <em>右侧表为主表，信息全列出，左侧表列出匹配信息，不匹配的返回null记录补充</em></td>
-</tr>
-<tr>
-<td align="center">full join</td>
-<td align="center">全关联</td>
-<td>select * from 表1 full join 表2 on 表1字段&#x3D;表2字段；<br/>   <em>l两侧表信息全部列出以匹配格式返回，不匹配的返回null记录补充</em></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>释义</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Varchar2</td>
-<td>字符类型</td>
-<td>4000字节，英文字符4000个，汉字2000个</td>
-</tr>
-<tr>
-<td>Number</td>
-<td>数值类型</td>
-<td>P：Precison，即精度缩写，表示有效数字的位数，最多不能超过38个有效数字<br/>S：Scale，Scale为正数时，表示从小数点到最低有效数字的位数。</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>日期类型</td>
-<td>存储日期和时间信息</td>
-</tr>
-<tr>
-<td>Clob</td>
-<td></td>
-<td>存储单字节和多字节字符数据。支持固定宽度和可变宽度的字符集。<br/>如需存储字符超过4000个，就需要用CLOB类型进行存储。</td>
-</tr>
-<tr>
-<td>Blob</td>
-<td></td>
-<td>存储非结构化的二进制数据大对象，它可以被认为是没有字符集语义的比特流;<br/>一般是存储图像、声音、视频等文件。</td>
-</tr>
-</tbody></table>
-<p>SQL约束</p>
-<p>约束用于限制插入表的数据。<br>可以在创建表时规定约束《通过CREATE TABLE 语句），或者在表创建之后也可以（通过ALTER TABLE 语句进行修改）。我们将主要探讨以下几种约束：</p>
-<table>
-<thead>
-<tr>
-<th>约束</th>
-<th>释义</th>
-<th>范例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>NOT NULL</td>
-<td>强制列不能为空</td>
-<td>create table 表名 (字段名  number(10)  not null);</td>
-</tr>
-<tr>
-<td>UNIQUE</td>
-<td>约束唯一标识</td>
-<td>alter table 表名 add unique (字段名);<br/><em>注：每个表可以有多个Unique约束，但是每个表只能有一个Primary Key 约束。</em></td>
-</tr>
-<tr>
-<td>PRIMARY  KEY</td>
-<td>主键，唯一非空</td>
-<td>create table 表名 (字段名  number(10)  PRIMARY  KEY);<br/>alter table 表名 drop constraint 主键名；   <em>删除主键</em><br/><em>每个表应有且只有一个主键</em></td>
-</tr>
-<tr>
-<td>FOREIGN   KEY</td>
-<td>外键</td>
-<td>create table 表名 (字段名  number(10)  references 外键字段名);<br/>alter table 表名 drop constraint 主键名；   <em>删除主键</em><br/>alter table 表名 add FOREIGN   KEY (字段名) references  外键字段名;</td>
-</tr>
-<tr>
-<td>CHECK</td>
-<td>限制列值范围</td>
-<td>create table 表名 (字段名  date  check<br/> (字段名&gt;to_date(‘2024-06-18’,’yyyy-mm-dd’)  )     );<br/><em>如果对单个列定义 CHECK 约束，那么该列只允许特定的值。</em></td>
-</tr>
-<tr>
-<td>DEFAULT</td>
-<td>插入默认值</td>
-<td>create table 表名 (字段名  date  DEFAULT sysdate);   <em>插入当前时间</em><br/>alter table 表名 modify 字段名 default null；   <em>取消默认值</em><br/><em>如果没有规定其他的值，那么会将默认值添加到所有的新记录。</em></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>释义</th>
-<th>语法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>null</td>
-<td>列值不设定，默认为null</td>
-<td>条件查询时，用“字段 is null”查询；用“字段&#x3D;’ ‘ ”是查询不到的</td>
-</tr>
-<tr>
-<td>NVL()</td>
-<td>从两个表达式返回一个非 null 值</td>
-<td>NVL（eExpression1，eExpression2）<br/>1为null返回2；1不为null返回1；1、2都为null则返回null.</td>
-</tr>
-<tr>
-<td>Upper()</td>
-<td>字段值转换为大写</td>
-<td>select upper(字段) from 表名；<br/>select * from 表名 where upper(字段名)&#x3D;upper(‘条件值’)；<br/>insert into 表名 values（值1，upper（’值2‘），值3，……）；</td>
-</tr>
-<tr>
-<td>Lower()</td>
-<td>字段值转换为小写</td>
-<td>select lower(字段) from 表名；<br/><em>用法与upper()一样</em></td>
-</tr>
-<tr>
-<td>Substr()</td>
-<td>截取字段位数</td>
-<td>select substr(字段,起始位数，截取个数) from 表名；</td>
-</tr>
-<tr>
-<td>Length()</td>
-<td>字段长度</td>
-<td>select * from 表名 where length(字段)&#x3D;10；</td>
-</tr>
-<tr>
-<td>Round()</td>
-<td>精度控制</td>
-<td>select round(字段,精度位数) from 表名；</td>
-</tr>
-<tr>
-<td>To_char()</td>
-<td>字符格式转换</td>
-<td>select to_char(时间字段) from 表名 ；<br/>select to_char(时间字段,’yyyy-mm-dd’) from 表名 ；</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>聚合函数</th>
-<th>释义</th>
-<th>语法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Avg</td>
-<td>取平均值</td>
-<td>select avg(字段) from 表名；</td>
-</tr>
-<tr>
-<td>Count</td>
-<td>统计总数</td>
-<td>select count(*) from 表名；   <em>null值不计数</em><br/>select count(distinct 字段) from 表名；   <em>去重后统计</em></td>
-</tr>
-<tr>
-<td>Max</td>
-<td>取最大值</td>
-<td>select max(字段) from 表名；</td>
-</tr>
-<tr>
-<td>Min</td>
-<td>取最小值</td>
-<td>select min(字段) from 表名；</td>
-</tr>
-<tr>
-<td>Sum</td>
-<td>计算总和</td>
-<td>select sum(字段) from 表名；</td>
-</tr>
-</tbody></table>
-<h3 id="④中间件"><a href="#④中间件" class="headerlink" title="④中间件"></a>④中间件</h3><h4 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h4><p><strong>使用场景</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、Redis 是单进程单线程的吗？</span><br><span class="line">	答：Redis 是单进程单线程的，redis 利用队列技术将并发访问变为串行访问，消除了传统数据库串行控制的开销。</span><br><span class="line">2、一个字符串类型的值能存储最大容量是多少？</span><br><span class="line">	答：512M</span><br><span class="line">3、 缓存</span><br><span class="line">    DB缓存，减轻DB服务器压力，提高系统响应</span><br><span class="line">    作为Key-Value形态的内存数据库，Redis 最先会被想到的应用场景便是作为数据缓存。而使用 Redis 缓存数据非常简		单，只需要通过string类型将序列化后的对象存起来即可，不过也有一些需要注意的地方：</span><br><span class="line">    必须保证不同对象的 key 不会重复，并且使 key 尽量短，一般使用类名（表名）加主键拼接而成。</span><br><span class="line">    选择一个优秀的序列化方式也很重要，目的是提高序列化的效率和减少内存占用。</span><br><span class="line">    缓存内容与数据库的一致性，这里一般有两种做法：</span><br><span class="line">    只在数据库查询后将对象放入缓存，如果对象发生了修改或删除操作，直接清除对应缓存（或设为过期）。</span><br><span class="line">    在数据库新增和查询后将对象放入缓存，修改后更新缓存，删除后清除对应缓存（或设为过期）。</span><br><span class="line">4、清除缓存</span><br><span class="line">    flushdb ——&gt; 清空当前数据库中的所有 key</span><br><span class="line">    flushall ——&gt; 清空整个 Redis 服务器的数据(删除所有数据库的所有 key )</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="weblogic"><a href="#weblogic" class="headerlink" title="weblogic"></a><strong>weblogic</strong></h4><h4 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a><strong>tomcat</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、使用场景</span><br><span class="line">    Tomcat 服务器是一个免费的开放源代码的web应用服务器，属于轻量级应用服务器，应用在中小型系统和并发访问用户不	  是很多的场合，是开发和调试JSP页面的首选。</span><br><span class="line">    Tomcat 也可以处理静态的HTML 页面但是能力不及Apache或nginx ，所以Tomcat 通常作为一个 servlet 和JSP容器，     单独运行在后端</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a><strong>nginx</strong></h4><h2 id="2、职业要求"><a href="#2、职业要求" class="headerlink" title="2、职业要求"></a>2、职业要求</h2><p>  沟通、表达、协调资源的能力</p>
-<p>  文档和资料的编写能力</p>
-<p>  团队协助能力</p>
-<p>  可接受出差</p>
-<h2 id="3、项目经验"><a href="#3、项目经验" class="headerlink" title="3、项目经验"></a>3、项目经验</h2><p>  掌握实施工作流程和过程文档、项目业务（ERP\医疗）的基本了解、实施过程中问题的解决能力</p>
-<h1 id="四、项目实施工作标准化流程"><a href="#四、项目实施工作标准化流程" class="headerlink" title="四、项目实施工作标准化流程"></a><strong>四、项目实施工作标准化流程</strong></h1><h2 id="项目启动阶段"><a href="#项目启动阶段" class="headerlink" title="项目启动阶段"></a>项目启动阶段</h2><p>主要任务：</p>
-<p>l公司和客户双方选定合适的项目经理，分别成立项目实施小组和客户实施小组；</p>
-<p>l与客户实施共同商讨制定项目《项目实施主体计划书》，规划出整个项目的实时进程；</p>
-<p>l与客户实施组共同研讨制定实施项目章程，明确项目实施过程中涉及组织、范围和权责的相关约定；</p>
-<p>l公司和客户双方项目经理共同推动并组织召开项目启动会。使客户的高层及项目组全体成员对项目实施的方式和步骤有清楚的认识，建立相互合作、共同推进项目实施的基础。</p>
-<h3 id="1、项目交接"><a href="#1、项目交接" class="headerlink" title="1、项目交接"></a>1、<strong>项目交接</strong></h3><p> ****工作任务****：（内部交接——销售向实施交接）</p>
-<p>1）客户经理分类准备售前阶段所有与该项目有关的信息和资料；</p>
-<p>2）销售部门准备申请实施的资料，向实施团队发起销售转实施交底；</p>
-<p>3）客户经理组织项目相关人员举行项目内部交接会议；</p>
-<p>4）记录并整理会议纪要与会双方负责人签署会议备忘录。</p>
-<p>****工作流程****：</p>
-<p><em><strong>*①*</strong></em><em><strong>*项目实施的申请*</strong></em></p>
-<p>准备《项目售前调研报告》、《投标技术方2案》、《实施服务合同》等复本</p>
-<p>准备客户方所有接触过的重要人员的直接信息和分析资料</p>
-<p>整理销售人员、售前顾问对客户做的口头承诺的内容清单</p>
-<p>严格遵照制度编写《销售转实施交底单》，提出正式的项目实施申请</p>
-<p><em><strong>*②举行*</strong></em><em><strong>*内部交接会议*</strong></em></p>
-<p>准备会议议程，让参会人员明确会议主题、会议内容、参会人员、会议时间等相关信人息</p>
-<p>会议上要介绍客户方的人员、企业、产品等方面的信息，让项目实施小组尽可能多的了解项目的信息</p>
-<p><em><strong>*③*</strong></em><em><strong>*内部交接会议答疑*</strong></em></p>
-<p>客户经理或售前顾问有责任将合同中重要的条款部分在此说明（如：实施范围、实施周期、实施内容、收款条件等）</p>
-<p>客户经理或售前顾问必须向项目小组介绍在售前阶段向客户口头承诺的内容（如：客户期望、客户化的问题，免费给客户做的事情等）</p>
-<p><em><strong>*④*</strong></em><em><strong>*项目风险的重新评估*</strong></em></p>
-<p>回顾该项目的风险评估报告，客户经理或售前顾问有责任把项目可能遇到的风险在会议上提出。</p>
-<p>项目小组根据已掌握的信息及会上所涉及到的内容重新评估风险（如：口头承诺、对合同内容分析出的周期风险等）</p>
-<p>重新评估风险分析报告中的风险等级、没有提出的隐形风险等内容，应对策略，修订风险分析报告</p>
-<p><em><strong>*⑤*</strong></em><em><strong>*会议备忘录的签订*</strong></em></p>
-<p>项目小组成员必须记录交接会议纪要，特别是口头承诺、疑问解答内容，参与人共同确认</p>
-<p>项目经理和客户经理在会议后必须签署《项目内部交接会议备忘录》</p>
-<h3 id="2、项目筹备"><a href="#2、项目筹备" class="headerlink" title="2、项目筹备"></a>2、<strong>项目筹备</strong></h3><p><em><strong>*工作任务：*</strong></em></p>
-<p>1）项目经理拜会客户项目负责人；</p>
-<p>2）项目经理同客户高层进行深入沟通；</p>
-<p>3）项目经理帮助企业组建实施小组。</p>
-<p>​	<em><strong>*工作流程：*</strong></em></p>
-<p><em><strong>*①*</strong></em><em><strong>*拜会客户项目负责人*</strong></em></p>
-<p>项目经理拜会企业的项目前期负责人，获取企业对项目的重视程度和企业内部支持与反对等信息</p>
-<p>项目前期负责人确定拜会客户高层的相关事宜</p>
-<p><em><strong>*②*</strong></em><em><strong>*拜会企业高层*</strong></em></p>
-<p>与企业高层的首次沟通的目的是要与企业高层讨论项目实施的目标、范围、验收标准，摸清企业高层对项目的重视程度、预计投入的相关人员等情况</p>
-<p>明确企业在项目整个实施中主导的作用，企业高层应该如何推动项目的实施，需要做哪些具体工作</p>
-<p>与企业高层明确项目的实施方式，要求客户方必须组建项目实施小组，与公司实施小组共同完成整个实施工作，提出对项目小组的相关要求</p>
-<p><em><strong>*③*</strong></em><em><strong>*成立客户实施小组*</strong></em></p>
-<p>协助企业高层选定合适的项目经理</p>
-<p>向企业高层解释项目组成员在项目实施中的重要作用，提议哪些部门的人员参与到项目实施小组中</p>
-<p>要求企业配备系统管理员、技术顾问人员，明确他们在未来的项目实施中的关键作用，帮助企业选定项目组其他成员</p>
-<p><em><strong>*④*</strong></em><em><strong>*建立项目领导小组*</strong></em></p>
-<p>项目经理根据项目情况，若客户项目实施小组成员中没有企业高层直接参与，必须建议客户组建项目领导小组，高层人员必须加入其中，负责解决项目实施过程中出现的有争议的问题</p>
-<p>建立项目领导小组的同时必须明确问题汇报与研究解决的机制，保障领导小组能及时研究、决策、协调、落实问题</p>
-<h3 id="3、实施计划指定"><a href="#3、实施计划指定" class="headerlink" title="3、实施计划指定"></a>3、<strong>实施计划指定</strong></h3><p><em><strong>*工作任务：*</strong></em></p>
-<p>1）项目经理与客户项目经理商定实施目标；</p>
-<p>2）项目组进行补充调查，进一步了解客户的实际情况；</p>
-<p>3）编制《项目实施章程》，规划整个项目的实施过程；</p>
-<p>4）客户项目经理负责将《项目实施章程》提交企业高层进行审批。</p>
-<p><em><strong>*工作流程：*</strong></em></p>
-<p><em><strong>*①*</strong></em><em><strong>*明确项目实施目标*</strong></em></p>
-<p>按照《产品销售合同》、《实施服务合同》中规定的项目实施目标和范围与客户项目经理进行沟通，主要包括：组织范围、功能范围、业务流程范围、二次开发范围、技术实施范围、培训范围等</p>
-<p>如果对上述内容还存在有争议的内容，经双方项目组协商一致后，做补充说明</p>
-<p>若沟通中发生客户项目经理无法认定的内容，应共同与领导小组（企业高层）沟通确定，并以书面形式记录</p>
-<p><em><strong>*②*</strong></em><em><strong>*企业的补充调查*</strong></em></p>
-<p>项目经理必须对于企业关键业务环节和客户非常关注的地方向客户项目经理及客户项目小组进行补充调查，这种调查可以采用现场访谈、企业介绍等方式。</p>
-<p>进行调查时，切忌与企业讨论过深的问题，主要是了解为主，清楚地知道企业内部人员对项目的支持情况、企业业务流程中存在的弊端，企业急于想解决的问题、项目支持者对项目实施所担心的问题</p>
-<p>企业在这个阶段一般是不会有什么保留的，他们会尽量的满足我们的需要并暴露出企业上项目的真实目的</p>
-<p><em><strong>*③*</strong></em><em><strong>*规划项目实施的过程*</strong></em></p>
-<p>根据项目的大小和实施周期的长短，以及项目实施的风险和复杂程度做出分析每个阶段中必须明确工作任务、完成标志，客户方和公司方的职责分别是什么，项目验收的基本标准、验收策略</p>
-<p>每个阶段中必须明确工作任务、完成标志，客户方和公司方的职责分别是什么，项目验收的基本标准、验收策略</p>
-<p><em><strong>*④*</strong></em><em><strong>*协助客户建立项目进度汇报机制*</strong></em></p>
-<p>制定项目例会制度，在项目最初每周至少要开一次项目例会，总结本周的项目实施情况，布置下周的工作安排</p>
-<p>建议客户项目负责人必须每月参加一次项目例会，听取项目实施双方的工作汇报，如果遇到特殊问题，需要与项目负责人进行直接的沟通</p>
-<p>领导小组要了解每月项目的进展状况，对于影响项目进度的人员要给予相应的处罚，客户项目经理可以给予处罚的建议</p>
-<p>明确项目实施过程中有关项目管理方面的具体要求，对于可能出现项目变更要有严格的审批程序，重大变革必须由项目负责人亲自审批。减少项目变更给项目实施带来的不利因素</p>
-<h3 id="4、项目启动会"><a href="#4、项目启动会" class="headerlink" title="4、项目启动会"></a>4、<strong>项目启动会</strong></h3><p><em><strong>*工作任务：*</strong></em></p>
-<p>1）项目启动会是一次非常好的传达这件事情的机会；</p>
-<p>2）让客户方老总向中、高层的管理人员传递企业信息化实施的决心，为我们日后开展相关的工作扫除障碍，让客户方从上到下达成一种共识；</p>
-<p>3）双方项目组成员第一次在企业全体亮相。</p>
-<p><em><strong>*工*</strong></em><em><strong>*作流程：*</strong></em></p>
-<p><em><strong>*①*</strong></em><em><strong>*项目启动会准备*</strong></em></p>
-<p>1）与客户高层商定会议日程，以及需参加人员名单；</p>
-<p>2）选定会议主持人、明确会议的议程；</p>
-<p>3）准备相关演讲PPT资料；</p>
-<p>4）准备领导讲话演讲稿；</p>
-<p>5）客户方准备会议场地；</p>
-<p>6）会场布置；</p>
-<p>7）发出会议通知。</p>
-<p><em><strong>*②*</strong></em><em><strong>*召开启动会*</strong></em></p>
-<p>项目启动会只是一个形式，标志着项目的正式启动，真正重要的是启动会前的准备工作是否充分，启动会的效果是否达到预期的目标，这才是我们双方最关注的地方。因此，项目启动会前必须做充分的会前准备工作，与客户高层深入交流，明确启动会的意义所在。</p>
-<p><em><strong>*③*</strong></em><em><strong>*会议纪要的签字确认*</strong></em></p>
-<p>目的主要是让与会人员再一次在感性上增强认识，引起大家的充分重视，让客户公司的相关人员感受到实施的力度。</p>
-<h3 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a><strong>5、总结</strong></h3><p>以上为项目准备阶段要完成的内容，其中公司方面主要派出项目经理、销售顾问。客户方面主要派出项目经理和客户中高层。通过双方相关工作人员的配合，为后续实施开展做好了充足的准备工作，接下来进入第二个阶段，需求调研阶段，我们实施工程师也要登场了。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        
-<div class="counter-tag counter">
-    <span id="/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="软件实施工程师必备技能">
-         &nbsp;
-        view
-    </span>
+  </div>
 </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
 
 
 
 
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2024/08/08/hello-world/" class="article-date">
-  	<time datetime="2024-08-08T09:05:29.967Z" itemprop="datePublished">2024-08-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+</header>
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/08/08/hello-world/">
-        Hello World
-        
-      </a>
-    </h1>
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">软件实施工程师必备技能</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-08 22:20:15" itemprop="dateCreated datePublished" datetime="2024-08-08T22:20:15+08:00">2024-08-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-19 20:25:55" itemprop="dateModified" datetime="2024-08-19T20:25:55+08:00">2024-08-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
       </header>
-      
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>长风破浪！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/08/FAN-%E8%BD%AF%E4%BB%B6%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%AC%94%E8%AE%B0/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/08/fan-cs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/08/fan-cs/" class="post-title-link" itemprop="url">fan-cs</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-08-08 22:20:15 / 修改时间：22:21:47" itemprop="dateCreated datePublished" datetime="2024-08-08T22:20:15+08:00">2024-08-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>长风破浪会有时，直挂云帆济沧海！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/08/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-08 17:05:29" itemprop="dateCreated datePublished" datetime="2024-08-08T17:05:29+08:00">2024-08-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -1326,98 +350,75 @@
 
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-        
-<div class="counter-tag counter">
-    <span id="/2024/08/08/hello-world/" class="leancloud_visitors post-title-link"
-          style="font-size: 12px" data-flag-title="Hello World">
-         &nbsp;
-        view
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
     </span>
-</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
   </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2024 John Doe
-      </div>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
-        </div>
-    </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
-</footer>
+
     </div>
-    
+  </footer>
+
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-
-<script src="/js/main.js"></script>
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
-
-
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
 </body>
 </html>
